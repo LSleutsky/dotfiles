@@ -1,0 +1,48 @@
+# ------------------------------------------------------------------------
+# GIT
+# ------------------------------------------------------------------------
+alias gac='git add . && git commit -m'
+alias gb="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
+alias gbd='git branch -D'
+alias gbD='git push origin --delete'
+alias gcam='git add . && git commit --amend'
+alias gcof='git checkout --'
+alias gcom='git checkout $(git_main_branch)'
+alias gd='git diff'
+alias gdc='git diff --name-only'
+alias gdt='git diff-tree --no-commit-id --name-status -r'
+alias gfp='git fetch --all --prune && git pull --rebase origin $(git_current_branch)'
+alias glc='git log -1 HEAD --stat'
+alias glo='git log --oneline'
+alias glp='git log --patch'
+alias glst='git log --stat -p'
+alias gpp='git pull --rebase origin $(git_current_branch) && git push origin $(git_current_branch)'
+alias gpum='git pull upstream master'
+alias grbum='git rebase upstream/master'
+alias gst='git stash'
+alias gstp='git stash pop'
+
+alias lg='lazygit'
+
+# ------------------------------------------------------------------------
+# SHELL
+# ------------------------------------------------------------------------
+
+alias ls='gls -lAh --color=auto --group-directories-first'
+alias n='nvim'
+alias na='nvim ~/.aliases'
+alias nb='nvim ~/.bash_profile'
+alias nn='nvim ~/.nanorc'
+alias nz='nvim ~/.zshrc'
+
+# ------------------------------------------------------------------------
+# CONFIG
+# ------------------------------------------------------------------------
+
+alias myip='curl http://ipecho.net/plain; echo'
+
+# ------------------------------------------------------------------------
+# SYSTEM
+# ------------------------------------------------------------------------
+alias rs='sudo shutdown -r now'
+alias sd='sudo shutdown -h now'
