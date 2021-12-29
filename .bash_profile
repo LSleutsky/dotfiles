@@ -9,6 +9,8 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_DATA_DIRS="/usr/local/share"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:/usr/share"
 
+export VIM="/usr/share/vim"
+
 export PATH=$PATH:/opt/gradle/gradle-7.0/bin
 export PATH=$PATH:/opt/local/bin
 export PATH=$PATH:/opt/local/sbin
