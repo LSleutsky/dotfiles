@@ -1,0 +1,22 @@
+[user]
+	name = Lush Sleutsky
+	email = lushsleutsky@gmail.com
+	username = LSleutsky
+[core]
+	editor = nvim --wait
+[diff]
+	guitool = nvimdiff
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+	prompt = true
+[fetch]
+	prune = true
+[web]
+	google-chrome
+[commit]
+	verbose = true
+[pull]
+	rebase = true
+[checkout]
+	defaultRemote = origin
