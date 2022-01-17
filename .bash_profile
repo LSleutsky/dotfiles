@@ -1,6 +1,6 @@
 eval "$(pyenv init -)"
 
-export XDG_CACHE_HOME="$HOME/.cache" 
+export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG_DIRS="/etc/xdg"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -9,7 +9,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_DATA_DIRS="/usr/local/share"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:/usr/share"
 
-export VIM="/usr/share/vim"
+export EDITOR="nvim"
 
 export PATH=$PATH:/opt/gradle/gradle-7.0/bin
 export PATH=$PATH:/opt/local/bin
@@ -23,10 +23,10 @@ export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/local/share
 export PATH=$PATH:/usr/local/share/nvim/bin
 
-export PATH=$PATH:$HOME/nvim-osx64/bin
 export PATH=$PATH:$HOME/.pyenv
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.cargo/env
+export PATH=$PATH:$HOME/.config/yarn/global/node_modules
 export PATH=$PATH:$HOME/.gem/ruby/2.7.0/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin

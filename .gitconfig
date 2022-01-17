@@ -3,7 +3,7 @@
 	email = lushsleutsky@gmail.com
 	username = LSleutsky
 [core]
-	editor = nvim --wait
+	editor = nvim
 [diff]
 	guitool = nvimdiff
 	tool = nvimdiff
