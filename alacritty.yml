@@ -13,7 +13,7 @@ window:
   # Remove buttons
   decorations: full
   # Open in full screen
-  startup_mode: Windowed
+  startup_mode: FullScreen
   # Dimensions if not SimpleFullscreen
   dimensions:
     columns: 140
@@ -23,8 +23,8 @@ window:
 window.opacity: 0.92
 
 cursor:
-  # Block Underline or Beam
-  style: Block
+  # Block, Underline, or Beam
+  style: Beam
 
 font:
   normal:
@@ -35,6 +35,8 @@ font:
 
   # Better font rendering for mac
   use_thin_strokes: true
+
+draw_bold_text_with_bright_colors: true
 
 # Colors (Hyper)
 colors:
