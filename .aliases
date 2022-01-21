@@ -31,6 +31,7 @@ alias lg='lazygit'
 alias ls='gls -lAh --color=auto --group-directories-first'
 alias n='nvim'
 alias na='nvim ~/.aliases'
+alias nal='nvim ~/.config/alacritty/alacritty.yml'
 alias nb='nvim ~/.bash_profile'
 alias ng='nvim ~/.gitconfig'
 alias nn='nvim ~/.nanorc'
@@ -45,5 +46,7 @@ alias myip='curl http://ipecho.net/plain; echo'
 # ------------------------------------------------------------------------
 # SYSTEM
 # ------------------------------------------------------------------------
+alias ag='ag --path-to-ignore ~/.ignore'
+
 alias rs='sudo shutdown -r now'
 alias sd='sudo shutdown -h now'
