@@ -17,7 +17,6 @@ export PATH=$PATH:/usr/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/opt
 export PATH=$PATH:/usr/local/opt/openjdk/bin
-export PATH=$PATH:/usr/local/opt/ruby/bin
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/local/share
 export PATH=$PATH:/usr/local/share/nvim/bin
@@ -25,8 +24,8 @@ export PATH=$PATH:/usr/local/share/nvim/bin
 export PATH=$PATH:$HOME/.pyenv
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.cargo/env
-export PATH=$PATH:$HOME/.config/yarn/global/node_modules
-export PATH=$PATH:$HOME/.rvm/gems/ruby-3.0.0/bin
+export PATH=$PATH:$HOME/.rvm/gems/ruby-3.0.3/bin
+export PATH=$PATH:$HOME/.rvm/rubies/ruby-3.0.3/bin
 # Add rvm to PATH and make sure this is the last PATH variable.
 export PATH=$PATH:$HOME/.rvm/bin
 
