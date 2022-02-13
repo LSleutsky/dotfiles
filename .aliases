@@ -30,6 +30,7 @@ alias lg='lazygit'
 # ------------------------------------------------------------------------
 
 alias ls='gls -lAh --color=auto --group-directories-first'
+
 alias n='nvim'
 alias na='nvim ~/.aliases'
 alias nal='nvim ~/.config/alacritty/alacritty.yml'
@@ -42,6 +43,7 @@ alias nz='nvim ~/.zshrc'
 # CONFIG
 # ------------------------------------------------------------------------
 
+alias cors='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
 alias myip='curl http://ipecho.net/plain; echo'
 
 # ------------------------------------------------------------------------
