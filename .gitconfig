@@ -3,13 +3,16 @@
 	email = lushsleutsky@gmail.com
 	username = LSleutsky
 [core]
-	editor = nvim
+	editor = code --wait
 [diff]
-	guitool = nvimdiff
-	tool = nvimdiff
-[difftool "nvimdiff"]
-	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
-	prompt = true
+	guitool = vscode
+	tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [fetch]
 	prune = true
 [web]
