@@ -46,5 +46,3 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighti
 source ~/.bash_profile
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
-# Created by `pipx` on 2022-02-04 11:21:19
-export PATH="$PATH:/Users/lushsleutsky/.local/bin"
