@@ -34,7 +34,6 @@ alias ls='gls -lAh --color=auto --group-directories-first'
 
 alias n='nvim'
 alias na='nvim ~/.aliases'
-alias nal='nvim ~/.config/alacritty/alacritty.yml'
 alias nb='nvim ~/.bash_profile'
 alias ng='nvim ~/.gitconfig'
 alias nn='nvim ~/.nanorc'
