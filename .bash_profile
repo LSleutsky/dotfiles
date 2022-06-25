@@ -1,5 +1,3 @@
-eval "$(pyenv init -)"
-
 export EDITOR="nvim"
 
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -37,5 +35,7 @@ export PATH=$PATH:$HOME/.rvm/bin
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+eval "$(pyenv init -)"
 
 source ~/.aliases
