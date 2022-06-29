@@ -1,6 +1,6 @@
-# ------------------------------------------------------------------------
-# GIT
-# ------------------------------------------------------------------------
+# ╭──────────────────────────────────────────────────────────╮
+# │ GIT                                                      │
+# ╰──────────────────────────────────────────────────────────╯
 
 alias gac='git add . && git commit -m'
 alias gb="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
@@ -26,38 +26,39 @@ alias gstp='git stash pop'
 
 alias lg='lazygit'
 
-# ------------------------------------------------------------------------
-# SHELL
-# ------------------------------------------------------------------------
+# ╭──────────────────────────────────────────────────────────╮
+# │ SHELL                                                    │
+# ╰──────────────────────────────────────────────────────────╯
 
 alias ls='gls -lAh --color=auto --group-directories-first'
 
 alias n='nvim'
 alias na='nvim ~/.aliases'
+alias nal='nvim ~/.config/alacritty/alacritty.yml'
 alias nb='nvim ~/.bash_profile'
 alias ng='nvim ~/.gitconfig'
 alias nn='nvim ~/.nanorc'
 alias nz='nvim ~/.zshrc'
 
-# ------------------------------------------------------------------------
-# CONFIG
-# ------------------------------------------------------------------------
+# ╭──────────────────────────────────────────────────────────╮
+# │ CONFIG                                                   │
+# ╰──────────────────────────────────────────────────────────╯
 
 alias cors='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
 alias myip='curl http://ipecho.net/plain; echo'
 
-# ------------------------------------------------------------------------
-# SYSTEM
-# ------------------------------------------------------------------------
+# ╭──────────────────────────────────────────────────────────╮
+# │ SYSTEM                                                   │
+# ╰──────────────────────────────────────────────────────────╯
 
 alias ag='ag --path-to-ignore ~/.ignore'
 
 alias rs='sudo shutdown -r now'
 alias sd='sudo shutdown -h now'
 
-# ------------------------------------------------------------------------
-# NODE
-# ------------------------------------------------------------------------
+# ╭──────────────────────────────────────────────────────────╮
+# │ NODE                                                     │
+# ╰──────────────────────────────────────────────────────────╯
 
 alias nbp='npm run build:prod'
 alias nsp='npm run start:prod'
