@@ -5,17 +5,14 @@
 [core]
 	editor = nvim
 [diff]
-  guitool = nvimdiff
-	tool = nvimdiff
-[difftool "nvimdiff"]
-  cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
-  prompt = true
+  guitool = vscode
+	tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-  tool = nvim
-[mergetool]
-  prompt = false
-[mergetool "nvim"]
-  cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [checkout]
 	defaultRemote = origin
 [commit]
