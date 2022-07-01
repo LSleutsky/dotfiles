@@ -3,7 +3,7 @@
 	email = lushsleutsky@gmail.com
 	username = LSleutsky
 [core]
-	editor = nvim
+	editor = vscode
 [diff]
   guitool = vscode
 	tool = vscode
