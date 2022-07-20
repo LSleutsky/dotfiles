@@ -7,6 +7,7 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export EDITOR="nvim"
+export KUBE_EDITOR="code --wait"
 
 export PATH=$PATH:/opt/local/bin
 export PATH=$PATH:/opt/local/sbin
