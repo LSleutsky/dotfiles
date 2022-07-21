@@ -14,11 +14,13 @@ ZSH_DISABLE_COMPFIX=true
 ZSH_THEME=powerlevel10k/powerlevel10k
 
 plugins=(
+  aws
   aliases
   brew
   colored-man-pages
   common-aliases
   composer
+  docker
   dotenv
   gh
   git
