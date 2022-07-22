@@ -10,8 +10,20 @@ fi
 
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
+
 ZSH_DISABLE_COMPFIX=true
-ZSH_THEME=powerlevel10k/powerlevel10k
+ZSH_THEME="spaceship"
+
+SPACESHIP_PROMPT_ADD_NEW_LINE="true"
+SPACESHIP_PROMPT_DEFAULT_FIX="$USER"
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+SPACESHIP_CHAR_SYMBOL="\u26a1"
+SPACESHIP_CHAR_SUFFIX=(" ")
+SPACESHIP_USER_SHOW="true"
+SPACESHIP_DIR_TRUNC="0"
+SPACESHIP_DIR_TRUNC_REPO="false"
+SPACESHIP_PACKAGE_PREFIX="on "
+SPACESHIP_AWS_SUFFIX=" on "
 
 plugins=(
   aws
@@ -28,6 +40,7 @@ plugins=(
   gitfast
   github
   iterm2
+  kubectl
   macports
   man
   macos

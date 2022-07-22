@@ -32,13 +32,15 @@ alias lg='lazygit'
 # │ SHELL                                                    │
 # ╰──────────────────────────────────────────────────────────╯
 
-alias ls='gls -lAh --color=auto --group-directories-first'
+alias ag='ag --path-to-ignore ~/.ignore'
+alias ls='colorls -lA --sd'
 
 alias n='nvim'
 alias na='nvim ~/.aliases'
 alias nb='nvim ~/.bash_profile'
 alias ng='nvim ~/.gitconfig'
 alias nn='nvim ~/.nanorc'
+alias np='nvim ~/.p10k.zsh'
 alias nz='nvim ~/.zshrc'
 
 # ╭──────────────────────────────────────────────────────────╮
@@ -52,15 +54,6 @@ alias myip='curl http://ipecho.net/plain; echo'
 # │ SYSTEM                                                   │
 # ╰──────────────────────────────────────────────────────────╯
 
-alias ag='ag --path-to-ignore ~/.ignore'
-
+alias et='rimraf ~/.Trash/*'
 alias rs='sudo shutdown -r now'
 alias sd='sudo shutdown -h now'
-
-# ╭──────────────────────────────────────────────────────────╮
-# │ NODE                                                     │
-# ╰──────────────────────────────────────────────────────────╯
-
-alias nbp='npm run build:prod'
-alias nsp='npm run start:prod'
-alias nsl='npm run start:local'

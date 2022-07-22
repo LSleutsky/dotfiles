@@ -7,7 +7,7 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export EDITOR="nvim"
-export KUBE_EDITOR="code --wait"
+export KUBE_EDITOR="nvim"
 
 export PATH=$PATH:/opt/local/bin
 export PATH=$PATH:/opt/local/sbin
@@ -38,5 +38,6 @@ export XDG_DATA_DIRS="/usr/local/share"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:/usr/share"
 
 eval "$(pyenv init -)"
+eval "$(rbenv init - zsh)"
 
 source ~/.aliases
