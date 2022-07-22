@@ -38,6 +38,5 @@ export XDG_DATA_DIRS="/usr/local/share"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:/usr/share"
 
 eval "$(pyenv init -)"
-eval "$(rbenv init - zsh)"
 
 source ~/.aliases
