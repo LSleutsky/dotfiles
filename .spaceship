@@ -12,14 +12,14 @@ SPACESHIP_PROMPT_ORDER=(
   git
   package
   node
-  ruby
+  docker
+  aws
   xcode
   swift
   golang
-  docker
-  aws
   venv
   pyenv
+  ruby
   line_sep
   char
 )
