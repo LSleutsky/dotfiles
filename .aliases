@@ -15,7 +15,7 @@ alias gdt='git diff-tree --no-commit-id --name-status -r'
 alias gfp='git fetch --all --prune && git pull --rebase origin $(git_current_branch)'
 alias gfu='git fetch upstream'
 alias glc='git log -1 HEAD --stat'
-alias glo='git log --oneline'
+alias glo="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glp='git log --patch'
 alias glst='git log --stat -p'
 alias gpp='git pull --rebase origin $(git_current_branch) && git push origin $(git_current_branch)'
@@ -41,6 +41,7 @@ alias nb='nvim ~/.bash_profile'
 alias ng='nvim ~/.gitconfig'
 alias nn='nvim ~/.nanorc'
 alias np='nvim ~/.p10k.zsh'
+alias ns='nvim ~/.spaceship'
 alias nz='nvim ~/.zshrc'
 
 # ╭──────────────────────────────────────────────────────────╮
