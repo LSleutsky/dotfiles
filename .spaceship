@@ -2,12 +2,12 @@
 # ╭──────────────────────────────────────────────────────────╮
 # │ ORDER                                                    │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_PROMPT_ORDER=(
   time     #
   vi_mode  # these sections will be
   user     # before prompt char
   host     #
-  char
   dir
   git
   package
@@ -21,11 +21,13 @@ SPACESHIP_PROMPT_ORDER=(
   venv
   pyenv
   line_sep
+  char
 )
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ USER                                                     │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_USER_PREFIX="" # remove `with` before username
 SPACESHIP_USER_SUFFIX="" # remove space before host
 
@@ -33,6 +35,7 @@ SPACESHIP_USER_SUFFIX="" # remove space before host
 # ╭──────────────────────────────────────────────────────────╮
 # │ HOST                                                     │
 # ╰──────────────────────────────────────────────────────────╯
+
 # Result will look like this:
 #   username@:(hostname)
 SPACESHIP_HOST_PREFIX="@:("
@@ -41,12 +44,14 @@ SPACESHIP_HOST_SUFFIX=") "
 # ╭──────────────────────────────────────────────────────────╮
 # │ DIR                                                      │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_DIR_PREFIX='' # disable directory prefix, cause it's not the first section
 SPACESHIP_DIR_TRUNC='1' # show only last directory
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ GIT                                                      │
 # ╰──────────────────────────────────────────────────────────╯
+
 # Disable git symbol
 SPACESHIP_GIT_SYMBOL="" # disable git prefix
 SPACESHIP_GIT_BRANCH_PREFIX="" # disable branch prefix too
@@ -61,6 +66,7 @@ SPACESHIP_GIT_STATUS_SUFFIX=""
 # ╭──────────────────────────────────────────────────────────╮
 # │ PACKGE                                                   │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_PACKAGE_PREFIX="package:("
 SPACESHIP_PACKAGE_SUFFIX=") "
 SPACESHIP_PACKAGE_SYMBOL=""
@@ -68,6 +74,7 @@ SPACESHIP_PACKAGE_SYMBOL=""
 # ╭──────────────────────────────────────────────────────────╮
 # │ NODE                                                     │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_NODE_PREFIX="node:("
 SPACESHIP_NODE_SUFFIX=") "
 SPACESHIP_NODE_SYMBOL=""
@@ -75,6 +82,7 @@ SPACESHIP_NODE_SYMBOL=""
 # ╭──────────────────────────────────────────────────────────╮
 # │ RUBY                                                     │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_RUBY_PREFIX="ruby:("
 SPACESHIP_RUBY_SUFFIX=") "
 SPACESHIP_RUBY_SYMBOL=""
@@ -82,6 +90,7 @@ SPACESHIP_RUBY_SYMBOL=""
 # ╭──────────────────────────────────────────────────────────╮
 # │ XCODE                                                    │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_XCODE_PREFIX="xcode:("
 SPACESHIP_XCODE_SUFFIX=") "
 SPACESHIP_XCODE_SYMBOL=""
@@ -89,6 +98,7 @@ SPACESHIP_XCODE_SYMBOL=""
 # ╭──────────────────────────────────────────────────────────╮
 # │ SWIFT                                                    │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_SWIFT_PREFIX="swift:("
 SPACESHIP_SWIFT_SUFFIX=") "
 SPACESHIP_SWIFT_SYMBOL=""
@@ -96,6 +106,7 @@ SPACESHIP_SWIFT_SYMBOL=""
 # ╭──────────────────────────────────────────────────────────╮
 # │ GOLANG                                                   │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_GOLANG_PREFIX="go:("
 SPACESHIP_GOLANG_SUFFIX=") "
 SPACESHIP_GOLANG_SYMBOL=""
@@ -103,6 +114,7 @@ SPACESHIP_GOLANG_SYMBOL=""
 # ╭──────────────────────────────────────────────────────────╮
 # │ DOCKER                                                   │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_DOCKER_PREFIX="docker:("
 SPACESHIP_DOCKER_SUFFIX=") "
 SPACESHIP_DOCKER_SYMBOL=""
@@ -110,6 +122,7 @@ SPACESHIP_DOCKER_SYMBOL=""
 # ╭──────────────────────────────────────────────────────────╮
 # │ AWS                                                      │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_AWS_PREFIX="aws:("
 SPACESHIP_AWS_SUFFIX=") "
 SPACESHIP_AWS_SYMBOL=""
@@ -117,12 +130,14 @@ SPACESHIP_AWS_SYMBOL=""
 # ╭──────────────────────────────────────────────────────────╮
 # │ VENV                                                     │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_VENV_PREFIX="venv:("
 SPACESHIP_VENV_SUFFIX=") "
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ PYENV                                                    │
 # ╰──────────────────────────────────────────────────────────╯
+
 SPACESHIP_PYENV_PREFIX="python:("
 SPACESHIP_PYENV_SUFFIX=") "
 SPACESHIP_PYENV_SYMBOL=""
