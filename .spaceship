@@ -4,10 +4,7 @@
 # ╰──────────────────────────────────────────────────────────╯
 
 SPACESHIP_PROMPT_ORDER=(
-  time     #
-  vi_mode  # these sections will be
-  user     # before prompt char
-  host     #
+  vi_mode
   dir
   git
   package
@@ -22,14 +19,15 @@ SPACESHIP_PROMPT_ORDER=(
   ruby
   line_sep
   char
+  user
 )
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ USER                                                     │
 # ╰──────────────────────────────────────────────────────────╯
 
-SPACESHIP_USER_PREFIX="" # remove `with` before username
-SPACESHIP_USER_SUFFIX="" # remove space before host
+SPACESHIP_USER_PREFIX="(" # remove `with` before username
+SPACESHIP_USER_SUFFIX=") " # remove space before host
 
 
 # ╭──────────────────────────────────────────────────────────╮
@@ -64,7 +62,7 @@ SPACESHIP_GIT_STATUS_PREFIX=""
 SPACESHIP_GIT_STATUS_SUFFIX=""
 
 # ╭──────────────────────────────────────────────────────────╮
-# │ PACKGE                                                   │
+# │ PACKAGE                                                   │
 # ╰──────────────────────────────────────────────────────────╯
 
 SPACESHIP_PACKAGE_PREFIX="semver:("
