@@ -18,24 +18,9 @@ SPACESHIP_PROMPT_ORDER=(
   pyenv
   ruby
   line_sep
-  char
   user
+  char
 )
-
-# ╭──────────────────────────────────────────────────────────╮
-# │ USER                                                     │
-# ╰──────────────────────────────────────────────────────────╯
-
-SPACESHIP_USER_PREFIX="(" # remove `with` before username
-SPACESHIP_USER_SUFFIX=") " # remove space before host
-
-
-# ╭──────────────────────────────────────────────────────────╮
-# │ HOST                                                     │
-# ╰──────────────────────────────────────────────────────────╯
-
-SPACESHIP_HOST_PREFIX="@:("
-SPACESHIP_HOST_SUFFIX=") "
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ DIR                                                      │
@@ -73,12 +58,20 @@ SPACESHIP_NODE_SUFFIX=") "
 SPACESHIP_NODE_SYMBOL=""
 
 # ╭──────────────────────────────────────────────────────────╮
-# │ RUBY                                                     │
+# │ DOCKER                                                   │
 # ╰──────────────────────────────────────────────────────────╯
 
-SPACESHIP_RUBY_PREFIX="ruby:("
-SPACESHIP_RUBY_SUFFIX=") "
-SPACESHIP_RUBY_SYMBOL=""
+SPACESHIP_DOCKER_PREFIX="docker:("
+SPACESHIP_DOCKER_SUFFIX=") "
+SPACESHIP_DOCKER_SYMBOL=""
+
+# ╭──────────────────────────────────────────────────────────╮
+# │ AWS                                                      │
+# ╰──────────────────────────────────────────────────────────╯
+
+SPACESHIP_AWS_PREFIX="aws:("
+SPACESHIP_AWS_SUFFIX=") "
+SPACESHIP_AWS_SYMBOL=""
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ XCODE                                                    │
@@ -105,22 +98,6 @@ SPACESHIP_GOLANG_SUFFIX=") "
 SPACESHIP_GOLANG_SYMBOL=""
 
 # ╭──────────────────────────────────────────────────────────╮
-# │ DOCKER                                                   │
-# ╰──────────────────────────────────────────────────────────╯
-
-SPACESHIP_DOCKER_PREFIX="docker:("
-SPACESHIP_DOCKER_SUFFIX=") "
-SPACESHIP_DOCKER_SYMBOL=""
-
-# ╭──────────────────────────────────────────────────────────╮
-# │ AWS                                                      │
-# ╰──────────────────────────────────────────────────────────╯
-
-SPACESHIP_AWS_PREFIX="aws:("
-SPACESHIP_AWS_SUFFIX=") "
-SPACESHIP_AWS_SYMBOL=""
-
-# ╭──────────────────────────────────────────────────────────╮
 # │ VENV                                                     │
 # ╰──────────────────────────────────────────────────────────╯
 
@@ -134,3 +111,18 @@ SPACESHIP_VENV_SUFFIX=") "
 SPACESHIP_PYENV_PREFIX="python:("
 SPACESHIP_PYENV_SUFFIX=") "
 SPACESHIP_PYENV_SYMBOL=""
+
+# ╭──────────────────────────────────────────────────────────╮
+# │ RUBY                                                     │
+# ╰──────────────────────────────────────────────────────────╯
+
+SPACESHIP_RUBY_PREFIX="ruby:("
+SPACESHIP_RUBY_SUFFIX=") "
+SPACESHIP_RUBY_SYMBOL=""
+
+# ╭──────────────────────────────────────────────────────────╮
+# │ USER                                                     │
+# ╰──────────────────────────────────────────────────────────╯
+
+SPACESHIP_USER_PREFIX="(" # remove `with` before username
+SPACESHIP_USER_SUFFIX=") " # remove space before host
