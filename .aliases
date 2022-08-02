@@ -24,7 +24,10 @@ alias gpum='git pull upstream master'
 alias grup='git rebase upstream/$(git_main_branch)'
 alias grum='git rebase upstream/master'
 alias gst='git stash'
+alias gsta='git stash apply'
+alias gstl='git stash list'
 alias gstp='git stash pop'
+alias gsts='git stash save'
 
 alias lg='lazygit'
 
