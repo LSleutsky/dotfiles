@@ -48,6 +48,8 @@ source ~/.oh-my-zsh/custom/plugins/zsh-better-npm-completion/zsh-better-npm-comp
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/.bash_profile
+source ~/.aliases
 source ~/.spaceship
+
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
