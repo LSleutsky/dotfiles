@@ -18,6 +18,7 @@ export PATH=$PATH:/usr/local/opt/openjdk/bin
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/local/share
 export PATH=$PATH:/usr/local/share/nvim/bin
+export PATH=$PATH:/usr/local/share/pngquant
 
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.pyenv
