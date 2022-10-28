@@ -1,9 +1,15 @@
 local overrides = require "custom.plugins.overrides"
 
 return {
-  ["LudoPinelli/comment-box.nvim"] = {},
+  ["LudoPinelli/comment-box.nvim"] = {
+    cmd = { "CBlbox", "CBclbox", "CBcbox", "CBccbox", "CBalbox", "CBaclbox", "CBacbox", "CBaccbox", "CBline", "CBcline" },
+    config = function()
+      require "custom.plugins.configs.comment-box"
+    end
+  },
 
   ["folke/todo-comments.nvim"] = {
+    after = "plenary.nvim",
     config = function()
       require "custom.plugins.configs.todo-comments"
     end
@@ -17,16 +23,39 @@ return {
   },
 
   ["kylechui/nvim-surround"] = {
+    event = "BufWinEnter",
     config = function()
       require "custom.plugins.configs.nvim-surround"
     end
   },
 
+  ["nathom/filetype.nvim"] = {},
+
+  ["nvim-telescope/telescope-fzf-native.nvim"] = {
+    run = "make",
+    config = function()
+      require "custom.plugins.configs.telescope"
+    end
+  },
+
   ["romgrk/barbar.nvim"] = {
+    event = "BufWinEnter",
     after = "nvim-web-devicons",
     config = function()
       require "custom.plugins.configs.barbar"
+    end,
+  },
+
+  ["ruifm/gitlinker.nvim"] = {
+    after = "plenary.nvim",
+    config = function()
+      require "custom.plugins.configs.gitlinker"
     end
+  },
+
+  ["windwp/nvim-ts-autotag"] = {
+    event = "InsertEnter",
+    after = "nvim-treesitter"
   },
 
   -- git stuff

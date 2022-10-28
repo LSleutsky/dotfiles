@@ -14,6 +14,20 @@ M.gitsigns = {
 }
 
 M.nvchad = {
+  statusline = {
+    overriden_modules = function()
+      local st_modules = require "nvchad_ui.statusline.modules"
+
+      return {
+        cursor_position = function()
+          local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+          local cp = st_modules.cursor_position()
+
+          return cp .. "| " .. line .. ":" .. (col + 1) .. " "
+        end
+      }
+    end
+  },
   tabufline = {
     enabled = false
   }
@@ -22,39 +36,39 @@ M.nvchad = {
 M.mason = {
   ensure_installed = {
     -- dap
-    "chrome-debug-adapter",
-    "firefox-debug-adapter",
+    'chrome-debug-adapter',
+    'firefox-debug-adapter',
 
     -- formatters
-    "prettier",
-    "prettierd",
-    "stylua",
+    'prettier',
+    'prettierd',
+    'stylua',
 
     -- linters
-    "commitlint",
-    "eslint_d",
-    "jsonlint",
-    "yamllint",
+    'commitlint',
+    'eslint_d',
+    'jsonlint',
+    'yamllint',
 
     -- lsp
-    "bash-language-server",
-    "css-lsp",
-    "cssmodules-language-server",
-    "dockerfile-language-server",
-    "eslint-lsp",
-    "html-lsp",
-    "json-lsp",
-    "lua-language-server",
-    "tailwindcss-language-server",
-    "typescript-language-server",
-    "vim-language-server",
-    "yaml-language-server"
+    'bash-language-server',
+    'css-lsp',
+    'cssmodules-language-server',
+    'dockerfile-language-server',
+    'eslint-lsp',
+    'html-lsp',
+    'json-lsp',
+    'lua-language-server',
+    'tailwindcss-language-server',
+    'typescript-language-server',
+    'vim-language-server',
+    'yaml-language-server'
   },
   ui = {
     icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗"
+      package_installed = '✓',
+      package_pending = '➜',
+      package_uninstalled = '✗'
     }
   }
 }
@@ -74,34 +88,37 @@ M.nvimtree = {
 }
 
 M.treesitter = {
+  autotag = {
+    enable = true
+  },
   ensure_installed = {
-    "bash",
-    "comment",
-    "css",
-    "diff",
-    "dockerfile",
-    "dot",
-    "gitattributes",
-    "gitignore",
-    "help",
-    "hjson",
-    "html",
-    "http",
-    "javascript",
-    "jsdoc",
-    "json",
-    "jsonc",
-    "json5",
-    "lua",
-    "markdown",
-    "regex",
-    "scss",
-    "todotxt",
-    "toml",
-    "tsx",
-    "typescript",
-    "vim",
-    "yaml"
+    'bash',
+    'comment',
+    'css',
+    'diff',
+    'dockerfile',
+    'dot',
+    'gitattributes',
+    'gitignore',
+    'help',
+    'hjson',
+    'html',
+    'http',
+    'javascript',
+    'jsdoc',
+    'json',
+    'jsonc',
+    'json5',
+    'lua',
+    'markdown',
+    'regex',
+    'scss',
+    'todotxt',
+    'toml',
+    'tsx',
+    'typescript',
+    'vim',
+    'yaml'
   },
   incremental_selection = {
     enable = true,
