@@ -87,6 +87,22 @@ M.nvimtree = {
   }
 }
 
+M.telescope = {
+  defaults = {
+    vimgrep_arguments = {
+      "rg",
+      "-L",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+      "-u"
+    }
+  }
+}
+
 M.treesitter = {
   autotag = {
     enable = true
@@ -128,6 +144,10 @@ M.treesitter = {
       node_incremental = '<TAB>',
       node_decremental = '<S-TAB>'
     }
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true
   }
 }
 

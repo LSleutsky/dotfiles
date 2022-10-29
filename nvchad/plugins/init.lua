@@ -1,13 +1,6 @@
 local overrides = require "custom.plugins.overrides"
 
 return {
-  ["LudoPinelli/comment-box.nvim"] = {
-    cmd = { "CBlbox", "CBclbox", "CBcbox", "CBccbox", "CBalbox", "CBaclbox", "CBacbox", "CBaccbox", "CBline", "CBcline" },
-    config = function()
-      require "custom.plugins.configs.comment-box"
-    end
-  },
-
   ["folke/todo-comments.nvim"] = {
     after = "plenary.nvim",
     config = function()
@@ -15,10 +8,35 @@ return {
     end
   },
 
+  ["LudoPinelli/comment-box.nvim"] = {
+    cmd = { "CBlbox", "CBclbox", "CBcbox", "CBccbox", "CBalbox", "CBaclbox", "CBacbox", "CBaccbox", "CBline", "CBcline" },
+    config = function()
+      require "custom.plugins.configs.comment-box"
+    end
+  },
+
+  ["dstein64/vim-startuptime"] = {},
+
+  ["iamcco/markdown-preview.nvim"] = {
+    event = "BufWinEnter",
+    run = "cd app && npm install",
+    setup = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown"}
+  },
+
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
     config = function()
       require "custom.plugins.configs.null-ls"
+    end
+  },
+
+  ["karb94/neoscroll.nvim"] = {
+    event = "BufWinEnter",
+    config = function()
+      require "custom.plugins.configs.neoscroll"
     end
   },
 
@@ -31,11 +49,8 @@ return {
 
   ["nathom/filetype.nvim"] = {},
 
-  ["nvim-telescope/telescope-fzf-native.nvim"] = {
-    run = "make",
-    config = function()
-      require "custom.plugins.configs.telescope"
-    end
+  ["p00f/nvim-ts-rainbow"] = {
+    after = "nvim-treesitter"
   },
 
   ["romgrk/barbar.nvim"] = {
@@ -43,7 +58,7 @@ return {
     after = "nvim-web-devicons",
     config = function()
       require "custom.plugins.configs.barbar"
-    end,
+    end
   },
 
   ["ruifm/gitlinker.nvim"] = {

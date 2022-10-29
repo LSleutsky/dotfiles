@@ -37,6 +37,12 @@ M.lsp = {
   }
 }
 
+M.markdownpreview = {
+  n = {
+    ["<C-p>"] = {"<cmd> MarkdownPreviewToggle <CR>", "toggle markdown preview"}
+  }
+}
+
 M.nvimtree = {
   n = {
     ["<C-e>"] = {"<cmd> NvimTreeToggle <CR>", "toggle nvimtree"}
@@ -56,7 +62,8 @@ M.custom = {
     ["X"] = {'"_X', "don't yank deleted character"},
     ["<leader>w"] = {":bw <CR>", "wipe out buffer"},
     ["<C-a>"] = {"gg0VG", "select all text"},
-    ["<C-S-s>"] = {":wa <CR>", "save all"}
+    ["<C-S-s>"] = {":wa <CR>", "save all"},
+    ["<Space>fp"] = {"<cmd> !echo -n % | pbcopy <CR>", "copy file path"}
   },
 
   v = {
