@@ -51,5 +51,4 @@ source ~/.bash_profile
 source ~/.aliases
 source ~/.spaceship
 
-
 fpath+=${ZDOTDIR:-~}/.zsh_functions
