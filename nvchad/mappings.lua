@@ -70,6 +70,7 @@ M.custom = {
     ["X"] = {'"_X', "don't yank deleted character"},
     ["<leader>w"] = {":bw <CR>", "wipe out buffer"},
     ["<C-a>"] = {"gg0VG", "select all text"},
+    ["<C-x>"] = {"<C-w>c", "close window"},
     ["<C-S-s>"] = {":wa <CR>", "save all"},
     ["<Space>fp"] = {"<cmd> !echo -n % | pbcopy <CR>", "copy file path"}
   },
