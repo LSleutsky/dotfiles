@@ -49,6 +49,14 @@ M.nvimtree = {
   }
 }
 
+M.sessionmanager = {
+  n = {
+    ["<leader>ss"] = {"<cmd> SessionManager save_current_session <CR>"},
+    ["<leader>sd"] = {"<cmd> SessionManager load_current_dir_session <CR>"},
+    ["<leader>sr"] = {"<cmd> SessionManager delete_session <CR>"},
+  }
+}
+
 M.custom = {
   i = {
     ["<C-s>"] = {"<ESC> :w <CR>", "save"},

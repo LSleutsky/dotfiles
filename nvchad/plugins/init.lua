@@ -17,6 +17,12 @@ return {
 
   ["dstein64/vim-startuptime"] = {},
 
+  ["gbprod/stay-in-place.nvim"] = {
+    config = function()
+      require "custom.plugins.configs.stay-in-place"
+    end
+  },
+
   ["iamcco/markdown-preview.nvim"] = {
     event = "BufWinEnter",
     run = "cd app && npm install",
@@ -47,6 +53,12 @@ return {
     end
   },
 
+  ["mg979/vim-visual-multi"] = {
+    config = function()
+      vim.g.VM_leader = ";"
+    end
+  },
+
   ["nathom/filetype.nvim"] = {},
 
   ["p00f/nvim-ts-rainbow"] = {
@@ -65,6 +77,12 @@ return {
     after = "plenary.nvim",
     config = function()
       require "custom.plugins.configs.gitlinker"
+    end
+  },
+
+  ["Shatur/neovim-session-manager"] = {
+    config = function()
+      require "custom.plugins.configs.nvim-session-manager"
     end
   },
 
@@ -93,7 +111,8 @@ return {
   --  ╰──────────────────────────────────────────────────────────╯
 
   ["goolord/alpha-nvim"] = {
-    disable = false
+    disable = false,
+    override_options = overrides.alpha
   },
 
   ["kyazdani42/nvim-tree.lua"] = {
