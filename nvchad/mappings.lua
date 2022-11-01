@@ -33,7 +33,8 @@ M.lsp = {
         require("nvchad_ui.renamer").open()
       end,
       "lsp rename"
-    }
+    },
+    ["<leader>ca"] = {"<cmd> lua vim.lsp.buf.code_action() <CR>", "lsp code actions"}
   }
 }
 

@@ -36,12 +36,11 @@ M.alpha = {
   buttons = {
     type = "group",
     val = {
-      button("SPC f f", "  Find File  ", "<cmd> Telescope find_files <CR>"),
+      button("SPC f f", "  Project Files  ", "<cmd> Telescope find_files <CR>"),
+      button("SPC f a", "  All Files  ", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>"),
       button("SPC f o", "  Recent Files  ", "<cmd> Telescope oldfiles <CR>"),
       button("SPC f w", "  Find Word  ", "<cmd> Telescope live_grep <CR>"),
       button("SPC s d", "  Load Session", " <cmd> SessionManager load_current_dir_session <CR>"),
-      button("SPC u p", "  Update Plugins", "<cmd> PackerSync <CR>"),
-      button("SPC b m", "  Bookmarks  ", "<cmd> Telescope marks <CR>"),
       button("-", "  Exit", "<cmd> exit <CR>")
     },
     opts = {
@@ -194,6 +193,9 @@ M.treesitter = {
       node_incremental = '<TAB>',
       node_decremental = '<S-TAB>'
     }
+  },
+  matchup = {
+    enable = true
   },
   rainbow = {
     enable = true,
