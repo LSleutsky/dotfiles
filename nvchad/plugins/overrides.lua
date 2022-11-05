@@ -39,7 +39,7 @@ M.alpha = {
       button("SPC f f", "  Project Files  ", "<cmd> Telescope find_files <CR>"),
       button("SPC f a", "  All Files  ", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>"),
       button("SPC f o", "  Recent Files  ", "<cmd> Telescope oldfiles <CR>"),
-      button("SPC f w", "  Find Word  ", "<cmd> Telescope live_grep <CR>"),
+      button("SPC f s", "  Live Grep ", "<cmd> Telescope live_grep <CR>"),
       button("SPC s d", "  Load Session", " <cmd> SessionManager load_current_dir_session <CR>"),
       button("-", "  Exit", "<cmd> exit <CR>")
     },

@@ -7,6 +7,7 @@ alias gb="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:re
 alias gbd='git branch -D'
 alias gbD='git push origin --delete'
 alias gcam='git add . && git commit --amend'
+alias gcod='git checkout dev'
 alias gcof='git checkout --'
 alias gcom='git checkout $(git_main_branch)'
 alias gd='git diff'
@@ -47,6 +48,8 @@ alias nn='nvim ~/.nanorc'
 alias np='nvim ~/.p10k.zsh'
 alias ns='nvim ~/.spaceship'
 alias nz='nvim ~/.zshrc'
+
+alias tree='tree -d --gitignore -C'
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ CONFIG                                                   │

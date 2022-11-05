@@ -58,6 +58,13 @@ M.sessionmanager = {
   }
 }
 
+M.telescope = {
+  n = {
+    ["<leader>fs"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
+    ["<leader>fw"] = { "<cmd> Telescope grep_string <CR>", "grep word under cursor" },
+  }
+}
+
 M.custom = {
   i = {
     ["<C-s>"] = {"<ESC> :w <CR>", "save"},

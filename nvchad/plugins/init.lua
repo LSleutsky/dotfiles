@@ -17,6 +17,12 @@ return {
 
   ["dstein64/vim-startuptime"] = {},
 
+  ["gorbit99/codewindow.nvim"] = {
+    config = function()
+      require "custom.plugins.configs.codewindow"
+    end
+  },
+
   ["gbprod/stay-in-place.nvim"] = {
     config = function()
       require "custom.plugins.configs.stay-in-place"
@@ -129,6 +135,10 @@ return {
 
   ["nvim-lua/plenary.nvim"] = {
     rm_default_opts  = true
+  },
+
+  ["nvim-telescope/telescope.nvim"] = {
+    override_options = overrides.telescope
   },
 
   ["nvim-treesitter/nvim-treesitter"] = {

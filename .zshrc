@@ -12,7 +12,6 @@ COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
 ZSH_DISABLE_COMPFIX=true
-ZSH_THEME="spaceship"
 
 plugins=(
   aws
@@ -37,18 +36,19 @@ plugins=(
   python
   sudo
   vscode
-  zsh-z
   yarn
+  zsh-better-npm-completion
+  zsh-z
 )
 
-source ~/.oh-my-zsh/oh-my-zsh.sh
-source ~/.oh-my-zsh/custom/plugins/vscode/vscode.plugin.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-better-npm-completion/zsh-better-npm-completion.plugin.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/opt/spaceship/spaceship.zsh
 
 source ~/.bash_profile
 source ~/.aliases
+source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/.spaceship
+
+source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions

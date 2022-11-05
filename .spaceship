@@ -4,23 +4,25 @@
 # ╰──────────────────────────────────────────────────────────╯
 
 SPACESHIP_PROMPT_ORDER=(
-  vi_mode
   dir
   git
   package
   node
   docker
-  aws
   xcode
-  swift
-  golang
   venv
-  pyenv
+  python
   ruby
   line_sep
   user
   char
 )
+
+# ╭──────────────────────────────────────────────────────────╮
+# │ GENERAL                                                  │
+# ╰──────────────────────────────────────────────────────────╯
+
+SPACESHIP_PROMPT_ASYNC=false
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ DIR                                                      │
@@ -66,14 +68,6 @@ SPACESHIP_DOCKER_SUFFIX=") "
 SPACESHIP_DOCKER_SYMBOL=""
 
 # ╭──────────────────────────────────────────────────────────╮
-# │ AWS                                                      │
-# ╰──────────────────────────────────────────────────────────╯
-
-SPACESHIP_AWS_PREFIX="aws:("
-SPACESHIP_AWS_SUFFIX=") "
-SPACESHIP_AWS_SYMBOL=""
-
-# ╭──────────────────────────────────────────────────────────╮
 # │ XCODE                                                    │
 # ╰──────────────────────────────────────────────────────────╯
 
@@ -82,28 +76,12 @@ SPACESHIP_XCODE_SUFFIX=") "
 SPACESHIP_XCODE_SYMBOL=""
 
 # ╭──────────────────────────────────────────────────────────╮
-# │ SWIFT                                                    │
+# │ PYTHON                                                   │
 # ╰──────────────────────────────────────────────────────────╯
 
-SPACESHIP_SWIFT_PREFIX="swift:("
-SPACESHIP_SWIFT_SUFFIX=") "
-SPACESHIP_SWIFT_SYMBOL=""
-
-# ╭──────────────────────────────────────────────────────────╮
-# │ GOLANG                                                   │
-# ╰──────────────────────────────────────────────────────────╯
-
-SPACESHIP_GOLANG_PREFIX="go:("
-SPACESHIP_GOLANG_SUFFIX=") "
-SPACESHIP_GOLANG_SYMBOL=""
-
-# ╭──────────────────────────────────────────────────────────╮
-# │ PYENV                                                    │
-# ╰──────────────────────────────────────────────────────────╯
-
-SPACESHIP_PYENV_PREFIX="python:("
-SPACESHIP_PYENV_SUFFIX=") "
-SPACESHIP_PYENV_SYMBOL=""
+SPACESHIP_PYTHON_PREFIX="python:("
+SPACESHIP_PYTHON_SUFFIX=") "
+SPACESHIP_PYTHON_SYMBOL=""
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ RUBY                                                     │
@@ -117,5 +95,5 @@ SPACESHIP_RUBY_SYMBOL=""
 # │ USER                                                     │
 # ╰──────────────────────────────────────────────────────────╯
 
-SPACESHIP_USER_PREFIX="(" # remove `with` before username
-SPACESHIP_USER_SUFFIX=") " # remove space before host
+SPACESHIP_USER_PREFIX="("
+SPACESHIP_USER_SUFFIX=") "
