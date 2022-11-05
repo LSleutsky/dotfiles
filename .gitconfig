@@ -3,16 +3,18 @@
 	email = lushsleutsky@gmail.com
 	username = LSleutsky
 [core]
-	editor = code --wait
+	editor = nvim
 [diff]
-  guitool = vscode
-	tool = vscode
-[difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+  guitool = nvimdiff
+	tool = nvimdiff 
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+  prompt = true
 [merge]
-  tool = vscode
-[mergetool "vscode"]
-  cmd = code --wait $MERGED
+  tool = nvimdiff
+[mergetool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
+  prompt = true
 [checkout]
 	defaultRemote = origin
 [commit]
