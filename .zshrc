@@ -41,13 +41,12 @@ plugins=(
   zsh-z
 )
 
-source /usr/local/opt/spaceship/spaceship.zsh
-
+source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/.bash_profile
 source ~/.aliases
-source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/.spaceship
 
+source $(brew --prefix)/opt/spaceship/spaceship.zsh
 source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
