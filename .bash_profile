@@ -40,6 +40,4 @@ export XDG_CONFIG_DIRS="/etc/xdg"
 export XDG_DATA_DIRS="/usr/local/share"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:/usr/share"
 
-export RPS1="%{$reset_color%}"
-
 eval "$(pyenv init -)"

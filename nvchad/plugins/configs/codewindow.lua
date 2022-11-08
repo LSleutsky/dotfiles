@@ -21,8 +21,8 @@ code_window.setup({
   use_git = true,
   width_multiplier = 4,
   z_index = 1,
-  show_cursor = true,
-  window_border = "single"
+  show_cursor = false,
+  window_border = "none"
 })
 
 code_window.apply_default_keybinds()

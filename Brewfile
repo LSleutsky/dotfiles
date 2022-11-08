@@ -36,3 +36,5 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 
 cask "font-fira-code"
+cask "font-mononoki"
+cask "font-mononoki-nerd-font"

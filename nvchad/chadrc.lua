@@ -1,6 +1,9 @@
 local M = {}
 
-M.ui = {}
+M.ui = {
+  theme = "chadracula",
+  theme_toggle = { "chadracula", "onedark" }
+}
 M.plugins = require "custom.plugins"
 M.mappings = require "custom.mappings"
 

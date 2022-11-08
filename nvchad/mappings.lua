@@ -34,7 +34,8 @@ M.lsp = {
       end,
       "lsp rename"
     },
-    ["<leader>ca"] = {"<cmd> lua vim.lsp.buf.code_action() <CR>", "lsp code actions"}
+    ["<leader>ca"] = {"<cmd> lua vim.lsp.buf.code_action() <CR>", "lsp code actions"},
+    ["<leader>cf"] = {"<cmd> lua vim.lsp.buf.format() <CR>", "format document"}
   }
 }
 
@@ -60,8 +61,8 @@ M.sessionmanager = {
 
 M.telescope = {
   n = {
-    ["<leader>fs"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
-    ["<leader>fw"] = { "<cmd> Telescope grep_string <CR>", "grep word under cursor" },
+    ["<leader>fs"] = {"<cmd> Telescope live_grep <CR>", "live grep"},
+    ["<leader>fw"] = {"<cmd> Telescope grep_string <CR>", "grep word under cursor"},
   }
 }
 

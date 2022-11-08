@@ -29,6 +29,10 @@ return {
     end
   },
 
+  ["kkoomen/vim-doge"] = {
+    run = "npm i --no-save && npm run build:binary:unix"
+  },
+
   ["iamcco/markdown-preview.nvim"] = {
     event = "BufWinEnter",
     run = "cd app && npm install",
@@ -83,12 +87,6 @@ return {
     after = "plenary.nvim",
     config = function()
       require "custom.plugins.configs.gitlinker"
-    end
-  },
-
-  ["Shatur/neovim-session-manager"] = {
-    config = function()
-      require "custom.plugins.configs.nvim-session-manager"
     end
   },
 

@@ -40,7 +40,7 @@ M.alpha = {
       button("SPC f a", "  All Files  ", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>"),
       button("SPC f o", "  Recent Files  ", "<cmd> Telescope oldfiles <CR>"),
       button("SPC f s", "  Live Grep ", "<cmd> Telescope live_grep <CR>"),
-      button("SPC s d", "  Load Session", " <cmd> SessionManager load_current_dir_session <CR>"),
+      -- button("SPC s d", "  Load Session", " <cmd> SessionManager load_current_dir_session <CR>"),
       button("-", "  Exit", "<cmd> exit <CR>")
     },
     opts = {
@@ -199,7 +199,7 @@ M.treesitter = {
   },
   rainbow = {
     enable = true,
-    extended_mode = true
+    extended_mode = false
   }
 }
 

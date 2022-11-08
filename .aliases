@@ -49,7 +49,7 @@ alias np='nvim ~/.p10k.zsh'
 alias ns='nvim ~/.spaceship'
 alias nz='nvim ~/.zshrc'
 
-alias tree='tree -d --gitignore -C'
+alias tree='tree -d --gitignore -C -L 2'
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ CONFIG                                                   │
