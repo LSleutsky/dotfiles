@@ -51,3 +51,5 @@ source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-h
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

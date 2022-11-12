@@ -4,13 +4,21 @@
 	username = LSleutsky
 [core]
 	editor = nvim
+  pager = delta
+[delta]
+  navigate = true
+  light = false
 [diff]
+  colorMoved = default
   guitool = nvimdiff
 	tool = nvimdiff 
 [difftool "nvimdiff"]
   cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
   prompt = true
+[interactive]
+  diffFilter = delta --color-only
 [merge]
+  conflictstyle = diff3
   tool = nvimdiff
 [mergetool "nvimdiff"]
   cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"

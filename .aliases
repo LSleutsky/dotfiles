@@ -3,7 +3,7 @@
 # ╰──────────────────────────────────────────────────────────╯
 
 alias gac='git add . && git commit -m'
-alias gb="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
+alias gb="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate",
 alias gbd='git branch -D'
 alias gbD='git push origin --delete'
 alias gcam='git add . && git commit --amend'
@@ -38,7 +38,10 @@ alias lg='lazygit'
 # ╰──────────────────────────────────────────────────────────╯
 
 alias ag='ag --path-to-ignore ~/.ignore'
+alias bg='batgrep'
 alias ls='colorls -lA --sd'
+alias man='batman'
+alias rg="rg -g '!{**/node_modules/**, node_modules/**, node_modules}'"
 
 alias n='nvim'
 alias na='nvim ~/.aliases'
