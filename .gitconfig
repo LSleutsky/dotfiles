@@ -7,14 +7,6 @@
 [core]
 	editor = nvim
   pager = delta
-[delta]
-  features = chameleon
-  navigate = true
-  light = false
-  line-numbers = true
-  side-by-side = true
-[delta "interactive"]
-  keep-plus-minus-markers = false
 [diff]
   colorMoved = default
   guitool = nvimdiff
@@ -42,20 +34,27 @@
 	prune = true
 [pull]
 	rebase = true
+[delta]
+  features = chameleon
+  navigate = true
+  light = false
+  line-numbers = true
+  side-by-side = true
+[delta "interactive"]
+  keep-plus-minus-markers = false
 [delta "chameleon"]
-  commit-decoration-style = 232 130 box
-  commit-style = 232 bold italic 130
+  commit-decoration-style = bold box ul "#450eff"
   dark = true
   side-by-side = true
   keep-plus-minus-markers = false
   syntax-theme = Nord
   file-style = 232 bold 184
   file-added-label = [+]
-  file-copied-label = [==]
+  file-copied-label = [C]
   file-decoration-style = "#606018" ul
-  file-modified-label = [*]
+  file-modified-label = [M]
   file-removed-label = [-]
-  file-renamed-label = [->]
+  file-renamed-label = [R]
   hunk-header-style = omit
   line-numbers = true
   line-numbers-left-format = "{nm:>1}┊"
@@ -66,7 +65,7 @@
   line-numbers-plus-style = green italic black
   line-numbers-zero-style = "#545474" italic
   tabs = 2
-  minus-style = syntax "#400000"
+  minus-style = normal "#990017"
   minus-emph-style = syntax bold "#780000"
   minus-non-emph-style = bold
   plus-style = syntax "#004000"
