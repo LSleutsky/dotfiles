@@ -1,3 +1,5 @@
+[include]
+  path = https://github.com/dandavison/delta/blob/master/themes.gitconfig
 [user]
 	name = Lush Sleutsky
 	email = lushsleutsky@gmail.com
@@ -6,8 +8,13 @@
 	editor = nvim
   pager = delta
 [delta]
+  features = chameleon
   navigate = true
   light = false
+  line-numbers = true
+  side-by-side = true
+[delta "interactive"]
+  keep-plus-minus-markers = false
 [diff]
   colorMoved = default
   guitool = nvimdiff
@@ -16,7 +23,7 @@
   cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
   prompt = true
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta --color-only --features=interactive
 [merge]
   conflictstyle = diff3
   tool = nvimdiff
@@ -25,13 +32,54 @@
   prompt = true
 [checkout]
 	defaultRemote = origin
+[init]
+	defaultBranch = main
+[web]
+  [google-chrome]
 [commit]
 	verbose = true
 [fetch]
 	prune = true
 [pull]
 	rebase = true
-[init]
-	defaultBranch = main
-[web]
-	google-chrome
+[delta "chameleon"]
+  commit-decoration-style = 232 130 box
+  commit-style = 232 bold italic 130
+  dark = true
+  side-by-side = true
+  keep-plus-minus-markers = false
+  syntax-theme = Nord
+  file-style = 232 bold 184
+  file-added-label = [+]
+  file-copied-label = [==]
+  file-decoration-style = "#606018" ul
+  file-modified-label = [*]
+  file-removed-label = [-]
+  file-renamed-label = [->]
+  hunk-header-style = omit
+  line-numbers = true
+  line-numbers-left-format = "{nm:>1}┊"
+  line-numbers-left-style = red
+  line-numbers-right-format = "{np:>1}┊"
+  line-numbers-right-style = green
+  line-numbers-minus-style = red italic black
+  line-numbers-plus-style = green italic black
+  line-numbers-zero-style = "#545474" italic
+  tabs = 2
+  minus-style = syntax "#400000"
+  minus-emph-style = syntax bold "#780000"
+  minus-non-emph-style = bold
+  plus-style = syntax "#004000"
+  plus-emph-style = syntax bold "#007800"
+  plus-non-emph-style = bold
+  zero-style = syntax
+  blame-code-style = syntax
+  blame-format = "{author:<18} ({commit:>7}) ┊{timestamp:^16}┊ "
+  blame-palette = "#101010 #200020 #002800 #000028 #202000 #280000 #002020 #002800 #202020"
+  whitespace-error-style = "#280050" reverse
+  merge-conflict-begin-symbol = ~
+  merge-conflict-end-symbol = ~
+  merge-conflict-ours-diff-header-style = "#F1FA8C" bold
+  merge-conflict-ours-diff-header-decoration-style = "#434C5E" box
+  merge-conflict-theirs-diff-header-style = "#F1FA8C" bold
+  merge-conflict-theirs-diff-header-decoration-style = "#434C5E" box
