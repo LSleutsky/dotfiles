@@ -3,7 +3,7 @@
 # ╰──────────────────────────────────────────────────────────╯
 
 alias gac='git add . && git commit -m'
-alias gb="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate",
+alias gb="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
 alias gbd='git branch -D'
 alias gbD='git push origin --delete'
 alias gcam='git add . && git commit --amend'
@@ -24,6 +24,7 @@ alias gpup='git pull upstream $(git_main_branch)'
 alias gpum='git pull upstream master'
 alias grup='git rebase upstream/$(git_main_branch)'
 alias grum='git rebase upstream/master'
+alias gs="git show -- . ':!package-lock.json'"
 alias gst='git stash'
 alias gsta='git stash apply'
 alias gstc='git stash clear'
