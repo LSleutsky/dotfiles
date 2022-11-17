@@ -49,6 +49,7 @@ SPACESHIP_GIT_STATUS_SUFFIX="]"
 SPACESHIP_PACKAGE_PREFIX="semver:("
 SPACESHIP_PACKAGE_SUFFIX=") "
 SPACESHIP_PACKAGE_SYMBOL=""
+SPACESHIP_PACKAGE_SHOW_PRIVATE=true
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ NODE                                                     │
