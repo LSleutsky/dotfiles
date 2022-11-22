@@ -10,7 +10,7 @@ alias gcam='git add . && git commit --amend'
 alias gcod='git checkout dev'
 alias gcof='git checkout --'
 alias gcom='git checkout $(git_main_branch)'
-alias gd='git diff'
+alias gd='git diff -- . ':!package-lock.json''
 alias gdn='git diff --name-only'
 alias gdt='git diff-tree --no-commit-id --name-status -r'
 alias gfp='git fetch --all --prune && git pull --rebase origin $(git_current_branch)'
@@ -42,7 +42,7 @@ alias ag='ag --path-to-ignore ~/.ignore'
 alias bg='batgrep'
 alias ls='colorls -lA --sd'
 alias man='batman'
-alias rg="rg -g '!{**/node_modules/**, node_modules/**, node_modules}'"
+alias rg="rg -g '!{**/node_modules/**, node_modules/**, node_modules}' -g '!package-lock.json'"
 
 alias n='nvim'
 alias na='nvim ~/.aliases'
