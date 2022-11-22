@@ -25,6 +25,7 @@ plugins=(
   gh
   git
   git-extras
+  git-extra-commands
   gitfast
   github
   iterm2
