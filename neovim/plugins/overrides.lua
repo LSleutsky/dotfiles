@@ -10,7 +10,7 @@ local function button(sc, txt, keybind)
     cursor = 5,
     width = 36,
     align_shortcut = "right",
-    hl = "AlphaButtons",
+    hl = "AlphaButtons"
   }
 
   if keybind then
@@ -24,13 +24,9 @@ local function button(sc, txt, keybind)
       local key = vim.api.nvim_replace_termcodes(sc_, true, false, true) or ""
       vim.api.nvim_feedkeys(key, "normal", false)
     end,
-    opts = opts,
+    opts = opts
   }
 end
-
---  ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
---  │ plugin overrides                                                                                 │
---  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 M.alpha = {
   buttons = {
@@ -40,7 +36,6 @@ M.alpha = {
       button("SPC f a", "  All Files  ", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>"),
       button("SPC f o", "  Recent Files  ", "<cmd> Telescope oldfiles <CR>"),
       button("SPC f s", "  Live Grep ", "<cmd> Telescope live_grep <CR>"),
-      -- button("SPC s d", "  Load Session", " <cmd> SessionManager load_current_dir_session <CR>"),
       button("-", "  Exit", "<cmd> exit <CR>")
     },
     opts = {
@@ -51,15 +46,15 @@ M.alpha = {
 
 M.gitsigns = {
   signs = {
-    add = { hl = 'GitGutterAdd', text = '▎', numhl = 'GitSignsAddNr' },
-    change = { hl = 'GitGutterChange', text = '▎', numhl = 'GitSignsChangeNr' },
-    delete = { hl = 'GitGutterDelete', text = '_', numhl = 'GitSignsDeleteNr' },
-    topdelete = { hl = 'GitGutterDelete', text = '‾', numhl = 'GitSignsDeleteNr' },
-    changedelete = { hl = 'GitGutterChange', text = '~', numhl = 'GitSignsChangeNr' },
+    add = { hl = "GitGutterAdd", text = "▎", numhl = "GitSignsAddNr" },
+    change = { hl = "GitGutterChange", text = "▎", numhl = "GitSignsChangeNr" },
+    delete = { hl = "GitGutterDelete", text = "_", numhl = "GitSignsDeleteNr" },
+    topdelete = { hl = "GitGutterDelete", text = "‾", numhl = "GitSignsDeleteNr" },
+    changedelete = { hl = "GitGutterChange", text = "~", numhl = "GitSignsChangeNr" },
   },
   signcolumn = true,
   current_line_blame = true,
-  current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>'
+  current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>"
 }
 
 M.nvchad = {
@@ -85,39 +80,39 @@ M.nvchad = {
 M.mason = {
   ensure_installed = {
     -- dap
-    'chrome-debug-adapter',
-    'firefox-debug-adapter',
+    "chrome-debug-adapter",
+    "firefox-debug-adapter",
 
     -- formatters
-    'prettier',
-    'prettierd',
-    'stylua',
+    "prettier",
+    "prettierd",
+    "stylua",
 
     -- linters
-    'commitlint',
-    'eslint_d',
-    'jsonlint',
-    'yamllint',
+    "commitlint",
+    "eslint_d",
+    "jsonlint",
+    "yamllint",
 
     -- lsp
-    'bash-language-server',
-    'css-lsp',
-    'cssmodules-language-server',
-    'dockerfile-language-server',
-    'eslint-lsp',
-    'html-lsp',
-    'json-lsp',
-    'lua-language-server',
-    'tailwindcss-language-server',
-    'typescript-language-server',
-    'vim-language-server',
-    'yaml-language-server'
+    "bash-language-server",
+    "css-lsp",
+    "cssmodules-language-server",
+    "dockerfile-language-server",
+    "eslint-lsp",
+    "html-lsp",
+    "json-lsp",
+    "lua-language-server",
+    "tailwindcss-language-server",
+    "typescript-language-server",
+    "vim-language-server",
+    "yaml-language-server"
   },
   ui = {
     icons = {
-      package_installed = '✓',
-      package_pending = '➜',
-      package_uninstalled = '✗'
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗"
     }
   }
 }
@@ -141,13 +136,26 @@ M.telescope = {
     vimgrep_arguments = {
       "rg",
       "-L",
-      "--color=never",
+      "--color=auto",
       "--no-heading",
       "--with-filename",
       "--line-number",
       "--column",
       "--smart-case",
       "-u"
+    },
+    file_ignore_patterns = {
+      "node_modules",
+      "build",
+      "dist",
+      "bin",
+      "coverage",
+      "package-lock.json",
+      "yarn.lock",
+      ".git",
+      ".gitignore",
+      "CHANGELOG",
+      "LICENSE"
     }
   }
 }
@@ -157,41 +165,41 @@ M.treesitter = {
     enable = true
   },
   ensure_installed = {
-    'bash',
-    'comment',
-    'css',
-    'diff',
-    'dockerfile',
-    'dot',
-    'gitattributes',
-    'gitignore',
-    'help',
-    'hjson',
-    'html',
-    'http',
-    'javascript',
-    'jsdoc',
-    'json',
-    'jsonc',
-    'json5',
-    'lua',
-    'markdown',
-    'regex',
-    'scss',
-    'todotxt',
-    'toml',
-    'tsx',
-    'typescript',
-    'vim',
-    'yaml'
+    "bash",
+    "comment",
+    "css",
+    "diff",
+    "dockerfile",
+    "dot",
+    "gitattributes",
+    "gitignore",
+    "help",
+    "hjson",
+    "html",
+    "http",
+    "javascript",
+    "jsdoc",
+    "json",
+    "jsonc",
+    "json5",
+    "lua",
+    "markdown",
+    "regex",
+    "scss",
+    "todotxt",
+    "toml",
+    "tsx",
+    "typescript",
+    "vim",
+    "yaml"
   },
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = '<CR>',
-      scope_incremental = '<CR>',
-      node_incremental = '<TAB>',
-      node_decremental = '<S-TAB>'
+      init_selection = "<CR>",
+      scope_incremental = "<CR>",
+      node_incremental = "<TAB>",
+      node_decremental = "<S-TAB>"
     }
   },
   matchup = {

@@ -35,7 +35,7 @@ M.lsp = {
       "lsp rename"
     },
     ["<leader>ca"] = {"<cmd> lua vim.lsp.buf.code_action() <CR>", "lsp code actions"},
-    ["<leader>cf"] = {"<cmd> lua vim.lsp.buf.format() <CR>", "format document"}
+    ["<leader>f"] = {"<cmd> lua vim.lsp.buf.format({ timeout_ms = 5000 }) <CR>", "format document"}
   }
 }
 
@@ -45,17 +45,15 @@ M.markdownpreview = {
   }
 }
 
-M.nvimtree = {
+M.mru = {
   n = {
-    ["<C-e>"] = {"<cmd> NvimTreeToggle <CR>", "toggle nvimtree"}
+    ["<leader>m"] = {"<cmd> MRU <CR>", "most recently edited files"}
   }
 }
 
-M.sessionmanager = {
+M.nvimtree = {
   n = {
-    ["<leader>ss"] = {"<cmd> SessionManager save_current_session <CR>"},
-    ["<leader>sd"] = {"<cmd> SessionManager load_current_dir_session <CR>"},
-    ["<leader>sr"] = {"<cmd> SessionManager delete_session <CR>"},
+    ["<C-e>"] = {"<cmd> NvimTreeToggle <CR>", "toggle nvimtree"}
   }
 }
 
@@ -66,10 +64,16 @@ M.telescope = {
   }
 }
 
+M.trouble = {
+  n = {
+    ["<leader>t"] = {"<cmd> TroubleToggle <CR>", "toggle trouble"}
+  }
+}
+
 M.custom = {
   i = {
-    ["<C-s>"] = {"<ESC> :w <CR>", "save"},
-    ["<C-S-s>"] = {"<ESC> :wa <CR>", "save all"}
+    ["<C-s>"] = {"<ESC> <cmd> w <CR>", "save"},
+    ["<C-S-s>"] = {"<ESC> <cmd> wa <CR>", "save all"}
   },
 
   n = {
@@ -77,11 +81,12 @@ M.custom = {
     ["K"] = {"<cmd> move .-2 <CR>==", "move selected text up"},
     ["x"] = {'"_x', "don't yank deleted character"},
     ["X"] = {'"_X', "don't yank deleted character"},
-    ["<leader>w"] = {":bw <CR>", "wipe out buffer"},
+    ["<leader>w"] = {"<cmd> bw <CR>", "wipe out buffer"},
     ["<C-a>"] = {"gg0VG", "select all text"},
     ["<C-x>"] = {"<C-w>c", "close window"},
-    ["<C-S-s>"] = {":wa <CR>", "save all"},
-    ["<Space>fp"] = {"<cmd> !echo -n % | pbcopy <CR>", "copy file path"}
+    ["<C-S-s>"] = {"<cmd> wa <CR>", "save all"},
+    ["<Space>fp"] = {"<cmd> !echo -n % | pbcopy <CR>", "copy file path"},
+    ["-"] = {"<cmd> qa <CR>", "exit neovim"}
   },
 
   v = {

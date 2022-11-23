@@ -8,10 +8,13 @@ code_window.setup({
   active_in_terminals = false,
   auto_enable = {
     "javascript",
-    "javascriptreact"
+    "javascriptreact",
+    "yaml",
+    "yml"
   },
   exclude_filetypes = {
-    "NvimTree"
+    "NvimTree",
+    "Trouble"
   },
   max_minimap_height = nil,
   max_lines = nil,

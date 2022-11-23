@@ -1,21 +1,15 @@
 local overrides = require "custom.plugins.overrides"
 
 return {
-  ["folke/todo-comments.nvim"] = {
-    after = "plenary.nvim",
-    config = function()
-      require "custom.plugins.configs.todo-comments"
-    end
-  },
-
-  ["LudoPinelli/comment-box.nvim"] = {
-    cmd = { "CBlbox", "CBclbox", "CBcbox", "CBccbox", "CBalbox", "CBaclbox", "CBacbox", "CBaccbox", "CBline", "CBcline" },
-    config = function()
-      require "custom.plugins.configs.comment-box"
-    end
-  },
-
   ["dstein64/vim-startuptime"] = {},
+
+  ["folke/trouble.nvim"] = {
+    event = "BufWinEnter",
+    after = "nvim-web-devicons",
+    config = function()
+      require "custom.plugins.configs.trouble"
+    end
+  },
 
   ["gorbit99/codewindow.nvim"] = {
     config = function()
@@ -29,8 +23,22 @@ return {
     end
   },
 
+  ["karb94/neoscroll.nvim"] = {
+    event = "BufWinEnter",
+    config = function()
+      require "custom.plugins.configs.neoscroll"
+    end
+  },
+
   ["kkoomen/vim-doge"] = {
     run = "npm i --no-save && npm run build:binary:unix"
+  },
+
+  ["kylechui/nvim-surround"] = {
+    event = "BufWinEnter",
+    config = function()
+      require "custom.plugins.configs.nvim-surround"
+    end
   },
 
   ["iamcco/markdown-preview.nvim"] = {
@@ -49,24 +57,10 @@ return {
     end
   },
 
-  ["karb94/neoscroll.nvim"] = {
-    event = "BufWinEnter",
-    config = function()
-      require "custom.plugins.configs.neoscroll"
-    end
-  },
-
-  ["kylechui/nvim-surround"] = {
-    event = "BufWinEnter",
-    config = function()
-      require "custom.plugins.configs.nvim-surround"
-    end
-  },
+  ["mfussenegger/nvim-dap"] = {},
 
   ["mg979/vim-visual-multi"] = {
-    config = function()
-      vim.g.VM_leader = ";"
-    end
+    event = "BufWinEnter"
   },
 
   ["nathom/filetype.nvim"] = {},
@@ -90,9 +84,24 @@ return {
     end
   },
 
+  ["s1n7ax/nvim-search-and-replace"] = {
+    config = function()
+      require "custom.plugins.configs.nvim-search-and-replace"
+    end
+  },
+
   ["windwp/nvim-ts-autotag"] = {
     event = "InsertEnter",
     after = "nvim-treesitter"
+  },
+
+  ["yegappan/mru"] = {},
+
+  ["https://gitlab.com/yorickpeterse/nvim-pqf.git"] = {
+    after ="nvim-lspconfig",
+    config = function()
+      require "custom.plugins.configs.nvim-pqf"
+    end
   },
 
   -- git stuff
@@ -110,12 +119,29 @@ return {
     end
   },
 
+  -- comments
+  ["folke/todo-comments.nvim"] = {
+    after = "plenary.nvim",
+    config = function()
+      require "custom.plugins.configs.todo-comments"
+    end
+  },
+
+  ["LudoPinelli/comment-box.nvim"] = {
+    cmd = { "CBlbox", "CBclbox", "CBcbox", "CBccbox", "CBalbox", "CBaclbox", "CBacbox", "CBaccbox", "CBline", "CBcline" },
+    config = function()
+      require "custom.plugins.configs.comment-box"
+    end
+  },
+
+
   --  ╭──────────────────────────────────────────────────────────╮
   --  │   Core Plugins                                           │
   --  ╰──────────────────────────────────────────────────────────╯
 
   ["goolord/alpha-nvim"] = {
     disable = false,
+    cmd = "Alpha",
     override_options = overrides.alpha
   },
 
