@@ -9,6 +9,7 @@ code_window.setup({
   auto_enable = {
     "javascript",
     "javascriptreact",
+    "lua",
     "yaml",
     "yml"
   },

@@ -4,11 +4,10 @@ return {
   ["dstein64/vim-startuptime"] = {},
 
   ["folke/trouble.nvim"] = {
-    event = "BufWinEnter",
-    after = "nvim-web-devicons",
     config = function()
       require "custom.plugins.configs.trouble"
-    end
+    end,
+    ft = { "javascript" }
   },
 
   ["gorbit99/codewindow.nvim"] = {
@@ -18,13 +17,13 @@ return {
   },
 
   ["gbprod/stay-in-place.nvim"] = {
+    event = { "CursorMoved", "CursorMovedI" },
     config = function()
       require "custom.plugins.configs.stay-in-place"
     end
   },
 
   ["karb94/neoscroll.nvim"] = {
-    event = "BufWinEnter",
     config = function()
       require "custom.plugins.configs.neoscroll"
     end
@@ -35,7 +34,7 @@ return {
   },
 
   ["kylechui/nvim-surround"] = {
-    event = "BufWinEnter",
+    event = "InsertEnter",
     config = function()
       require "custom.plugins.configs.nvim-surround"
     end
@@ -47,7 +46,7 @@ return {
     setup = function()
       vim.g.mkdp_filetypes = { "markdown" }
     end,
-    ft = { "markdown"}
+    ft = { "markdown" }
   },
 
   ["jose-elias-alvarez/null-ls.nvim"] = {
@@ -60,7 +59,7 @@ return {
   ["mfussenegger/nvim-dap"] = {},
 
   ["mg979/vim-visual-multi"] = {
-    event = "BufWinEnter"
+    after = "nvim-treesitter"
   },
 
   ["nathom/filetype.nvim"] = {},
@@ -70,7 +69,6 @@ return {
   },
 
   ["romgrk/barbar.nvim"] = {
-    event = "BufWinEnter",
     after = "nvim-web-devicons",
     config = function()
       require "custom.plugins.configs.barbar"
@@ -95,7 +93,9 @@ return {
     after = "nvim-treesitter"
   },
 
-  ["yegappan/mru"] = {},
+  ["yegappan/mru"] = {
+    cmd = "MRU"
+  },
 
   ["https://gitlab.com/yorickpeterse/nvim-pqf.git"] = {
     after ="nvim-lspconfig",

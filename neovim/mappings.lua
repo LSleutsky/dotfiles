@@ -21,7 +21,7 @@ M.barbar = {
 
 M.commentbox = {
  n = {
-    ["<leader>cb"] = {"<cmd> CBlbox <CR>", 'comment box'},
+    ["<leader>cx"] = {"<cmd> CBlbox <CR>", 'comment box'},
     ["<leader>cl"] = {"<cmd> CBline <CR>", 'comment line'}
   }
 }
@@ -47,7 +47,7 @@ M.markdownpreview = {
 
 M.mru = {
   n = {
-    ["<leader>m"] = {"<cmd> MRU <CR>", "most recently edited files"}
+    ["<leader>m"] = {"<cmd> MRU <CR>", "most recently used"}
   }
 }
 
@@ -61,6 +61,7 @@ M.telescope = {
   n = {
     ["<leader>fs"] = {"<cmd> Telescope live_grep <CR>", "live grep"},
     ["<leader>fw"] = {"<cmd> Telescope grep_string <CR>", "grep word under cursor"},
+    ["<leader>cb"] = {"<cmd> Telescope git_bcommits <CR>", "buffer git commits"}
   }
 }
 
@@ -85,7 +86,8 @@ M.custom = {
     ["<C-a>"] = {"gg0VG", "select all text"},
     ["<C-x>"] = {"<C-w>c", "close window"},
     ["<C-S-s>"] = {"<cmd> wa <CR>", "save all"},
-    ["<Space>fp"] = {"<cmd> !echo -n % | pbcopy <CR>", "copy file path"},
+    ["<leader>fp"] = {"<cmd> !echo -n % | pbcopy <CR>", "copy file path"},
+    ["<F5>"] = {"<cmd> bufdo e <CR>", "reload open buffers"},
     ["-"] = {"<cmd> qa <CR>", "exit neovim"}
   },
 
