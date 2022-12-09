@@ -61,6 +61,7 @@ M.nvchad = {
   statusline = {
     overriden_modules = function()
       local st_modules = require "nvchad_ui.statusline.modules"
+      local separators = require("nvchad_ui.icons").statusline_separators["arrow"]
 
       return {
         cursor_position = function()
@@ -68,6 +69,23 @@ M.nvchad = {
           local cp = st_modules.cursor_position()
 
           return cp .. "| " .. line .. ":" .. (col + 1) .. " "
+        end,
+        fileInfo = function()
+          local icon = "  "
+          local path = (vim.fn.expand "%" == "" and "") or vim.fn.expand "%"
+
+          if path ~= "" then
+            local devicons_present, devicons = pcall(require, "nvim-web-devicons")
+
+            if devicons_present then
+              local ft_icon = devicons.get_icon(path)
+              icon = (ft_icon ~= nil and " " .. ft_icon) or ""
+            end
+
+            path = " " .. path .. " "
+          end
+
+          return "%#St_file_info#" .. icon .. path .. "%#St_file_sep#" .. separators["right"]
         end
       }
     end
