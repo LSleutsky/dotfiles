@@ -50,6 +50,7 @@ alias tree='tree -d --gitignore -C -L 2'
 
 alias na='nvim ~/.aliases'
 alias nb='nvim ~/.bash_profile'
+alias nB='nvim ~/Brewfile'
 alias ng='nvim ~/.gitconfig'
 alias nk='nvim ~/.config/kitty/kitty.conf'
 alias nn='nvim ~/.nanorc'

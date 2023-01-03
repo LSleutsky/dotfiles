@@ -14,6 +14,7 @@ ENABLE_CORRECTION="true"
 ZSH_DISABLE_COMPFIX=true
 
 plugins=(
+  autoupdate
   aws
   aliases
   brew
@@ -39,7 +40,6 @@ plugins=(
   vscode
   yarn
   zsh-better-npm-completion
-  zsh-z
 )
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
