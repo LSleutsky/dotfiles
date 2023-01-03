@@ -14,6 +14,7 @@ ENABLE_CORRECTION="true"
 plugins=(
   aliases
   archlinux
+  autoupdate
   colored-man-pages
   common-aliases
   docker
