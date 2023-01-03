@@ -13,6 +13,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
   aliases
+  archlinux
   colored-man-pages
   common-aliases
   docker
