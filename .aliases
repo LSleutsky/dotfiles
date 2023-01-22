@@ -73,7 +73,7 @@ alias n='nvim'
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
-alias pacman-'sudo pacman'
+alias pacman='sudo pacman'
 alias pow='sudo shutdown now'
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
