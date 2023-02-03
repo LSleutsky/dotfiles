@@ -76,6 +76,7 @@ alias wtr='curl wttr.in'
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
 alias pacman='sudo pacman'
 alias pow='sudo shutdown now'
+alias reb='sudo reboot now'
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ OS X                                                                                             │
