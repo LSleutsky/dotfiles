@@ -7,6 +7,7 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
@@ -23,6 +24,7 @@ plugins=(
   composer
   docker
   dotenv
+  fast-syntax-highlighting
   gh
   git
   git-extras
@@ -45,11 +47,10 @@ plugins=(
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/.bash_profile
 source ~/.aliases
-source ~/.spaceship
 
-source $(brew --prefix)/opt/spaceship/spaceship.zsh
-source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+eval "$(starship init zsh)"
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
