@@ -781,7 +781,7 @@ detect_folders = ['.terraform']
 
 [time]
 # format = 'at [$time]($style) '
-format = '🕙[$time]($style) '
+format = '🕙 [$time]($style) '
 style = 'bold yellow'
 use_12hr = true
 disabled = false
