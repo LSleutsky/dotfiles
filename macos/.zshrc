@@ -1,13 +1,11 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+[ -s /opt/homebrew/opt/nvm/nvm.sh ] && \. /opt/homebrew/opt/nvm/nvm.sh
+[ -s /opt/homebrew/opt/nvm/etc/bash_completion.d/nvm ] && \. /opt/homebrew/opt/nvm/etc/bash_completion.d/nvm
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+# This loads autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
@@ -41,6 +39,7 @@ plugins=(
   sudo
   vscode
   yarn
+  zsh-autosuggestions
   zsh-better-npm-completion
 )
 
@@ -48,9 +47,9 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/.bash_profile
 source ~/.aliases
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+eval "$(pyenv init -)"
 eval "$(starship init zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
