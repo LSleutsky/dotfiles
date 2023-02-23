@@ -5,7 +5,7 @@ format = '$all'
 right_format = '$time'
 continuation_prompt = '[∙](bright-black) '
 scan_timeout = 30
-command_timeout = 500
+command_timeout = 2000
 add_newline = true
 
 [aws]
