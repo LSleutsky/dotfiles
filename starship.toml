@@ -627,7 +627,7 @@ detect_files = [
     'setup.py',
     '__init__.py',
 ]
-detect_folders = []
+detect_folders = ['.pyenv']
 
 [red]
 format = 'via [$symbol($version )]($style)'
