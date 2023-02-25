@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-##
-## Wofi Powermenu
-
 ## Files
 CONFIG="$HOME/.config/sway/wofi/config"
 STYLE="$HOME/.config/sway/wofi/style.css"
@@ -20,11 +16,11 @@ wofi_command="wofi --show dmenu \
 uptime=$(uptime -p | sed -e 's/up //g')
 
 ## Entries
-shutdown=" Shutdown"
-reboot=" Restart"
-lock=" Lock"
-suspend=" Sleep"
-logout=" Logout"
+shutdown="⏻ Shutdown"
+reboot=" Restart"
+lock=" Lock"
+suspend="⏾ Sleep"
+logout=" Logout"
 
 # Ask for confirmation
 cdialog () {
@@ -35,7 +31,7 @@ cdialog () {
 open_menu () {
 	options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
-	chosen="$(echo -e "$options" | $wofi_command --prompt "UP - $uptime")"
+	chosen="$(echo -e "$options" | $wofi_command --prompt "Uptime - $uptime")"
 	case $chosen in
 		$shutdown)
 			cdialog

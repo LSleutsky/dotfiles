@@ -1,23 +1,22 @@
-// Waybar config file
 {
     "include": "~/.config/sway/waybar/modules",
-    "name": "main-bar", 			// Waybar name
-    "id": "main-bar", 				// Waybar id
-    "layer": "top", 				// Waybar at top layer
-    "mode": "dock", 				// Display mode (dock|hide|invisible|overlay)
-    "exclusive": true, 				// Request an exclusive zone from the compositor
-    "passthrough": false, 			// Pass any pointer events to the window under the bar
-    "position": "top", 				// Waybar position (top|bottom|left|right)
-    "height": 40, 					// Waybar height (to be removed for auto height)
-    "width": "", 					// Waybar width (empty for auto width)
-    "spacing": 6, 					// Gaps between modules
-    "margin": 0, 					// Space around the bar
-    "margin-top": 0, 				// Space above the bar
-    "margin-bottom": 0, 			// Space below the bar
-    "margin-left": 0, 				// Space to the left of the bar
-    "margin-right": 0, 				// Space to the right of the bar
-    "fixed-center": true, 			// Center modules position
-    "ipc": true, 					// Control waybar with `swaymsg bar` commands
+    "name": "main-bar",
+    "id": "main-bar",
+    "layer": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+    "height": 40,
+    "width": "",
+    "spacing": 6,
+    "margin": 0,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "fixed-center": true,
+    "ipc": true,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["mpd"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "memory", "cpu", "temperature", "network", "battery", "clock#date", "clock", "tray"]

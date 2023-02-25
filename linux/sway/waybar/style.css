@@ -1,6 +1,6 @@
 /** ********** Fonts ********** **/
 * {
-  font-family: "JetBrains Mono", "Iosevka Nerd Font", archcraft, sans-serif;
+  font-family: "Mononoki Nerd Font", "JetBrains Mono Nerd Font", archcraft, sans-serif;
   font-size: 12px;
 }
 
@@ -63,15 +63,15 @@ window#waybar.hidden {
 
 #workspaces button {
 	color: #FFFFFF;
-	padding: 2px 6px;
+	padding: 2px 10px 2px 6px;
 }
 
 #workspaces button:hover {
 	background-color: #1B1F28;
-	color: #FFFFFF;
+	color: #000000;
 	border: 0px solid #1B1F28;
 	border-radius: 12px;
-	padding: 2px 6px;
+	padding: 2px 10px 2px 6px;
 }
 
 #workspaces button.visible {
@@ -96,7 +96,7 @@ window#waybar.hidden {
 #workspaces button.persistent {
 	color: #1B1F28;
 	border-radius: 12px;
-	padding: 2px 6px;
+	padding: 2px 8px 2px 6px;
 }
 
 
@@ -162,6 +162,9 @@ window#waybar.empty #window {
 /** ********** Idle Inhibitor ********** **/
 #idle_inhibitor {
 	background-image: linear-gradient(to right, #E5C07A, #62AEEF);
+	border-radius: 12px;
+	margin: 6px 0px;
+	padding: 2px 15px 2px 10px;
 }
 
 #idle_inhibitor.deactivated {
@@ -192,7 +195,7 @@ window#waybar.empty #window {
 
 /** ********** Network ********** **/
 #network {
-	background-image: linear-gradient(to right, #55B6C2, #C778DD);
+	background-image: linear-gradient(to right, #55B6C2, #E06B74);
 }
 
 #network.disconnected {
@@ -211,7 +214,6 @@ window#waybar.empty #window {
 #memory,
 #cpu,
 #clock,
-#idle_inhibitor,
 #mode,
 #window,
 #mpd,

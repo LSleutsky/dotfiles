@@ -1,159 +1,4 @@
 {
-  // waybar-backlight
-  "backlight": {
-    "interval": 2,
-    "align": 0,
-    "rotate": 0,
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", ""],
-    "on-click": "",
-    "on-click-middle": "",
-    "on-click-right": "",
-    "on-update": "",
-    "on-scroll-up": "light -A 5%",
-    "on-scroll-down": "light -U 5%",
-    "smooth-scrolling-threshold": 1
-  },
-
-  // waybar-battery
-  "battery": {
-    "interval": 60,
-    "align": 0,
-    "rotate": 0,
-    "full-at": 100,
-    "design-capacity": false,
-    "states": {
-      "good": 95,
-      "warning": 25,
-      "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-full": "{icon} Full",
-    "format-alt": "{icon} {time}",
-    "format-icons": ["", "", "", "", ""],
-    "format-time": "{H}h {M}min",
-    "tooltip": true
-  },
-
-  // waybar-clock
-  "clock": {
-    "interval": 60,
-    "align": 0,
-    "rotate": 0,
-    "format": " {:%I:%M %p}"
-  },
-
-  // waybar-clock#date
-  "clock#date": {
-    "interval": 60,
-    "align": 0,
-    "rotate": 0,
-    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": " {:%a %b %d, %G}"
-  },
-
-  // waybar-temperature
-  "temperature": {
-    "critical-threshold": 175,
-    "format": "{temperatureF}°F {icon}",
-    "format-icons": ["", "", ""]
-  },
-
-  // waybar-cpu
-  "cpu": {
-    "format": " {usage}%",
-    "tooltip": false
-  },
-
-  // waybar-memory
-  "memory": {
-    "interval": 30,
-    "format": " {used:0.1f}GiB | {total:0.1f}GiB"
-  },
-
-  // waybar-idle-inhibitor
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    },
-    "timeout": 30
-  },
-
-  // waybar-mpd
-  "mpd": {
-    "interval": 2,
-    "unknown-tag": "N/A",
-    "format": "{artist} - {title} {stateIcon}",
-    "format-disconnected": " Disconnected",
-    "format-paused": "{artist} - {title} {stateIcon}",
-    "format-stopped": "Stopped ",
-    "state-icons": {
-      "paused": "",
-      "playing": ""
-    },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)",
-    "on-click": "mpc toggle",
-    "on-click-middle": "foot -c ~/.config/sway/foot/foot.ini -e ncmpcpp",
-    "on-click-right": "mpc next",
-    "on-update": "",
-    "on-scroll-up": "volume --inc",
-    "on-scroll-down": "volume --dec",
-    "smooth-scrolling-threshold": 1
-  },
-
-  // waybar-network
-  "network": {
-    "interval": 5,
-    "format-alt": " {essid}",
-    "format-ethernet": " {ipaddr}/{cidr}",
-    "format-linked": " {ifname} (No IP)",
-    "format-disconnected": "睊 Disconnected",
-    "format-disabled": "睊 Disabled",
-    "format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes}",
-    "tooltip-format": " {ifname} via {gwaddr}"
-  },
-
-  // waybar-pulseaudio
-  "pulseaudio": {
-    "format": "{icon} {volume}%  {format_source}",
-    "format-muted": " Mute",
-    "format-bluetooth": " {volume}% {format_source}",
-    "format-bluetooth-muted": " Mute",
-    "format-source": " {volume}%",
-    "format-source-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
-    "scroll-step": 5.0,
-    "on-click": "pulsemixer --toggle-mute",
-    "on-click-right": "pulsemixer --toggle-mute",
-    "smooth-scrolling-threshold": 1
-  },
-
-  // waybar-sway-mode
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
-
-  // waybar-sway-window
-  "sway/window": {
-    "format": "{}",
-    "max-length": 50,
-    "icon": false
-  },
-
-  // waybar-sway-workspaces
   "sway/workspaces": {
     "disable-scroll": false,
     "disable-click": false,
@@ -180,8 +25,147 @@
     "disable-markup": false,
     "current-only": false
   },
+  
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
 
-  // waybar-tray
+  "sway/window": {
+    "format": "{}",
+    "max-length": 50,
+    "icon": false
+  },
+
+  "mpd": {
+    "interval": 2,
+    "unknown-tag": "N/A",
+    "format": "{artist} - {title} {stateIcon}",
+    "format-disconnected": " Disconnected",
+    "format-paused": "{artist} - {title} {stateIcon}",
+    "format-stopped": "Stopped ",
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+    "on-click": "mpc toggle",
+    "on-click-middle": "foot -c ~/.config/sway/foot/foot.ini -e ncmpcpp",
+    "on-click-right": "mpc next",
+    "on-update": "",
+    "on-scroll-up": "volume --inc",
+    "on-scroll-down": "volume --dec",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "start-activated": true,
+    "timeout": false
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " Mute",
+    "format-bluetooth": " {volume}% {format_source}",
+    "format-bluetooth-muted": " Mute",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 5.0,
+    "on-click": "pulsemixer --toggle-mute",
+    "on-click-right": "pulsemixer --toggle-mute",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "backlight": {
+    "interval": 2,
+    "align": 0,
+    "rotate": 0,
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", ""],
+    "on-click": "",
+    "on-click-middle": "",
+    "on-click-right": "",
+    "on-update": "",
+    "on-scroll-up": "light -A 5%",
+    "on-scroll-down": "light -U 5%",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": " {used:0.1f}GiB | {total:0.1f}GiB"
+  },
+
+  "cpu": {
+    "format": " {load}%",
+  },
+
+  "temperature": {
+    "critical-threshold": 175,
+    "format": " {temperatureF}°F"
+  },
+
+  "network": {
+    "interval": 5,
+    "format-alt": " {essid}",
+    "format-ethernet": " {ipaddr}/{cidr}",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": "睊 Disconnected",
+    "format-disabled": "睊 Disabled",
+    "format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes}",
+    "tooltip-format": " {ifname} via {gwaddr}"
+  },
+
+  "battery": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "full-at": 100,
+    "design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 25,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": "{icon} Full",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""],
+    "format-time": "{H}h {M}min",
+    "tooltip": true
+  },
+
+  "clock#date": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": " {:%a %b %d, %G}"
+  },
+
+  "clock": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "format": " {:%I:%M %p}"
+  },
+
   "tray": {
     "icon-size": 16,
     "spacing": 10
