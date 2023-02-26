@@ -509,7 +509,7 @@ detect_files = [
     '.node-version',
     '.nvmrc',
 ]
-detect_folders = ['node_modules']
+detect_folders = ['.nvm', 'js', 'node_modules']
 
 [ocaml]
 format = 'via [$symbol($version )(\($switch_indicator$switch_name\) )]($style)'
@@ -780,7 +780,7 @@ detect_files = []
 detect_folders = ['.terraform']
 
 [time]
-format = '🕙 [$time]($style) '
+format = ' [$time]($style) '
 style = 'bold yellow'
 use_12hr = true
 disabled = false
