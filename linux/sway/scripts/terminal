@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-##
-## launch terminal with alt config
-
-CONFIG="$HOME/.config/sway/foot/foot.ini"
+CONFIG="$HOME/.config/kitty/kitty.conf"
 
 if [ "$1" == "-f" ]; then
-	foot --app-id='foot-float' --config="$CONFIG"
+	kitty --app-id='kitty-float' --config="$CONFIG"
 elif [ "$1" == "-F" ]; then
-	foot --fullscreen --app-id='foot-full' --config="$CONFIG"
+	kitty --fullscreen --app-id='kitty-full' --config="$CONFIG"
 elif [ "$1" == "-s" ]; then
-	foot --app-id='foot-float' --config="$CONFIG" \
+	kitty --app-id='kitty-float' --config="$CONFIG" \
 	--window-size-pixels=$(slurp -b 1B1F28CC -c E06B74ff -s C778DD0D -w 2 -f "%wx%h")
 else
-	foot --config="$CONFIG"
+	kitty --config="$CONFIG"
 fi

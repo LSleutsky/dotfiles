@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-
 # Background Image
 IMAGE="$HOME/.config/sway/wallpapers/lockscreen.png"
 
@@ -23,7 +21,7 @@ swaylock -f \
 	`# Appearance` \
 	--color ${bg}E6 \
 	`#--image ${IMAGE} --scaling fill` \
-	--font 'JetBrainsMono Nerd Font' --font-size 18 \
+	--font 'Mononoki Nerd Font' --font-size 18 \
 	\
 	`# Backspace Key` \
 	--key-hl-color ${green} \

@@ -3,7 +3,7 @@ set $mod Mod4
 set $alt Mod1
 
 ##-- Fonts (Global) ----------------------
-font pango:JetBrains Mono Medium 12
+font pango:Mononoki Nerd Font 12
 
 ##-- Config files ------------------------
 include ~/.config/sway/sway-idle
@@ -197,14 +197,9 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 ##-- Rules -------------------------------
-#assign [app_id="foot"] → workspace number 1
-#assign [class="firefox"] → workspace number 2
-#assign [app_id="thunar"] → workspace number 3
-#assign [app_id="geany"] → workspace number 4
-
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
-for_window [app_id="foot-float"] floating enable
+for_window [app_id="kitty-float"] floating enable
 for_window [app_id="yad|nm-connection-editor|pavucontrol"] floating enable
 for_window [app_id="xfce-polkit|kvantummanager|qt5ct"] floating enable
 for_window [class="feh|Viewnior|Gpicview|Gimp|MPlayer"] floating enable
