@@ -132,12 +132,12 @@ window#waybar.hidden {
 
 /** ********** Backlight ********** **/
 #backlight {
-  background-image: linear-gradient(to right, #90EE90, #00FF00);
+  background-image: linear-gradient(to right, #d0f0c0, #66ff00);
 }
 
 /** ********** Memory ********** **/
 #memory {
-	background-image: linear-gradient(to right, #66B2B2, #008080);
+	background-image: linear-gradient(to right, #7fffd4, #008080);
 }
 
 /** ********** CPU ********** **/

@@ -53,7 +53,6 @@ bindsym $mod+Shift+b exec $browser
 bindsym $mod+Shift+s exec $spotify
 
 # -- Wofi --
-bindsym $alt+F1 exec $menu
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+x exec $powermenu
 
