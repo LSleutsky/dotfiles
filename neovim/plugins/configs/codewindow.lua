@@ -15,7 +15,8 @@ code_window.setup({
   },
   exclude_filetypes = {
     "NvimTree",
-    "Trouble"
+    "Trouble",
+    "Alpha"
   },
   max_minimap_height = nil,
   max_lines = nil,

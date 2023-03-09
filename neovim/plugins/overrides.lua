@@ -100,6 +100,7 @@ M.mason = {
     -- dap
     "chrome-debug-adapter",
     "firefox-debug-adapter",
+    "node-debug2-adapter",
 
     -- formatters
     "prettier",
@@ -118,6 +119,7 @@ M.mason = {
     "cssmodules-language-server",
     "diagnostic-languageserver",
     "dockerfile-language-server",
+    "docker-compose-language-service",
     "dot-language-server",
     "eslint-lsp",
     "html-lsp",
