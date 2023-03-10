@@ -23,7 +23,7 @@ overshoot = 0
 # The number of bars (0-200). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
 bars = 0
-bar_width = 1.0
+bar_width = 2.0
 bar_spacing = 1.0
 
 
@@ -94,30 +94,15 @@ channels = mono
 
 gradient = 1
 
-
-gradient_color_1 = '#3b3c59'
-gradient_color_2 = '#4b4464'
-gradient_color_3 = '#4b4464'
-gradient_color_4 = '#6d5276'
-gradient_color_5 = '#7f597e'
-gradient_color_6 = '#926184'
-gradient_color_7 = '#a4688a'
-gradient_color_8 = '#b6708e'
-gradient_color_9 = '#c87990'
-gradient_color_10 = '#d98292'
-
-
-#3b3c59
-#4b4464
-#4b4464
-#6d5276
-#7f597e
-#926184
-#a4688a
-#b6708e
-#c87990
-#d98292
-
+gradient_color_1 = '#F1FA8C'
+gradient_color_2 = '#50FA7B'
+gradient_color_3 = '#8BE9FD'
+gradient_color_4 = '#CAA9FA'
+gradient_color_5 = '#BD93F9'
+gradient_color_6 = '#FF92D0'
+gradient_color_7 = '#FF79C6'
+gradient_color_8 = '#FF6E67'
+gradient_color_9 = '#FF5555'
 
 [smoothing]
 
