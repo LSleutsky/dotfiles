@@ -17,7 +17,7 @@ vim.opt.termguicolors = true
 --  ╭────────────────────────────────────────────────────────────────────────────────────────╮
 --  │ lvim                                                                                   │
 --  ╰────────────────────────────────────────────────────────────────────────────────────────╯
-lvim.colorscheme = "tokyonight-night"
+lvim.colorscheme = "moonfly"
 lvim.log.level = "info"
 lvim.format_on_save = {
   enabled = true,
@@ -192,10 +192,9 @@ lvim.plugins = {
 
   -- ui
   {
-    'bluz71/vim-nightfly-colors',
-    name = 'nightfly'
+    'bluz71/vim-moonfly-colors',
+    name = 'moonfly'
   },
-  { 'folke/tokyonight.nvim' },
   { 'mg979/vim-visual-multi', after = 'nvim-treesitter' },
   {
     'HiPhish/nvim-ts-rainbow2',
