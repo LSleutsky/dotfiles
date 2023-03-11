@@ -310,7 +310,7 @@ ignore_submodules = false
 disabled = false
 
 [golang]
-format = 'via [$symbol($version )]($style)'
+format = 'via [$symbol ($version )]($style)'
 version_format = 'v${raw}'
 symbol = 'ﳑ'
 style = 'bold cyan'
@@ -324,7 +324,7 @@ detect_files = [
     'Gopkg.lock',
     '.go-version',
 ]
-detect_folders = ['Godeps']
+detect_folders = ['go', 'Godeps']
 
 [haskell]
 format = 'via [$symbol($version )]($style)'
@@ -546,7 +546,7 @@ disabled = false
 
 [package]
 format = 'is [$symbol$version]($style) '
-symbol = '📦 '
+symbol = '  '
 style = '208 bold'
 display_private = false
 disabled = false
