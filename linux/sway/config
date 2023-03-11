@@ -53,17 +53,18 @@ bindsym $mod+Shift+b exec $browser
 bindsym $mod+Shift+s exec $spotify
 
 # -- Wofi --
-bindsym $mod+d exec $menu
-bindsym $mod+Shift+x exec $powermenu
+bindsym $alt+F1 exec $menu
+bindsym $mod+a exec $menu
+bindsym $mod+x exec $powermenu
 
 # -- Misc --
 bindsym $mod+n  exec nm-connection-editor
 bindsym $mod+Shift+p exec $colorpicker
-bindsym $mod+x exec $wlogout
+bindsym $mod+Shift+x exec $wlogout
 
 # -- Function keys --
-bindsym XF86MonBrightnessUp 	exec "$backlight --inc"
-bindsym XF86MonBrightnessDown 	exec "$backlight --dec"
+bindsym XF86MonBrightnessUp exec "$backlight --inc"
+bindsym XF86MonBrightnessDown exec "$backlight --dec"
 bindsym XF86AudioRaiseVolume exec "$volume --inc"
 bindsym XF86AudioLowerVolume exec "$volume --dec"
 bindsym XF86AudioMute exec "$volume --toggle"
@@ -182,7 +183,7 @@ bindsym $mod+space floating toggle
 bindsym $mod+Shift+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+p focus parent
 
 # focus the child container
 bindsym $mod+z focus child

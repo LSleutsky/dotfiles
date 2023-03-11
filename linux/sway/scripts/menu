@@ -5,7 +5,7 @@ STYLE="$HOME/.config/sway/wofi/style.css"
 COLORS="$HOME/.config/sway/wofi/colors"
 
 if [[ ! `pidof wofi` ]]; then
-	wofi --show drun --prompt 'Apps' --conf ${CONFIG} --style ${STYLE} --color ${COLORS}
+	wofi --show drun --prompt 'Applications' --conf ${CONFIG} --style ${STYLE} --color ${COLORS}
 else
 	pkill wofi
 fi

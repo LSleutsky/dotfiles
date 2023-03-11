@@ -113,18 +113,14 @@
     "smooth-scrolling-threshold": 1
   },
 
-  "memory": {
-    "interval": 30,
-    "format": " {used:0.1f}GiB"
-  },
-
-  "cpu": {
-    "format": " {usage}%",
-  },
-
   "temperature": {
     "critical-threshold": 175,
     "format": " {temperatureF}°F"
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": " {used:0.1f}GiB"
   },
 
   "network": {

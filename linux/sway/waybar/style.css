@@ -7,8 +7,8 @@
 
 /** ********** Waybar Window ********** **/
 window#waybar {
-  background-color: #1B1F28;
-  background-color: #191414;
+  background-color: transparent;
+  /* background-color: rgb(40, 42, 54); */
   border-bottom: 2px solid #2F333C;
   transition-property: background-color;
   transition-duration: .5s;
@@ -33,9 +33,10 @@ window#waybar.hidden {
 
 /** ********** Workspaces ********** **/
 #workspaces {
-	background-color: #2F333C;
 	color: #FFFFFF;
-	border-radius: 0 8px 0 0;
+  background-color: #282a36;
+  border-bottom: 2px solid #2F333C;
+	border-radius: 0 4px 0 0;
 	padding: 4px;
 }
 
@@ -73,7 +74,7 @@ window#waybar.hidden {
 #workspaces button.focused,
 #workspaces button.urgent,
 #workspaces button.persistent {
-	color: #1B1F28;
+	color: #282a36;
   border-radius: 8px;
 	padding: 2px 9px 2px 6px;
 }
@@ -81,98 +82,104 @@ window#waybar.hidden {
 /** ********** MPD ********** **/
 #mpd {
 	background-color: #2A2E37;
-	color: #FFFFFF;
+	color: #f8f8f2;
 }
 
 #mpd.disconnected {
-	background-color: #E06B74;
-	color: #FFFFFF;
+	background-color: #2A2E37;
+	color: #f8f8f2;
 }
 
 #mpd.stopped {
 	background-image: linear-gradient(to right, #E06B74, #E5C07A);
-	color: #1B1F28;
+  color: #282a36;
 }
 
 #mpd.playing {
 	background-image: linear-gradient(to right, #62AEEF, #C778DD);
-	color: #1B1F28;
+  color: #282a36;
 }
 
 /** ********** Spotify ********** **/
 #custom-spotify.playing {
-  background-image: linear-gradient(to right, #1DB954, #2AAA8A);
+  background-image: linear-gradient(to right, #1db954, #2aaa8a);
   font-weight: 900;
+  color: #282a36;
 }
 
 /** ********** Idle Inhibitor ********** **/
 #idle_inhibitor {
-  background-image: linear-gradient(to right, #FFFDD0, #DAA520);
+	background-image: linear-gradient(to right, rgba(98, 114, 164, 0.75), rgb(98, 114, 164));
 	border-radius: 4px;
+  color: #282a36;
 	margin: 6px 0;
-	padding: 2px 15px 2px 10px;
+	padding: 2px 17px 2px 12px;
 }
 
 #idle_inhibitor.deactivated {
-	background-image: linear-gradient(to right, #989898, #505050);
+	background-image: linear-gradient(to right, rgba(68, 71, 90, 0.75), rgb(68, 71, 90));
+  color: #f8f8f2;
 }
 
 /** ********** Pulse Audio ********** **/
 #pulseaudio {
-  background-image: linear-gradient(to right, #89CFF0, #1434A4);
+	background-image: linear-gradient(to right, rgba(139, 233, 253, 0.65), rgb(139, 233, 253));
+  color: #282a36;
 }
 
 #pulseaudio.bluetooth {
-  background-image: linear-gradient(to right, #0096FF, #00008B);
+	background-image: linear-gradient(to right, rgba(139, 233, 253, 0.5), rgb(139, 233, 253));
+  color: #282a36;
 }
 
 #pulseaudio.muted {
 	background-image: linear-gradient(to right, #E5C07A, #E06B74);
+  color: #282a36;
 }
 
 /** ********** Backlight ********** **/
 #backlight {
-  background-image: linear-gradient(to right, #d0f0c0, #66ff00);
-}
-
-/** ********** Memory ********** **/
-#memory {
-	background-image: linear-gradient(to right, #7fffd4, #008080);
-}
-
-/** ********** CPU ********** **/
-#cpu {
-	background-image: linear-gradient(to right, #E8FFFF, #485F77);
+	background-image: linear-gradient(to right, rgba(80, 250, 123, 0.75), rgb(80, 250, 123));
+  color: #282a36;
 }
 
 /** ********** Temperature ********** **/
 #temperature {
-  background-image: linear-gradient(to right, #FFAC1C, #CC5500);
+	background-image: linear-gradient(to right, rgba(255, 184, 108, 0.65), rgb(255, 184, 108));
+  color: #282a36;
+}
+
+/** ********** Memory ********** **/
+#memory {
+	background-image: linear-gradient(to right, rgba(255, 121, 198, 0.6), rgb(255, 121, 198));
+  color: #282a36;
 }
 
 /** ********** Network ********** **/
 #network {
-	background-image: linear-gradient(to right, #DA70D6, #702963);
+	background-image: linear-gradient(to right, rgba(189, 147, 249, 0.4), rgb(189, 147, 249));
+  color: #282a36;
 }
 
 #network.disconnected {
-  background-image: linear-gradient(to right, #FA8072, #E0115F);
+	background-image: linear-gradient(to right, rgba(68, 71, 90, 0.7), rgb(68, 71, 90));
+	color: #f8f8f2;
 }
 
 #network.disabled {
-	background-image: linear-gradient(to right, #FAA0A0, #E35335);
-	color: #FFFFFF;
+	background-image: linear-gradient(to right, rgba(40, 42, 54, .8), rgb(40, 42, 54));
+	color: #f8f8f2;
 }
 
 /** ********** Battery ********** **/
 @keyframes blink {
   to {
-      color: #000000;
+    color: #000000;
   }
 }
 
 #battery {
-	background-image: linear-gradient(to right, #967969, #5C4033);
+	background-image: linear-gradient(to right, rgba(255, 85, 85, 0.5), rgb(255, 85, 85));
 }
 
 #battery.critical:not(.charging) {
@@ -186,14 +193,14 @@ window#waybar.hidden {
 
 /** ********** Clock ********** **/
 #clock {
-	background-image: linear-gradient(to right, #FA8072, #FF0000);
+	background-image: linear-gradient(to right, rgba(241, 250, 140, 0.55), rgb(241, 250, 140));
 }
 
 /** ********** Tray ********** **/
 #tray {
 	background-color: #2F333C;
-	border-radius: 8px 0 0 0;
-	padding: 4px 6px;
+	border-radius: 4px 0 0 0;
+	padding: 0px 6px;
 }
 
 #tray > .passive {
@@ -218,6 +225,5 @@ window#waybar.hidden {
 	border-radius: 4px;
 	margin: 6px 0;
 	padding: 2px 10px;
-  color: #191414;
   text-shadow: 0 0 1px #222222;
 }

@@ -18,5 +18,5 @@
     "fixed-center": true,
     "ipc": true,
     "modules-left": ["sway/workspaces", "mpd", "custom/spotify"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "memory", "cpu", "temperature", "network", "battery", "clock", "tray"]
+    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "temperature", "memory",  "network", "battery", "clock", "tray"]
 }
