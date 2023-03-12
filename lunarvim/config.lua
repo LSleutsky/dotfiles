@@ -35,13 +35,23 @@ lvim.keys.normal_mode["<C-s>"] = ":w <cr>"
 lvim.keys.normal_mode["<C-S-s>"] = ":wa <cr>"
 lvim.keys.normal_mode["<tab>"] = "<cmd> BufferLineCycleNext <cr>"
 lvim.keys.normal_mode["<S-tab>"] = "<cmd> BufferLineCyclePrev <cr>"
+lvim.keys.normal_mode["`"] = "<cmd> BufferLineMoveNext <cr>"
+lvim.keys.normal_mode["<C-`>"] = "<cmd> BufferLineMovePrev <cr>"
 lvim.keys.normal_mode["<S-q>"] = "<cmd> BufferKill <cr>"
 lvim.keys.normal_mode["<leader>xb"] = "<cmd> CBlbox <cr>"
 lvim.keys.normal_mode["<leader>xl"] = "<cmd> CBline <cr>"
+lvim.keys.normal_mode["-"] = "<cmd> qa <cr>"
+lvim.keys.normal_mode["x"] = '"_x'
+lvim.keys.normal_mode["X"] = '"_X'
+lvim.keys.normal_mode["<esc>"] = "<cmd> noh <cr>"
 
 -- insert mode
 lvim.keys.insert_mode["<C-s>"] = "<esc> :w <cr>"
 lvim.keys.insert_mode["<C-S-s>"] = "<esc> :wa <cr>"
+
+-- visual mode
+lvim.keys.visual_mode["x"] = '"_x'
+lvim.keys.visual_mode["X"] = '"_X'
 
 -- which key
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
