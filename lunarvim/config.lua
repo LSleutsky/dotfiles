@@ -44,6 +44,8 @@ lvim.keys.normal_mode["-"] = "<cmd> qa <cr>"
 lvim.keys.normal_mode["x"] = '"_x'
 lvim.keys.normal_mode["X"] = '"_X'
 lvim.keys.normal_mode["<esc>"] = "<cmd> noh <cr>"
+lvim.keys.normal_mode["<C-a>"] = "gg0VG"
+lvim.keys.normal_mode["<C-c>"] = "gg0VGy"
 
 -- insert mode
 lvim.keys.insert_mode["<C-s>"] = "<esc> :w <cr>"
@@ -54,7 +56,10 @@ lvim.keys.visual_mode["x"] = '"_x'
 lvim.keys.visual_mode["X"] = '"_X'
 
 -- which key
-lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects <cr>", "Projects" }
+lvim.builtin.which_key.mappings["sw"] = { "<cmd>Telescope grep_string <cr>", "Word under cursor" }
+lvim.builtin.which_key.mappings["gy"] =
+	{ '<cmd>lua require("gitlinker").get_buf_range_url("n") <cr>', "Git path permalink" }
 
 --  ╭────────────────────────────────────────────────────────────────────────────────────────╮
 --  │ builtins                                                                               │
@@ -113,9 +118,11 @@ lvim.builtin.treesitter.ensure_installed = {
 --  │ lsp                                                                                    │
 --  ╰────────────────────────────────────────────────────────────────────────────────────────╯
 -- formatters
-local formatters = require("lvim.lsp.null-ls.formatters")
-formatters.setup({
-	{ command = "stylua" },
+require("lvim.lsp.null-ls.formatters").setup({
+	{
+		command = "stylua",
+		filetypes = { "lua" },
+	},
 	{
 		command = "prettierd",
 		extra_args = { "--print-width", "100" },
@@ -128,8 +135,15 @@ formatters.setup({
 })
 
 -- linters
-local linters = require("lvim.lsp.null-ls.linters")
-linters.setup({
+require("lvim.lsp.null-ls.linters").setup({
+	{
+		command = "eslint_d",
+		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+	},
+})
+
+-- code actions
+require("lvim.lsp.null-ls.code_actions").setup({
 	{
 		command = "eslint_d",
 		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
@@ -144,6 +158,12 @@ lvim.plugins = {
 	{ "nathom/filetype.nvim" },
 
 	-- utility
+	{
+		"gbprod/stay-in-place.nvim",
+		config = function()
+			require("stay-in-place").setup()
+		end,
+	},
 	{
 		"kylechui/nvim-surround",
 		event = "InsertEnter",
@@ -181,7 +201,16 @@ lvim.plugins = {
 
 	-- ui
 	{ "mg979/vim-visual-multi", after = "nvim-treesitter" },
-	{ "Mofiqul/dracula.nvim" },
+	{
+		"Mofiqul/dracula.nvim",
+		config = function()
+			require("dracula").setup({
+				colors = {
+					bg = "#191919",
+				},
+			})
+		end,
+	},
 	{
 		"HiPhish/nvim-ts-rainbow2",
 		config = function()
@@ -230,6 +259,7 @@ lvim.plugins = {
 	},
 
 	-- git
+	{ "f-person/git-blame.nvim" },
 	{
 		"akinsho/git-conflict.nvim",
 		config = function()
@@ -245,7 +275,7 @@ lvim.plugins = {
 					add_current_line_on_normal_mode = true,
 					print_url = true,
 				},
-				mappings = "<leader>gl",
+				mappings = "<leader>gy",
 			})
 		end,
 	},
