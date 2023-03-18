@@ -11,6 +11,7 @@ vim.opt.smartindent = true
 vim.opt.smarttab = true
 vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
+vim.opt.showtabline = 2
 vim.opt.wrap = true
 vim.opt.termguicolors = true
 
@@ -46,10 +47,19 @@ lvim.keys.normal_mode["X"] = '"_X'
 lvim.keys.normal_mode["<esc>"] = "<cmd> noh <cr>"
 lvim.keys.normal_mode["<C-a>"] = "gg0VG"
 lvim.keys.normal_mode["<C-c>"] = "gg0VGy"
+lvim.keys.normal_mode["<C-x>"] = "<C-w>c"
+lvim.keys.normal_mode["<leader>t"] = "<cmd> TroubleToggle <cr>"
 
 -- insert mode
 lvim.keys.insert_mode["<C-s>"] = "<esc> :w <cr>"
 lvim.keys.insert_mode["<C-S-s>"] = "<esc> :wa <cr>"
+lvim.keys.insert_mode["<C-h>"] = "<Left>"
+lvim.keys.insert_mode["<C-j>"] = "<Down>"
+lvim.keys.insert_mode["<C-k>"] = "<Up>"
+lvim.keys.insert_mode["<C-l>"] = "<Right>"
+lvim.keys.insert_mode["<C-a>"] = "<Home>"
+lvim.keys.insert_mode["<C-b>"] = "<esc> ^i"
+lvim.keys.insert_mode["<C-e>"] = "<End>"
 
 -- visual mode
 lvim.keys.visual_mode["x"] = '"_x'
@@ -64,14 +74,36 @@ lvim.builtin.which_key.mappings["gy"] =
 --  ╭────────────────────────────────────────────────────────────────────────────────────────╮
 --  │ builtins                                                                               │
 --  ╰────────────────────────────────────────────────────────────────────────────────────────╯
+-- alpha
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
+
+-- lualine
 lvim.builtin.lualine.style = "default"
+lvim.builtin.lualine.sections.lualine_c = {
+	{
+		"diagnostics",
+		sources = { "nvim_diagnostic" },
+		symbols = { error = " ", warn = " ", info = " ", hint = " " },
+	},
+	{
+		"filename",
+		file_status = true,
+		path = 1,
+	},
+	"diff",
+}
+lvim.builtin.lualine.sections.lualine_x = { "encoding", "filetype" }
+
+-- nvimtree
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.terminal.active = true
-lvim.builtin.treesitter.auto_install = true
 
+-- terminal
+lvim.builtin.terminal.active = true
+
+-- treesitter
+lvim.builtin.treesitter.auto_install = true
 lvim.builtin.treesitter.ensure_installed = {
 	"bash",
 	"comment",
@@ -156,8 +188,48 @@ require("lvim.lsp.null-ls.code_actions").setup({
 lvim.plugins = {
 	-- general
 	{ "nathom/filetype.nvim" },
+	{
+		"gorbit99/codewindow.nvim",
+		config = function()
+			require("codewindow").setup({
+				active_in_terminals = false,
+				auto_enable = {
+					"javascript",
+					"javascriptreact",
+					"json",
+					"lua",
+					"yaml",
+					"yml",
+				},
+				exclude_filetypes = {
+					"NvimTree",
+					"NvimTree_1",
+					"Trouble",
+					"Alpha",
+					"alpha",
+					"[No Name]",
+				},
+				max_minimap_height = nil,
+				max_lines = nil,
+				minimap_width = 15,
+				use_lsp = true,
+				use_treesitter = true,
+				use_git = true,
+				width_multiplier = 4,
+				z_index = 1,
+				show_cursor = false,
+				window_border = "none",
+			})
+		end,
+	},
 
 	-- utility
+	{
+		"folke/trouble.nvim",
+		config = function()
+			require("trouble").setup()
+		end,
+	},
 	{
 		"gbprod/stay-in-place.nvim",
 		config = function()
@@ -312,4 +384,9 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		require("nvim-treesitter.highlight").attach(0, "bash")
 	end,
+})
+
+vim.api.nvim_create_autocmd("VimResized", {
+	pattern = "*",
+	command = "tabdo wincmd =",
 })
