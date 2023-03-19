@@ -46,7 +46,7 @@ lvim.keys.normal_mode["x"] = '"_x'
 lvim.keys.normal_mode["X"] = '"_X'
 lvim.keys.normal_mode["<esc>"] = "<cmd> noh <cr>"
 lvim.keys.normal_mode["<C-a>"] = "gg0VG"
-lvim.keys.normal_mode["<C-c>"] = "gg0VGy"
+lvim.keys.normal_mode["<C-c>"] = "<cmd> %y+ <cr>"
 lvim.keys.normal_mode["<C-x>"] = "<C-w>c"
 lvim.keys.normal_mode["<leader>t"] = "<cmd> TroubleToggle <cr>"
 
@@ -58,7 +58,7 @@ lvim.keys.insert_mode["<C-j>"] = "<Down>"
 lvim.keys.insert_mode["<C-k>"] = "<Up>"
 lvim.keys.insert_mode["<C-l>"] = "<Right>"
 lvim.keys.insert_mode["<C-a>"] = "<Home>"
-lvim.keys.insert_mode["<C-b>"] = "<esc> ^i"
+lvim.keys.insert_mode["<C-b>"] = "<esc>^i"
 lvim.keys.insert_mode["<C-e>"] = "<End>"
 
 -- visual mode
@@ -77,6 +77,11 @@ lvim.builtin.which_key.mappings["gy"] =
 -- alpha
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
+
+-- git
+lvim.builtin.gitsigns.opts.current_line_blame = true
+lvim.builtin.gitsigns.opts.current_line_blame_formatter =
+	"<author> ∙ <author_time:%B %d, %Y at %I:%M%p> ∙ <summary>"
 
 -- lualine
 lvim.builtin.lualine.style = "default"
@@ -205,9 +210,7 @@ lvim.plugins = {
 					"NvimTree",
 					"NvimTree_1",
 					"Trouble",
-					"Alpha",
 					"alpha",
-					"[No Name]",
 				},
 				max_minimap_height = nil,
 				max_lines = nil,
@@ -219,6 +222,18 @@ lvim.plugins = {
 				z_index = 1,
 				show_cursor = false,
 				window_border = "none",
+			})
+		end,
+	},
+	{
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("neoscroll").setup({
+				mappings = { "<C-u>", "<C-d>", "<C-b>", "<C-f>", "zt", "zz", "zb" },
+				hide_cursor = false,
+				performance_mode = false,
+				respect_scrolloff = false,
+				stop_eof = true,
 			})
 		end,
 	},
@@ -331,7 +346,6 @@ lvim.plugins = {
 	},
 
 	-- git
-	{ "f-person/git-blame.nvim" },
 	{
 		"akinsho/git-conflict.nvim",
 		config = function()
@@ -356,7 +370,7 @@ lvim.plugins = {
 		after = "plenary.nvim",
 		config = function()
 			require("diffview").setup({
-				enhanced_diff_hl = false,
+				enhanced_diff_hl = true,
 				git_cmd = { "git" },
 				use_icons = true,
 				icons = {
