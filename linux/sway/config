@@ -33,6 +33,7 @@ set $files thunar
 set $editor geany
 set $browser firefox-developer-edition
 set $spotify spotify
+set $typora typora
 
 ##-- Startup Programs --------------------
 exec_always ~/.config/sway/scripts/startup
@@ -51,6 +52,7 @@ bindsym $mod+Shift+f exec $files
 bindsym $mod+Shift+e exec $editor
 bindsym $mod+Shift+b exec $browser
 bindsym $mod+Shift+s exec $spotify
+bindsym $mod+Shift+t exec $typora
 
 # -- Wofi --
 bindsym $alt+F1 exec $menu
@@ -205,10 +207,10 @@ for_window [app_id="xfce-polkit|kvantummanager|qt5ct"] floating enable
 for_window [class="feh|Viewnior|Gpicview|Gimp|MPlayer"] floating enable
 for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
 
-##-- Misc --------------------------------
-include /etc/sway/config.d/*
-
 ##-- Display --------------------------------
 output eDP-1 mode 2256x1504
 output eDP-1 mode 3000x2000
 output eDP-1 scale 1.2
+
+##-- Misc --------------------------------
+include /etc/sway/config.d/*

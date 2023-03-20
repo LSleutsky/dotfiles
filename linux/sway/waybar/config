@@ -17,6 +17,7 @@
     "margin-right": 0,
     "fixed-center": true,
     "ipc": true,
-    "modules-left": ["sway/workspaces", "mpd", "custom/spotify"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "temperature", "memory",  "network", "battery", "clock", "tray"]
+    "modules-left": ["sway/workspaces", "mpd"],
+    "modules-center": ["custom/spotify"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "temperature", "memory",  "network", "battery", "clock", "custom/wlogout", "tray"]
 }

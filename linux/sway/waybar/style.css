@@ -1,15 +1,14 @@
 /** ********** Fonts ********** **/
 * {
   font-family: "Mononoki Nerd Font", "JetBrains Mono Nerd Font", archcraft, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 900;
 }
 
 /** ********** Waybar Window ********** **/
 window#waybar {
-  background-color: transparent;
-  /* background-color: rgb(40, 42, 54); */
-  border-bottom: 2px solid #2F333C;
+  background-color: rgb(40, 42, 54);
+  border-bottom: 1px solid rgb(189, 147, 249);
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -33,157 +32,129 @@ window#waybar.hidden {
 
 /** ********** Workspaces ********** **/
 #workspaces {
-	color: #FFFFFF;
-  background-color: #282a36;
-  border-bottom: 2px solid #2F333C;
-	border-radius: 0 4px 0 0;
+	color: rgb(248, 248, 242);
+  background-color: rgb(40, 42, 54);
+  margin-bottom: 4px;
 	padding: 4px;
 }
 
 #workspaces button {
-	color: #FFFFFF;
-  border-radius: 8px;
+	color: rgb(248, 248, 242);
 	padding: 2px 10px 2px 6px;
 }
 
 #workspaces button:hover {
-  color: #191414;
-	background-color: #1B1F28;
-	border: solid #1B1F28;
-  border-radius: 8px;
+  background: transparent;
+  border: 1px solid rgb(189, 147, 249);
 	padding: 2px 10px 2px 6px;
 }
 
-#workspaces button.visible {
-	background-image: linear-gradient(to right, #62AEEF, #98C379);
-}
-
 #workspaces button.focused {
-	background-image: linear-gradient(to right, #E06B74, #C778DD);
-}
-
-#workspaces button.urgent {
-	background-image: linear-gradient(to right, #E06B74, #E5C07A);
-}
-
-#workspaces button.persistent {
-	background-image: linear-gradient(to right, #E5C07A, #C778DD);
+  background: transparent;
+  border: 1px solid rgb(189, 147, 249);
 }
 
 #workspaces button.visible,
 #workspaces button.focused,
 #workspaces button.urgent,
 #workspaces button.persistent {
-	color: #282a36;
-  border-radius: 8px;
 	padding: 2px 9px 2px 6px;
 }
 
 /** ********** MPD ********** **/
 #mpd {
-	background-color: #2A2E37;
-	color: #f8f8f2;
+	background-color: rgb(40, 42, 54);
+	color: rgb(248, 248, 242);
 }
 
 #mpd.disconnected {
-	background-color: #2A2E37;
-	color: #f8f8f2;
+	color: rgb(248, 248, 242);
 }
 
 #mpd.stopped {
-	background-image: linear-gradient(to right, #E06B74, #E5C07A);
-  color: #282a36;
+  color: rgb(98, 114, 164);
 }
 
 #mpd.playing {
-	background-image: linear-gradient(to right, #62AEEF, #C778DD);
-  color: #282a36;
+  color: rgb(139, 233, 253);
 }
 
 /** ********** Spotify ********** **/
 #custom-spotify.playing {
   background-image: linear-gradient(to right, #1db954, #2aaa8a);
   font-weight: 900;
-  color: #282a36;
+}
+
+#custom-spotify.paused {
+  color: rgb(29, 185, 84);
 }
 
 /** ********** Idle Inhibitor ********** **/
 #idle_inhibitor {
-	background-image: linear-gradient(to right, rgba(98, 114, 164, 0.75), rgb(98, 114, 164));
+  color: rgb(248, 248, 242);
 	border-radius: 4px;
-  color: #282a36;
 	margin: 6px 0;
 	padding: 2px 17px 2px 12px;
 }
 
 #idle_inhibitor.deactivated {
-	background-image: linear-gradient(to right, rgba(68, 71, 90, 0.75), rgb(68, 71, 90));
-  color: #f8f8f2;
+  color: rgb(98, 114, 164);
 }
 
 /** ********** Pulse Audio ********** **/
 #pulseaudio {
-	background-image: linear-gradient(to right, rgba(139, 233, 253, 0.65), rgb(139, 233, 253));
-  color: #282a36;
+	color: rgb(255, 85, 85);
 }
 
 #pulseaudio.bluetooth {
-	background-image: linear-gradient(to right, rgba(139, 233, 253, 0.5), rgb(139, 233, 253));
-  color: #282a36;
+  color: rgb(139, 233, 253);
 }
 
 #pulseaudio.muted {
-	background-image: linear-gradient(to right, #E5C07A, #E06B74);
-  color: #282a36;
+  color: rgb(98, 114, 164);
 }
 
 /** ********** Backlight ********** **/
 #backlight {
-	background-image: linear-gradient(to right, rgba(80, 250, 123, 0.75), rgb(80, 250, 123));
-  color: #282a36;
+  color: rgb(139, 233, 253);
 }
 
 /** ********** Temperature ********** **/
 #temperature {
-	background-image: linear-gradient(to right, rgba(255, 184, 108, 0.65), rgb(255, 184, 108));
-  color: #282a36;
+  color: rgb(241, 250, 140);
 }
 
 /** ********** Memory ********** **/
 #memory {
-	background-image: linear-gradient(to right, rgba(255, 121, 198, 0.6), rgb(255, 121, 198));
-  color: #282a36;
+  color: rgb(255, 121, 198);
 }
 
 /** ********** Network ********** **/
 #network {
-	background-image: linear-gradient(to right, rgba(189, 147, 249, 0.4), rgb(189, 147, 249));
-  color: #282a36;
+	color: rgb(189, 147, 249);
 }
 
 #network.disconnected {
-	background-image: linear-gradient(to right, rgba(68, 71, 90, 0.7), rgb(68, 71, 90));
-	color: #f8f8f2;
+  color: rgb(98, 114, 164);
 }
 
 #network.disabled {
-	background-image: linear-gradient(to right, rgba(40, 42, 54, .8), rgb(40, 42, 54));
-	color: #f8f8f2;
+  color: rgb(98, 114, 164);
 }
 
 /** ********** Battery ********** **/
 @keyframes blink {
   to {
-    color: #000000;
+    color: rgb(68, 71, 90);
   }
 }
 
 #battery {
-	background-image: linear-gradient(to right, rgba(255, 85, 85, 0.5), rgb(255, 85, 85));
+	color: rgb(80, 250, 123);
 }
 
 #battery.critical:not(.charging) {
-	background-color: #E35335;
+	color: rgb(255, 85, 85);
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -193,13 +164,19 @@ window#waybar.hidden {
 
 /** ********** Clock ********** **/
 #clock {
-	background-image: linear-gradient(to right, rgba(241, 250, 140, 0.55), rgb(241, 250, 140));
+	color: rgb(255, 184, 108);
+}
+
+#custom-wlogout {
+	color: rgb(255, 85, 85);
+	margin: 0 5px 2px 5px;
+	font-size: 16px;
 }
 
 /** ********** Tray ********** **/
 #tray {
-	background-color: #2F333C;
-	border-radius: 4px 0 0 0;
+	background-color: rgb(40, 42, 54);
+  border-bottom: 1px solid rgb(189, 147, 249);
 	padding: 0px 6px;
 }
 
@@ -225,5 +202,4 @@ window#waybar.hidden {
 	border-radius: 4px;
 	margin: 6px 0;
 	padding: 2px 10px;
-  text-shadow: 0 0 1px #222222;
 }
