@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# Kill already running process
 _ps=(waybar mako mpd xfce-polkit)
 for _prs in "${_ps[@]}"; do
 	if [[ `pidof ${_prs}` ]]; then
@@ -8,17 +7,12 @@ for _prs in "${_ps[@]}"; do
 	fi
 done
 
-# Polkit agent
 /usr/lib/xfce-polkit/xfce-polkit &
 
-# Lauch notification daemon (mako)
 ~/.config/sway/scripts/notifications &
 
-# Lauch statusbar (waybar)
 ~/.config/sway/scripts/statusbar &
 
-# Start network manager applet
 nm-applet --indicator &
 
-# Start mpd
 exec mpd &

@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-##
-## Script to take screenshots with grim, slurp (in Wayland)
-
 iDIR="$HOME/.config/sway/mako/icons"
 
 time=`date +%Y-%m-%d-%H-%M-%S`
@@ -11,7 +7,6 @@ geometry=`swaymsg -pt get_outputs | grep 'Current mode:' | cut -d':' -f2 | cut -
 dir="`xdg-user-dir PICTURES`/Screenshots"
 file="Screenshot_${time}_${geometry}.png"
 
-# notify and view screenshot
 notify_cmd_shot="notify-send -h string:x-canonical-private-synchronous:sys-notify-shot -u low -i ${iDIR}/picture.png"
 notify_view () {
 	${notify_cmd_shot} "Copied to clipboard."
@@ -24,7 +19,6 @@ notify_view () {
 	fi
 }
 
-# countdown
 countdown () {
 	for sec in `seq $1 -1 1`; do
 		notify-send -h string:x-canonical-private-synchronous:sys-notify-count -t 1000 -i "$iDIR"/timer.png "Taking shot in : $sec"
@@ -32,7 +26,6 @@ countdown () {
 	done
 }
 
-# take shots
 shotnow () {
 	cd ${dir} && grim - | tee "$file" | wl-copy
 	notify_view

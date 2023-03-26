@@ -19,5 +19,5 @@
     "ipc": true,
     "modules-left": ["sway/workspaces", "mpd"],
     "modules-center": ["custom/spotify"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "temperature", "memory",  "network", "battery", "clock", "custom/wlogout"]
+    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "temperature", "disk",  "network", "battery", "clock"]
 }

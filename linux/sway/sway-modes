@@ -1,6 +1,6 @@
-##-- Resize ------------------------
+##-- Resize --------------------------
 
-# resize window (you can also use the mouse for that)
+# resize window
 mode "Resize" {
     bindsym h resize shrink width 10px
     bindsym j resize grow height 10px
@@ -21,7 +21,7 @@ bindsym $mod+r mode "Resize"
 
 ##-- Move --------------------------
 
-# move window (you can also use the mouse for that)
+# move window
 mode "Move" {
     bindsym h move left 20px
     bindsym j move down  20px

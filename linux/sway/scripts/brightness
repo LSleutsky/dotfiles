@@ -2,13 +2,11 @@
 
 iDIR="$HOME/.config/sway/mako/icons"
 
-# Get brightness
 get_backlight() {
 	LIGHT=$(printf "%.0f\n" `light -G`)
 	echo "${LIGHT}%"
 }
 
-# Get icons
 get_icon() {
 	backlight="$(get_backlight)"
 	current="${backlight%%%}"
@@ -25,22 +23,18 @@ get_icon() {
 	fi
 }
 
-# Notify
 notify_user() {
 	notify-send -h string:x-canonical-private-synchronous:sys-notify-backlight -u low -i "$icon" "Brightness : $(get_backlight)"
 }
 
-# Increase brightness
 inc_backlight() {
 	light -A 5 && get_icon && notify_user
 }
 
-# Decrease brightness
 dec_backlight() {
 	light -U 5 && get_icon && notify_user
 }
 
-# Execute accordingly
 if [[ "$1" == "--get" ]]; then
 	get_backlight
 elif [[ "$1" == "--inc" ]]; then

@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-## Files
 CONFIG="$HOME/.config/sway/wofi/config"
 STYLE="$HOME/.config/sway/wofi/style.css"
 COLORS="$HOME/.config/sway/wofi/colors"
 
-## Wofi Command
 wofi_command="wofi --show dmenu \
 			--conf ${CONFIG} --style ${STYLE} --color ${COLORS} \
 			--width=300 --height=205 \
@@ -15,19 +13,16 @@ wofi_command="wofi --show dmenu \
 
 uptime=$(uptime -p | sed -e 's/up //g')
 
-## Entries
 shutdown="⏻ Shutdown"
 reboot=" Restart"
 lock=" Lock"
 suspend="⏾ Sleep"
 logout=" Logout"
 
-# Ask for confirmation
 cdialog () {
 	yad --title='Confirm?' --borders=15 --center --fixed --undecorated --button=Yes:0 --button=No:1 --text="Are you sure?" --text-align=center
 }
 
-# Variable passed to rofi
 open_menu () {
 	options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
