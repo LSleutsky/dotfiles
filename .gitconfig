@@ -5,22 +5,22 @@
 	email = lushsleutsky@gmail.com
 	username = LSleutsky
 [core]
-	editor = nvim
+	editor = lvim
   pager = delta
 [diff]
   colorMoved = default
-  guitool = nvimdiff
-	tool = nvimdiff 
-[difftool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+  guitool = lvimdiff
+	tool = lvimdiff 
+[difftool "lvimdiff"]
+  cmd = "lvim -d \"$LOCAL\" \"$REMOTE\""
   prompt = true
 [interactive]
   diffFilter = delta --color-only --features=interactive
 [merge]
   conflictstyle = diff3
-  tool = nvimdiff
-[mergetool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
+  tool = lvimdiff
+[mergetool "lvimdiff"]
+  cmd = "lvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
   prompt = true
 [checkout]
 	defaultRemote = origin
