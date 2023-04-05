@@ -32,6 +32,7 @@ set $colorpicker ~/.config/sway/scripts/colorpicker
 set $files thunar
 set $editor geany
 set $browser firefox-developer-edition
+set $googlechrome google-chrome-unstable
 set $spotify spotify
 set $typora typora
 
@@ -51,6 +52,7 @@ bindsym $mod+t exec $term -F
 bindsym $mod+Shift+f exec $files
 bindsym $mod+Shift+e exec $editor
 bindsym $mod+Shift+b exec $browser
+bindsym $mod+Shift+c exec $googlechrome
 bindsym $mod+Shift+s exec $spotify
 bindsym $mod+Shift+t exec $typora
 

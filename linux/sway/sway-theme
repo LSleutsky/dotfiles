@@ -13,7 +13,7 @@ gaps outer 0
 ## -------------------------- Colors ------------------------------
 client.background       	#282A36
 
-# class                 	border  backgr. text    indicator child_border
+# class                 	border  bg      text    indicator child_border
 client.focused 	          #8BE9FD #8BE9FD #F8F8F2 #8BE9FD   #8BE9FD
 client.focused_inactive  	#50FA7B #50FA7B #44475A #50FA7B   #50FA7B
 client.unfocused        	#6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4

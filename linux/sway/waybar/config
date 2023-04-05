@@ -11,13 +11,9 @@
     "width": "",
     "spacing": 6,
     "margin": 0,
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
-    "margin-right": 0,
     "fixed-center": true,
     "ipc": true,
     "modules-left": ["sway/workspaces", "mpd"],
     "modules-center": ["custom/spotify"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "temperature", "disk",  "network", "battery", "clock"]
+    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "temperature",  "network", "battery", "clock"]
 }
