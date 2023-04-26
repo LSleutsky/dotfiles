@@ -75,7 +75,9 @@ alias wtr='curl wttr.in'
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
+alias google-chrome='google-chrome-unstable'
 alias pacman='sudo pacman'
+alias packill='sudo rm -rf /var/lib/pacman/db.lck'
 alias pow='sudo shutdown now'
 alias reb='sudo reboot now'
 
