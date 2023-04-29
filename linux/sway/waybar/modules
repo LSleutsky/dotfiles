@@ -99,7 +99,7 @@
       "phone": " ",
       "portable": " ",
       "car": " ",
-      "default": ["", " ", " "]
+      "default": ["", "", " "]
     },
     "scroll-step": 5.0,
     "on-click": "pulsemixer --toggle-mute",
@@ -122,8 +122,8 @@
     "on-click-right": "",
     "on-update": "",
     /* scroll behavior reversed due to natural scrolling enabled */
-    "on-scroll-up": "light -U 5%",
-    "on-scroll-down": "light -A 5%",
+    "on-scroll-up": "light -U 1%",
+    "on-scroll-down": "light -A 1%",
     "smooth-scrolling-threshold": 1
   },
 

@@ -28,11 +28,11 @@ notify_user() {
 }
 
 inc_backlight() {
-	light -A 5 && get_icon && notify_user
+	light -A 1 && get_icon && notify_user
 }
 
 dec_backlight() {
-	light -U 5 && get_icon && notify_user
+	light -U 1 && get_icon && notify_user
 }
 
 if [[ "$1" == "--get" ]]; then
