@@ -125,6 +125,11 @@ window#waybar.hidden {
   padding: 2px 15px 2px 11px;
 }
 
+#custom-weather {
+  background: rgb(98, 114, 164);
+  color: rgb(25, 25, 25);
+}
+
 /** ********** Idle Inhibitor ********** **/
 #idle_inhibitor {
   background: rgb(241, 250, 140);
@@ -256,6 +261,7 @@ window#waybar.hidden {
 
 /** ********** Common Styles ********** **/
 #mpd,
+#custom-weather,
 #window,
 #pulseaudio,
 #backlight, 

@@ -38,6 +38,7 @@ set $typora typora
 set $code code
 set $gimp gimp
 set $slack slack
+set $discord discord
 
 ##-- Startup Programs --------------------
 exec_always ~/.config/sway/scripts/startup
@@ -61,6 +62,7 @@ bindsym $mod+Shift+t exec $typora
 bindsym $mod+Shift+v exec $code
 bindsym $mod+Shift+g exec $gimp
 bindsym $mod+Shift+s exec $slack
+bindsym $mod+Shift+d exec $discord
 
 # -- Wofi --
 bindsym $alt+F1 exec $menu

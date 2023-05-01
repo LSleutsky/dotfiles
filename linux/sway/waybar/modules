@@ -48,7 +48,7 @@
     "interval": 2,
     "unknown-tag": "N/A",
     "format": "{artist} - {title} {stateIcon}",
-    "format-disconnected": " Disconnected",
+    "format-disconnected": " Disconnected",
     "format-paused": "{artist} - {title} {stateIcon}",
     "format-stopped": "Stopped ",
     "state-icons": {
@@ -72,6 +72,16 @@
     "exec": "~/.config/sway/waybar/custom/spotify.sh",
     "exec-if": "pgrep spotify",
     "escape": true
+  },
+
+  "custom/weather": {
+    "format": " {} ",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click-right",
+    "interval": 1800,
+    "return-type": "json",
+    "exec": "~/.config/sway/waybar/custom/weather.sh",
+    "exec-if": "ping wttr.in -c1",
   },
 
   "idle_inhibitor": {
