@@ -26,12 +26,12 @@ notify_user() {
 
 inc_volume() {
 	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
-	pulsemixer --max-volume 100 --change-volume +5 && get_icon && notify_user
+	pulsemixer --max-volume 100 --change-volume +1 && get_icon && notify_user
 }
 
 dec_volume() {
 	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
-	pulsemixer --max-volume 100 --change-volume -5 && get_icon && notify_user
+	pulsemixer --max-volume 100 --change-volume -1 && get_icon && notify_user
 }
 
 toggle_mute() {

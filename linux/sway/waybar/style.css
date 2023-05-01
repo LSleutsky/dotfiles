@@ -93,17 +93,20 @@ window#waybar.hidden {
 }
 
 #mpd.disconnected {
-	color: rgb(68, 71, 90);
+	background: rgb(68, 71, 90);
+	color: rgb(248, 248, 242);
 	border: 1px solid rgb(68, 71, 90);
 }
 
 #mpd.stopped {
-  color: rgb(248, 248, 242);
+	background: rgb(68, 71, 90);
+	color: rgb(248, 248, 242);
   border: 1px solid rgb(248, 248, 242);
 }
 
 #mpd.playing {
-  color: rgb(139, 233, 253);
+  background: rgb(139, 233, 253);
+  color: rgb(25, 25, 25);
   border: 1px solid rgb(139, 233, 253);
 }
 
@@ -112,7 +115,7 @@ window#waybar.hidden {
   background-image: linear-gradient(to right, rgb(29, 185, 84), rgb(42, 170, 138));
   border: 1px solid rgb(29, 185, 84);
   border-radius: 35px;
-  color: rgb(40, 42, 54);
+  color: rgb(25, 25, 25);
   font-weight: 900;
   margin: 6px 8px 6px 12px;
 	padding: 2px 15px;
@@ -124,85 +127,97 @@ window#waybar.hidden {
 
 /** ********** Idle Inhibitor ********** **/
 #idle_inhibitor {
-	background-color: rgb(40, 42, 54);
-  color: rgb(241, 250, 140);
+  background: rgb(241, 250, 140);
+  color: rgb(25, 25, 25);
   border: 1px solid rgb(241, 250, 140);
 	border-radius: 35px;
 	margin: 6px 0;
-	padding: 2px 15px 2px 10px;
+	padding: 2px 13px 2px 13px;
 }
 
 #idle_inhibitor.deactivated {
-	color: rgb(68, 71, 90);
+	background: rgb(68, 71, 90);
+	color: rgb(248, 248, 242);
 	border: 1px solid rgb(68, 71, 90);
 	padding: 2px 5px 2px 12px;
 }
 
 /** ********** Pulse Audio ********** **/
 #pulseaudio {
-  color: rgb(255, 184, 108);
+  background: rgb(255, 184, 108);
+  color: rgb(25, 25, 25);
   border: 1px solid rgb(255, 184, 108);
 }
 
 #pulseaudio.bluetooth {
-  color: rgb(0, 130, 252);
+  background: rgb(0, 130, 252);
+  color: rgb(25, 25, 25);
   border: 1px solid rgb(0, 130, 252);
 }
 
 #pulseaudio.muted {
-	color: rgb(68, 71, 90);
+	background: rgb(68, 71, 90);
+	color: rgb(248, 248, 242);
 	border: 1px solid rgb(68, 71, 90);
 }
 
 /** ********** Backlight ********** **/
 #backlight {
+	background: rgb(255, 85, 85);
+	color: rgb(25, 25, 25);
 	border: 1px solid rgb(255, 85, 85);
-	color: rgb(255, 85, 85);
 }
 
 /** ********** Temperature ********** **/
 #temperature {
-  color: rgb(255, 121, 198);
+  background: rgb(255, 121, 198);
+  color: rgb(25, 25, 25);
   border: 1px solid rgb(255, 121, 198);
 }
 
 /** ********** Disk & Memory ********** **/
 #disk,
 #memory {
-  color: rgb(255, 121, 198);
+  background: rgb(255, 121, 198);
+  color: rgb(25, 25, 25);
   border: 1px solid rgb(255, 121, 198);
 }
 
 /** ********** Network ********** **/
 #network {
-	color: rgb(189, 147, 249);
+	background: rgb(189, 147, 249);
+	color: rgb(25, 25, 25);
 	border: 1px solid rgb(189, 147, 249);
 }
 
 #network.disconnected {
-	color: rgb(68, 71, 90);
+	background: rgb(68, 71, 90);
+	color: rgb(248, 248, 242);
 	border: 1px solid rgb(68, 71, 90);
 }
 
 #network.disabled {
-	color: rgb(68, 71, 90);
+	background: rgb(68, 71, 90);
+	color: rgb(248, 248, 242);
 	border: 1px solid rgb(68, 71, 90);
 }
 
 /** ********** Battery ********** **/
 @keyframes blink {
   to {
-    color: rgb(139, 233, 253);
+    color: rgb(25, 25, 25);
   }
 }
 
 #battery {
-  color: rgb(139, 233, 253);
+  background: rgb(139, 233, 253);
+  color: rgb(25, 25, 25);
   border: 1px solid rgb(139, 233, 253);
 }
 
 #battery.critical:not(.charging) {
-	color: rgb(255, 85, 85);
+	background: rgb(255, 85, 85);
+	color: rgb(25, 25, 25);
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -212,7 +227,8 @@ window#waybar.hidden {
 
 /** ********** Clock ********** **/
 #clock {
-	color: rgb(80, 250, 123);
+	background: rgb(80, 250, 123);
+	color: rgb(25, 25, 25);
 	border: 1px solid rgb(80, 250, 123);
 }
 
@@ -250,7 +266,6 @@ window#waybar.hidden {
 #network,
 #battery,
 #clock {
-	background-color: rgb(40, 42, 54);
 	border-radius: 35px;
 	margin: 6px 0;
 	padding: 2px 10px;

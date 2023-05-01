@@ -14,7 +14,7 @@
       "7": " ",
       "8": " ",
       "9": " ",
-      "10": "ﳴ" ,
+      "10": "󰭻 " ,
       "urgent": " ",
       "focused": " ",
       "default": " "
@@ -77,7 +77,7 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "盛",
+      "activated": "",
       "deactivated": "󰤄 "
     },
     "start-activated": false,
@@ -94,9 +94,9 @@
     "format-source-muted": " ",
     "format-icons": {
       "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": " ",
+      "hands-free": "󰦢",
+      "headset": "󰋎",
+      "phone": "",
       "portable": " ",
       "car": " ",
       "default": ["", "", " "]
@@ -116,7 +116,7 @@
     "align": 0,
     "rotate": 0,
     "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", ""],
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
     "on-click": "",
     "on-click-middle": "",
     "on-click-right": "",
@@ -142,7 +142,7 @@
   "disk": {
     "interval": 30,
     "format-alt": " {used} / {total} ({percentage_used}%)",
-    "format": " {free}",
+    "format": "󰋊 {free}",
     "path": "/",
     "tooltip": false
   },
@@ -150,18 +150,17 @@
   "network": {
     "interval": 5,
     "format-alt": " {bandwidthDownBytes} |  {bandwidthUpBytes}",
-    "format-ethernet": " {ipaddr}/{cidr}",
-    "format-linked": " {ifname} (No IP)",
-    "format-disconnected": "睊 Disconnected",
-    "format-disabled": "睊 Disabled",
+    "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": "󰌙 Disconnected",
+    "format-disabled": "󱔑  Disabled",
     "format-wifi": "  {essid}",
-    "tooltip-format": " {ifname} via {gwaddr}",
+    "tooltip-format": "󱕆 {ifname} via {gwaddr}",
     "tooltip": false
   },
 
   "battery": {
     "interval": 60,
-    "align": 0,
     "rotate": 0,
     "full-at": 100,
     "design-capacity": false,
