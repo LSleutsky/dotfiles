@@ -110,6 +110,18 @@ window#waybar.hidden {
   border: 1px solid rgb(139, 233, 253);
 }
 
+/** ********** Bluetooth ********** **/
+#bluetooth {
+  background: rgb(0, 130, 252);
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+	background: rgb(68, 71, 90);
+	color: rgb(248, 248, 242);
+	border: 1px solid rgb(68, 71, 90);
+}
+
 /** ********** Spotify ********** **/
 #custom-spotify {
   background-image: linear-gradient(to right, rgb(29, 185, 84), rgb(42, 170, 138));
@@ -263,6 +275,7 @@ window#waybar.hidden {
 #mpd,
 #custom-weather,
 #window,
+#bluetooth,
 #pulseaudio,
 #backlight, 
 #disk,

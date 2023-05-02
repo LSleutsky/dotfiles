@@ -13,7 +13,7 @@
     "margin": 0,
     "fixed-center": true,
     "ipc": true,
-    "modules-left": ["sway/workspaces", "mpd", "custom/spotify"],
+    "modules-left": ["sway/workspaces", "mpd", "bluetooth", "custom/spotify"],
     "modules-center": ["custom/weather"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "temperature",  "network", "battery", "clock"]
 }
