@@ -3,7 +3,7 @@
     "layer": "top", // Waybar at top layer
     "modules-left": ["temperature", "cpu", "memory", "wlr/workspaces", "custom/weather"],
     "modules-center": ["custom/spotify"],
-    "modules-right": ["tray", "network", "pulseaudio",  "backlight", "battery", "idle_inhibitor", "clock", "custom/power-menu"],
+    "modules-right": ["tray", "network", "pulseaudio",  "backlight", "battery#format", "clock", "idle_inhibitor"],
 
     "temperature": {
       "critical-threshold": 175,
@@ -56,6 +56,7 @@
       "format-wifi": "{icon}",
       "format-ethernet": " ",
       "format-disconnected": "󰌙",
+      "format-disabled": "󱔑 ",
       "tooltip-format": "{essid}",
       "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh",
       "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
@@ -85,23 +86,22 @@
       "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
     },
 
-    "battery": {
-      "bat": "BAT1",
+    "battery#format": {
       "interval": 60,
+      "rotate": 0,
+      "full-at": 100,
+      "design-capacity": false,
       "states": {
         "good": 100,
         "critical": 50
       },
-      "max-length": 20,
-      "format": "{icon} ",
-      "format-warning": "{icon}",
-      "format-critical": "{icon}",
-      "format-charging": "",
-      "format-plugged": "", 
-
-      "format-full": "{icon}", 
-      "format-icons": ["󱊡", "󱊢", "󱊣"],
-      "tooltip-format": "{capacity}% ({time})"
+      "format": "{icon} {capacity}% ({time})",
+      "format-charging": " {capacity}% ({time})",
+      "format-plugged": " {capacity}% ({time})",
+      "format-full": "{icon} Full",
+      "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "format-time": "{H}:{m}",
+      "tooltip": false
     },
 
     "idle_inhibitor": {
