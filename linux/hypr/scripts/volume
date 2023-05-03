@@ -1,0 +1,39 @@
+#!/bin/sh
+
+down() {
+  # pamixer -d 2
+	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
+	pulsemixer --max-volume 100 --change-volume -2
+  volume=$(pulsemixer --get-volume | cut -d' ' -f1)
+  [$volume -gt 0 ] && volume=`expr $volume`  
+  dunstify -a "VOLUME" "$volume%" -h int:value:"$volume" -i ~/.config/dunst/assets/ui/volume_down.png -r 2593 -u normal
+  canberra-gtk-play -i audio-volume-change -d "changevolume"
+}
+
+up() {
+  # pamixer -i 2
+	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
+	pulsemixer --max-volume 100 --change-volume +2
+  # volume=$(pamixer --get-volume)
+  volume=$(pulsemixer --get-volume | cut -d' ' -f1)
+  [ $volume -lt 1000 ] && volume=`expr $volume`  
+  dunstify -a "VOLUME" "$volume%" -h int:value:"$volume" -i ~/.config/dunst/assets/ui/volume_up.png -r 2593 -u normal
+  canberra-gtk-play -i audio-volume-change -d "changevolume"
+}
+
+mute() {
+  muted="$(pamixer --get-mute)"
+  if $muted; then
+    pamixer -u
+    dunstify -a "VOLUME" "UNMUTED" -i ~/.config/dunst/assets/ui/volume_up.png -r 2593 -u normal
+  else 
+    pamixer -m
+    dunstify -a "VOLUME" "MUTED" -i ~/.config/dunst/assets/ui/volume_muted.svg -r 2593 -u normal
+  fi
+}
+
+case "$1" in
+  up) up;;
+  down) down;;
+  mute) mute;;
+esac

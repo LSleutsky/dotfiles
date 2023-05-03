@@ -1,0 +1,20 @@
+#!/bin/sh
+
+down() {
+  # brillo -u 150000 -U 2
+  light -U 2
+  brightness=$(printf "%.0f\n" `light -G`)
+  dunstify -a "BRIGHTNESS" "$brightness%" -h int:value:"$brightness" -i ~/.config/dunst/assets/ui/brightness_down.png -r 2593 -u normal
+}
+
+up() {
+  # brillo -u 150000 -A 2
+  light -A 2
+  brightness=$(printf "%.0f\n" `light -G`)
+  dunstify -a "BRIGHTNESS" "$brightness%" -h int:value:"$brightness" -i ~/.config/dunst/assets/ui/brightness_up.png -r 2593 -u normal
+}
+
+case "$1" in
+  up) up;;
+  down) down;;
+esac
