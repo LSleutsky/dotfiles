@@ -1,135 +1,133 @@
 {
-    "height": 40, // Waybar height (to be removed for auto height)
-    "layer": "top", // Waybar at top layer
-    "modules-left": ["temperature", "cpu", "memory", "wlr/workspaces", "custom/weather"],
-    "modules-center": ["custom/spotify"],
-    "modules-right": ["tray", "network", "pulseaudio",  "backlight", "battery#format", "clock", "idle_inhibitor"],
+   "id": "main-bar",
+   "layer": "top",
+   "position": "top",
+   "height": 40,
+   "width": "",
+   "fixed-center": true,
+   "modules-left": ["temperature", "cpu", "memory", "custom/weather", "custom/spotify"],
+   "modules-center": ["wlr/workspaces"],
+   "modules-right": ["tray", "network", "pulseaudio",  "backlight", "battery", "clock", "idle_inhibitor"],
 
-    "temperature": {
-      "critical-threshold": 175,
-      "format": " {temperatureF}°F",
-      "tooltip": false
-    },
+   "temperature": {
+     "critical-threshold": 175,
+     "format": "<span rise='4300' letter_spacing='10000'></span><span rise='2000'>{temperatureF}°F</span>",
+     "tooltip": false
+   },
 
-    "cpu": {
-      "interval": 10,
-      "format": " {}%",
-      "max-length": 10,
-      "on-click": "",
-    },
+   "cpu": {
+     "interval": 10,
+     "format": "<span font='20' rise='12500'>󰓅 </span><span rise='12000'>{}%</span>",
+     "max-length": 10,
+     "on-click": "",
+   },
 
-    "memory": {
-      "interval": 30,
-      "format":" {used:0.1f}GB",
-      "format-alt": "󰍛 {}%",
-      "max-length": 10,
-    },
+   "memory": {
+     "interval": 30,
+     "format":"<span rise='-5000'> </span><span rise='-3500'>{used:0.1f}GB</span>",
+     "format-alt": "<span letter_spacing='-4000'> </span> <span rise='1000'>{}%</span>",
+     "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB ({}%)",
+     "max-length": 10,
+   },
 
-    "wlr/workspaces": {
-      "format": "{icon}",
-      "on-click": "activate",
-      "format-icons": {
-        "active": " 󰮯",
-        "default": "",
-      }
-    },
+   "custom/weather": {
+     "exec": "python3 ~/.config/waybar/scripts/weather.py",
+     "restart-interval": 300,
+     "return-type": "json",
+   },
 
-    "custom/weather": {
-      "exec": "python3 ~/.config/waybar/scripts/weather.py",
-      "restart-interval": 300,
-      "return-type": "json",
-    },
-    
-    "custom/spotify": {
-      "interval": 1,
-      "return-type": "json",
-      "exec": "~/.config/waybar/scripts/spotify.sh",
-      "exec-if": "pgrep spotify",
-      "escape": true
-    },
+   "custom/spotify": {
+     "interval": 1,
+     "return-type": "json",
+     "exec": "~/.config/waybar/scripts/spotify.sh",
+     "exec-if": "pgrep spotify",
+     "escape": true
+   },
 
-    "tray": {
-      "spacing": 10
-    },
+   "tray": {
+     "spacing": 10
+   },
 
-    "network": {
-      "format-wifi": "{icon}",
-      "format-ethernet": " ",
-      "format-disconnected": "󰌙",
-      "format-disabled": "󱔑 ",
-      "tooltip-format": "{essid}",
-      "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh",
-      "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-    },
+   "wlr/workspaces": {
+     "format": "<span font='18'>{icon}</span>",
+     "on-click": "activate",
+     "format-icons": {
+       "active": " 󰮯",
+       "default": "",
+     }
+   },
 
-    "pulseaudio": {
-      "format": "{icon}",
-      "format-muted": " ",
-      "format-source": "",
-      "format-source-muted": "",
-      "format-icons": {
-        "headphone": " ",
-        "hands-free": "󰦢",
-        "headset": "󰋎",
-        "phone": "",
-        "portable": " ",
-        "car": " ",
-        "default": ["", "", " "]
-      },
-      "on-click": "pavucontrol &",
-      "tooltip": false
-    },
+   "network": {
+     "format-wifi": "<span font='19'>{icon}</span>",
+     "format-ethernet": " ",
+     "format-disconnected": "󰌙",
+     "format-disabled": "󱔑 ",
+     "tooltip-format": "{essid} ({signalStrength}%)",
+     "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh",
+     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+   },
 
-    "backlight": {
-      "format": "{icon}",
-      "tooltip-format": "{percent}%",
-      "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
-    },
+   "pulseaudio": {
+     "format": "<span font='21' rise='-27500'>{icon}</span>",
+     "format-muted": " ",
+     "format-source": "",
+     "format-source-muted": "",
+     "format-icons": {
+       "headphone": " ",
+       "hands-free": "󰦢",
+       "headset": "󰋎",
+       "phone": "",
+       "portable": " ",
+       "car": " ",
+       "default": ["", "", " "]
+     },
+     "on-click": "pavucontrol &",
+     "tooltip": false
+   },
 
-    "battery#format": {
-      "interval": 60,
-      "rotate": 0,
-      "full-at": 100,
-      "design-capacity": false,
-      "states": {
-        "good": 100,
-        "critical": 50
-      },
-      "format": "{icon} {capacity}% ({time})",
-      "format-charging": " {capacity}% ({time})",
-      "format-plugged": " {capacity}% ({time})",
-      "format-full": "{icon} Full",
-      "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-      "format-time": "{H}:{m}",
-      "tooltip": false
-    },
+   "backlight": {
+     "format": "<span font='19' rise='8800'>{icon}</span>",
+     "tooltip-format": "{percent}%",
+     "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+   },
 
-    "idle_inhibitor": {
-      "format": "{icon}",
-      "format-icons": {
-        "activated": "󰖨",
-        "deactivated": "󰤄 "
-      },
-      "start-activated": false,
-      "timeout": false,
-      "tooltip": false
-    },
+   "battery": {
+     "interval": 60,
+     "rotate": 0,
+     "full-at": 100,
+     "design-capacity": false,
+     "states": {
+       "good": 100,
+       "critical": 50
+     },
+     "format": "<span font='19' letter_spacing='-6000'>{icon}</span> <span rise='-300' letter_spacing='-1000'>{capacity}% ({time})</span>",
+     "format-charging": "<span font='18' letter_spacing='-7000'>{icon}</span> <span rise='-1200' letter_spacing='-1000'>{capacity}% ({time})</span>",
+     "format-plugged": "<span rise='-1000' letter_spacing='3000'> </span><span rise='-2900'>{capacity}%</span>",
+     "format-full": "<span font='19' letter_spacing='-2500'>{icon}</span>",
+     "format-icons": {
+       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+       "charging": ["󰢜 ", "󰂆 ", "󰂇 ", "󰂈 ", "󰢝 ", "󰂉 ", "󰢞 ", "󰂊 ", "󰂋 ", "󰂅 "],
+     },
+     "format-time": "{H}:{m}",
+     "tooltip": false
+   },
 
-    "clock": {
-      "interval": 60,
-      "align": 0,
-      "rotate": 0,
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "format": "  {:%a %b %d %I:%M %p}"
-    },
+   "clock": {
+     "interval": 60,
+     "align": 0,
+     "rotate": 0,
+     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+     "format": "<span letter_spacing='30000'></span><span rise='-1800'>{:%a %b %d %I:%M %p}</span>"
+   },
 
-   "custom/power-menu": {
-     "format": " ⏻ ",
-     "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh &",
-   }, 
-
-   "custom/launcher": {
-     "format": "",
-     "on-click": "rofi -show drun &",
+   "idle_inhibitor": {
+     "format": "{icon}",
+     "format-icons": {
+       "activated": "󰖨",
+       "deactivated": "󰤄 "
+     },
+     "start-activated": false,
+     "timeout": false,
+     "tooltip": false
    },
 }
