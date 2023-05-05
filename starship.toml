@@ -34,7 +34,7 @@ disabled = false
 style = "bg:none fg:#181825"
 
 [directory]
-format = "[]($style)[ ](bg:#181825 fg:#b4befe)[$path](bg:#181825 fg:#f5e0dc bold)[ ]($style)"
+format = "[]($style)[ ](bg:#181825 fg:#b4befe)[$path](bg:#181825 fg:#cdd6f4 bold)[ ]($style)"
 style = "bg:none fg:#181825"
 truncation_length = 3
 truncate_to_repo=false
