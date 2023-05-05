@@ -18,7 +18,7 @@ vim.opt.termguicolors = true
 --  ╭────────────────────────────────────────────────────────────────────────────────────────╮
 --  │ lvim                                                                                   │
 --  ╰────────────────────────────────────────────────────────────────────────────────────────╯
-lvim.colorscheme = "dracula"
+lvim.colorscheme = "catppuccin-mocha"
 lvim.log.level = "info"
 lvim.format_on_save = {
 	enabled = true,
@@ -288,16 +288,7 @@ lvim.plugins = {
 
 	-- ui
 	{ "mg979/vim-visual-multi", after = "nvim-treesitter" },
-	{
-		"Mofiqul/dracula.nvim",
-		config = function()
-			require("dracula").setup({
-				colors = {
-					bg = "#191919",
-				},
-			})
-		end,
-	},
+	{ "catppuccin/nvim", name = "catppuccin" },
 	{
 		"HiPhish/nvim-ts-rainbow2",
 		config = function()
