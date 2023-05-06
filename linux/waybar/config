@@ -5,27 +5,27 @@
    "height": 40,
    "width": "",
    "fixed-center": true,
-   "modules-left": ["temperature", "cpu", "memory", "custom/weather", "custom/spotify"],
+   "modules-left": ["temperature", "cpu", "memory", "custom/weather", "tray", "custom/spotify"],
    "modules-center": ["wlr/workspaces"],
-   "modules-right": ["tray", "network", "pulseaudio",  "backlight", "battery", "clock", "idle_inhibitor"],
+   "modules-right": ["network", "pulseaudio",  "backlight", "battery", "clock", "idle_inhibitor"],
 
    "temperature": {
      "critical-threshold": 175,
-     "format": "<span rise='4300' letter_spacing='10000'></span><span rise='2000'>{temperatureF}°F</span>",
+     "format": "<span rise='4pt' letter_spacing='10000'></span><span rise='2pt'>{temperatureF}°F</span>",
      "tooltip": false
    },
 
    "cpu": {
      "interval": 10,
-     "format": "<span font='20' rise='12500'>󰓅 </span><span rise='12000'>{}%</span>",
+     "format": "<span font='20' rise='12pt'>󰓅 </span><span rise='12pt'>{}%</span>",
      "max-length": 10,
      "on-click": "",
    },
 
    "memory": {
      "interval": 30,
-     "format":"<span rise='-5000'> </span><span rise='-3500'>{used:0.1f}GB</span>",
-     "format-alt": "<span letter_spacing='-4000'> </span> <span rise='1000'>{}%</span>",
+     "format":"<span rise='-6pt'> </span><span rise='-4pt'>{used:0.1f}GB</span>",
+     "format-alt": "<span rise='-3pt' letter_spacing='-6000'> </span> <span rise='-1pt'>{}%</span>",
      "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB ({}%)",
      "max-length": 10,
    },
@@ -45,15 +45,16 @@
    },
 
    "tray": {
-     "spacing": 10
+     "spacing": 8,
+     "icon-size": 22,
    },
 
    "wlr/workspaces": {
      "format": "<span font='18'>{icon}</span>",
      "on-click": "activate",
      "format-icons": {
-       "active": " 󰮯",
-       "default": "",
+       "active": "󰮯",
+       "default": "",
      }
    },
 
@@ -68,8 +69,8 @@
    },
 
    "pulseaudio": {
-     "format": "<span font='21' rise='-27500'>{icon}</span>",
-     "format-muted": " ",
+     "format": "<span font='21'>{icon}</span>",
+     "format-muted": "<span font='19'> </span>",
      "format-source": "",
      "format-source-muted": "",
      "format-icons": {
@@ -86,7 +87,7 @@
    },
 
    "backlight": {
-     "format": "<span font='19' rise='8800'>{icon}</span>",
+     "format": "<span font='19'>{icon}</span>",
      "tooltip-format": "{percent}%",
      "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
    },
@@ -97,18 +98,20 @@
      "full-at": 100,
      "design-capacity": false,
      "states": {
-       "good": 100,
-       "critical": 50
+       "full": 99,
+       "discharging": 98,
+       "warning": 35,
+       "critical": 15
      },
-     "format": "<span font='19' letter_spacing='-6000'>{icon}</span> <span rise='-300' letter_spacing='-1000'>{capacity}% ({time})</span>",
-     "format-charging": "<span font='18' letter_spacing='-7000'>{icon}</span> <span rise='-1200' letter_spacing='-1000'>{capacity}% ({time})</span>",
-     "format-plugged": "<span rise='-1000' letter_spacing='3000'> </span><span rise='-2900'>{capacity}%</span>",
-     "format-full": "<span font='19' letter_spacing='-2500'>{icon}</span>",
+     "format": "<span font='19' letter_spacing='-6000'>{icon}</span> <span rise='0.5pt'>{capacity}% {time}</span>",
+     "format-charging": "<span font='18'>{icon}</span><span rise='-1.2pt'>{capacity}% {time}</span>",
+     "format-discharging": "<span font='19' rise='3.5pt' letter_spacing='-11000'>{icon}</span> <span rise='2.5pt'>{capacity}% {time}</span>",
+     "format-plugged-full": "<span font='19'>{icon}</span>",
      "format-icons": {
        "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
        "charging": ["󰢜 ", "󰂆 ", "󰂇 ", "󰂈 ", "󰢝 ", "󰂉 ", "󰢞 ", "󰂊 ", "󰂋 ", "󰂅 "],
      },
-     "format-time": "{H}:{m}",
+     "format-time": "({H}:{m})",
      "tooltip": false
    },
 
@@ -116,8 +119,8 @@
      "interval": 60,
      "align": 0,
      "rotate": 0,
-     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-     "format": "<span letter_spacing='30000'></span><span rise='-1800'>{:%a %b %d %I:%M %p}</span>"
+     "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
+     "format": "<span rise='-2pt' letter_spacing='3000'> </span><span rise='-3.5pt'>{:%a %b %d %I:%M %p}</span>"
    },
 
    "idle_inhibitor": {

@@ -1,7 +1,6 @@
 #!/bin/sh
 
 down() {
-  # pamixer -d 2
 	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
 	pulsemixer --max-volume 100 --change-volume -2
   volume=$(pulsemixer --get-volume | cut -d' ' -f1)
@@ -11,10 +10,8 @@ down() {
 }
 
 up() {
-  # pamixer -i 2
 	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
 	pulsemixer --max-volume 100 --change-volume +2
-  # volume=$(pamixer --get-volume)
   volume=$(pulsemixer --get-volume | cut -d' ' -f1)
   [ $volume -lt 1000 ] && volume=`expr $volume`  
   dunstify -a "VOLUME" "$volume%" -h int:value:"$volume" -i ~/.config/dunst/assets/ui/volume_up.png -r 2593 -u normal
@@ -22,12 +19,15 @@ up() {
 }
 
 mute() {
-  muted="$(pamixer --get-mute)"
+  # muted="$(pamixer --get-mute)"
+  muted="$(pulsemixer --get-mute)"
   if $muted; then
-    pamixer -u
+    # pamixer -u
+    pulsemixer --toggle-mute
     dunstify -a "VOLUME" "UNMUTED" -i ~/.config/dunst/assets/ui/volume_up.png -r 2593 -u normal
   else 
-    pamixer -m
+    # pamixer -m
+    pulsemixer --toggle-mute
     dunstify -a "VOLUME" "MUTED" -i ~/.config/dunst/assets/ui/volume_muted.svg -r 2593 -u normal
   fi
 }
