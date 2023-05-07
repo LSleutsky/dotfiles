@@ -7,11 +7,19 @@ window#waybar {
 }
 
 .modules-left,
-.modules-right {
+.modules-right,
+#workspaces {
   margin: 10px;
-  border: 4px solid #cba6f7;
+  border: 4px solid #89b4fa;
   border-radius: 10px;
   background: #11111b;
+}
+
+.modules-left > widget:first-child,
+.modules-left > widget:last-child,
+.modules-right > widget:first-child,
+.modules-right > widget:last-child {
+  border-radius: 8px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -40,6 +48,7 @@ window#waybar {
 #custom-weather.default,
 #custom-spotify,
 #tray,
+#custom-pacman,
 #bluetooth,
 #keyboard-state,
 #workspaces,
@@ -121,6 +130,11 @@ window#waybar {
   -gtk-icon-effect: highlight;
 }
 
+#custom-pacman {
+  padding-bottom: 5.5px;
+  color: #cba6f7;
+}
+
 #bluetooth {
   padding-bottom: 5px;
   color: #45475a;
@@ -132,7 +146,7 @@ window#waybar {
 }
 
 #keyboard-state label {
-  padding-right: 5px;
+  padding-right: 8px;
   padding-bottom: 4px;
 }
 
@@ -147,14 +161,6 @@ window#waybar {
 #custom-spotify {
   padding: 2px 15px 0 10px;
   color: #94e2d5;
-}
-
-#workspaces {
-  margin: 10px;
-  padding: 0 2px;
-  border: 4px solid #cba6f7;
-  border-radius: 8px;
-  background: #11111b;
 }
 
 #workspaces button {
@@ -226,8 +232,8 @@ window#waybar {
   color: #a6e3a1;
 }
 
-#battery.charging {
-  padding-right: 10px;
+#battery.charging:not(.full) {
+  padding-right: 15px;
   color: #89dceb;
 }
 
@@ -250,7 +256,6 @@ window#waybar {
 #idle_inhibitor {
   padding: 2px 0 2px 7px;
   color: #6c7086;
-  background-color: #11111b;
   font-size: 22px;
 }
 

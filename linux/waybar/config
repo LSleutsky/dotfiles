@@ -5,7 +5,7 @@
    "height": 40,
    "width": "",
    "fixed-center": true,
-   "modules-left": ["temperature", "cpu", "memory", "custom/weather", "tray", "bluetooth", "keyboard-state", "custom/spotify"],
+   "modules-left": ["temperature", "cpu", "memory", "custom/weather", "tray", "custom/pacman", "bluetooth", "keyboard-state", "custom/spotify"],
    "modules-center": ["wlr/workspaces"],
    "modules-right": ["network", "pulseaudio",  "backlight", "battery", "clock", "idle_inhibitor"],
 
@@ -39,6 +39,14 @@
    "tray": {
      "spacing": 8,
      "icon-size": 22,
+   },
+
+   "custom/pacman": {
+     "interval": 350,
+     "format": "<span font='19' rise='5pt'> </span><span font='17' rise='4pt'>{}</span>",
+     "exec": "checkupdates | wc -l",
+     "on-click": "kitty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
+     "signal": 8
    },
 
    "bluetooth": {
