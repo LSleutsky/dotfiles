@@ -5,7 +5,7 @@
    "height": 40,
    "width": "",
    "fixed-center": true,
-   "modules-left": ["temperature", "cpu", "memory", "custom/weather", "tray", "custom/spotify"],
+   "modules-left": ["temperature", "cpu", "memory", "custom/weather", "tray", "bluetooth", "keyboard-state", "custom/spotify"],
    "modules-center": ["wlr/workspaces"],
    "modules-right": ["network", "pulseaudio",  "backlight", "battery", "clock", "idle_inhibitor"],
 
@@ -36,17 +36,37 @@
      "return-type": "json",
    },
 
+   "tray": {
+     "spacing": 8,
+     "icon-size": 22,
+   },
+
+   "bluetooth": {
+     "format": "<span font='19'>󰂲</span>",
+     "format-on": "<span font='16'></span>",
+     "format-connected": "<span font='16'></span>",
+     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+     "on-click": "kitty -e bluetoothctl"
+   }, 
+
+   "keyboard-state": {
+     "capslock": true,
+     "format": "<span font='15'>{icon}</span>",
+     "format-icons": {
+       "locked": "󰘲",
+       "unlocked": "󰘲"
+     }
+   },
+
    "custom/spotify": {
      "interval": 1,
      "return-type": "json",
      "exec": "~/.config/waybar/scripts/spotify.sh",
      "exec-if": "pgrep spotify",
      "escape": true
-   },
-
-   "tray": {
-     "spacing": 8,
-     "icon-size": 22,
    },
 
    "wlr/workspaces": {
@@ -70,7 +90,7 @@
 
    "pulseaudio": {
      "format": "<span font='21'>{icon}</span>",
-     "format-muted": "<span font='19'> </span>",
+     "format-muted": "<span font='21'> </span>",
      "format-source": "",
      "format-source-muted": "",
      "format-icons": {
@@ -98,8 +118,8 @@
      "full-at": 100,
      "design-capacity": false,
      "states": {
-       "full": 99,
-       "discharging": 98,
+       "full": 100,
+       "discharging": 99,
        "warning": 35,
        "critical": 15
      },
@@ -126,7 +146,7 @@
    "idle_inhibitor": {
      "format": "{icon}",
      "format-icons": {
-       "activated": "󰖨",
+       "activated": "",
        "deactivated": "󰤄 "
      },
      "start-activated": false,

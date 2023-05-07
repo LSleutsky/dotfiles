@@ -19,14 +19,10 @@ up() {
 }
 
 mute() {
-  # muted="$(pamixer --get-mute)"
-  muted="$(pulsemixer --get-mute)"
-  if $muted; then
-    # pamixer -u
+	if [[ `pulsemixer --get-mute` == 1 ]]; then
     pulsemixer --toggle-mute
     dunstify -a "VOLUME" "UNMUTED" -i ~/.config/dunst/assets/ui/volume_up.png -r 2593 -u normal
   else 
-    # pamixer -m
     pulsemixer --toggle-mute
     dunstify -a "VOLUME" "MUTED" -i ~/.config/dunst/assets/ui/volume_muted.svg -r 2593 -u normal
   fi
