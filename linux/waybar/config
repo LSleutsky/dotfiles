@@ -4,9 +4,9 @@
    "layer": "top",
    "position": "top",
    "fixed-center": true,
-   "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "tray",  "custom/weather", "custom/spotify", "mpd"],
+   "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "tray", "custom/weather", "custom/spotify", "mpd"],
    "modules-center": ["wlr/workspaces"],
-   "modules-right": ["keyboard-state", "bluetooth",  "network", "pulseaudio",  "backlight", "battery", "clock", "idle_inhibitor"]
+   "modules-right": ["keyboard-state", "bluetooth", "network", "pulseaudio", "backlight", "battery", "clock", "idle_inhibitor"],
 
    "temperature": {
      "critical-threshold": 85,
@@ -45,7 +45,7 @@
 
    "custom/weather": {
      "exec": "python3 ~/.config/waybar/scripts/weather.py",
-     "restart-interval": 300
+     "restart-interval": 300,
      "return-type": "json"
    },
 
