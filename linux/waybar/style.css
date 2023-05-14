@@ -50,7 +50,6 @@ window#waybar {
 #custom-weather.default,
 #custom-spotify,
 #mpd,
-#custom-cava,
 #workspaces,
 #keyboard-state,
 #bluetooth,
@@ -158,10 +157,6 @@ window#waybar {
 
 #mpd.paused {
   color: #f5c2e7;
-}
-
-#custom-cava {
-  color: #89b4fa;
 }
 
 .modules-left > widget:last-child > #custom-spotify {
