@@ -35,6 +35,8 @@ window#waybar {
 #temperature,
 #cpu,
 #memory,
+#custom-pacman,
+#tray,
 #custom-weather,
 #custom-weather.severe,
 #custom-weather.sunnyDay,
@@ -47,11 +49,11 @@ window#waybar {
 #custom-weather.snowyIcyNight,
 #custom-weather.default,
 #custom-spotify,
-#tray,
-#custom-pacman,
-#bluetooth,
-#keyboard-state,
+#mpd,
+#custom-cava,
 #workspaces,
+#keyboard-state,
+#bluetooth,
 #battery,
 #clock,
 #idle_inhibitor {
@@ -71,12 +73,35 @@ window#waybar {
   color: #fab387;
 }
 
+#temperature.critical {
+  color: #f38ba8;
+}
+
 #cpu {
   color: #b4befe;
 }
 
 #memory {
   color: #eba0ac;
+}
+
+#custom-pacman {
+  padding-bottom: 4.5px;
+  color: #cba6f7;
+}
+
+#tray {
+  padding-bottom: 4.5px;
+  padding-left: 10px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  background-color: #eb4d4b;
+  -gtk-icon-effect: highlight;
 }
 
 #custom-weather {
@@ -116,51 +141,31 @@ window#waybar {
   color: #f2cdcd;
 }
 
-#tray {
-  padding-bottom: 4.5px;
-  padding-left: 5.5px;
+#custom-spotify {
+  padding: 2px 18px 0 5px;
+  color: #94e2d5;
 }
 
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-  background-color: #eb4d4b;
-  -gtk-icon-effect: highlight;
-}
-
-#custom-pacman {
-  padding-bottom: 5.5px;
-  color: #cba6f7;
-}
-
-#bluetooth {
-  padding-bottom: 5px;
+#mpd {
+  padding-bottom: 4px;
+  padding-left: 3px;
   color: #45475a;
 }
 
-#bluetooth.on,
-#bluetooth.connected {
+#mpd.playing {
+  color: #94e2d5;
+}
+
+#mpd.paused {
+  color: #f5c2e7;
+}
+
+#custom-cava {
   color: #89b4fa;
 }
 
-#keyboard-state label {
-  padding-right: 8px;
-  padding-bottom: 4px;
-}
-
-#keyboard-state label.capslock {
-  color: #45475a;
-}
-
-#keyboard-state label.capslock.locked {
-  color: #f2cdcd;
-}
-
-#custom-spotify {
-  padding: 2px 15px 0 10px;
-  color: #94e2d5;
+.modules-left > widget:last-child > #custom-spotify {
+  padding-right: 20px;
 }
 
 #workspaces button {
@@ -186,6 +191,28 @@ window#waybar {
 
 #workspaces button.active:last-child {
   padding-left: 5px;
+}
+
+#keyboard-state label {
+  padding-right: 2px;
+  padding-bottom: 2px;
+}
+
+#keyboard-state label.capslock {
+  color: #45475a;
+}
+
+#keyboard-state label.capslock.locked {
+  color: #f2cdcd;
+}
+
+#bluetooth {
+  color: #45475a;
+}
+
+#bluetooth.on,
+#bluetooth.connected {
+  color: #89b4fa;
 }
 
 #network {
