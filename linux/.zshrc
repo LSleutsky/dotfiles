@@ -1,9 +1,5 @@
 [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 
-export ARCHFLAGS="-arch x86_64"
-export EDITOR="lvim"
-export ZSH="$HOME/.oh-my-zsh"
-
 zstyle ':omz:update' mode auto
 
 COMPLETION_WAITING_DOTS="true"
