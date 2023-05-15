@@ -3,7 +3,7 @@ set $mod Mod4
 set $alt Mod1
 
 ##-- Fonts (Global) ----------------------
-font pango:Mononoki Nerd Font 12
+font pango:ComicShannsMono Nerd Font 12
 
 ##-- Config files ------------------------
 include ~/.config/sway/sway-idle
