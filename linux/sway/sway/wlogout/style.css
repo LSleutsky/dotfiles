@@ -1,0 +1,48 @@
+* {
+  font-family: "Mononoki Nerd Font", "JetBrains Mono Nerd Font", "Iosevka Nerd Font", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+window {
+  background-color: rgb(40, 42, 54);
+}
+
+button {
+	background-color: rgb(68, 71, 90);
+  border: 2px solid rgb(189, 147, 249);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55%;
+  box-shadow: none;
+}
+
+button:focus, button:active, button:hover {
+  background-color: rgb(98, 114, 164);
+  outline-style: none;
+}
+
+#lock {
+  background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+  background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+  background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+  background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+  background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+  background-image: image(url("icons/reboot.png"));
+}

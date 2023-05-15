@@ -1,0 +1,6 @@
+exec swayidle -w \
+       timeout 900 "$lockscreen" \
+       timeout 1200 'swaymsg "output * dpms off"' \
+       resume 'swaymsg "output * dpms on"' \
+       before-sleep 'mpc pause' \
+       before-sleep "$lockscreen"

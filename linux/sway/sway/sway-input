@@ -1,0 +1,22 @@
+##-- Input configuration ----------------
+
+# swaymsg -t get_inputs
+
+## Touchpad / Mouse
+input "*" {
+  dwt enabled
+  tap enabled
+  natural_scroll enabled
+  middle_emulation enabled
+	pointer_accel 0.5
+}
+
+## Keyboard Layout
+#input "type:keyboard" {
+#    xkb_layout us,de
+#    xkb_variant ,nodeadkeys
+#    xkb_options grp:alt_shift_toggle
+#    repeat_delay 300
+#    repeat_rate 30
+#}
+

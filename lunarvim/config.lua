@@ -395,3 +395,13 @@ vim.api.nvim_create_autocmd("VimResized", {
 	pattern = "*",
 	command = "tabdo wincmd =",
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = { ".conf", "config" },
+	command = "setf dosini",
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*.sh",
+	command = "setf bash",
+})

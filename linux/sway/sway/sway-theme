@@ -1,0 +1,28 @@
+## --------------------------- Style -------------------------------
+default_border pixel 2
+default_floating_border pixel 2
+smart_borders off
+
+titlebar_border_thickness 2
+titlebar_padding 6 6
+title_align center
+
+gaps inner 10
+gaps outer 0
+
+## -------------------------- Colors ------------------------------
+client.background       	#282A36
+
+# class                 	border  bg      text    indicator child_border
+client.focused 	          #8BE9FD #8BE9FD #F8F8F2 #8BE9FD   #8BE9FD
+client.focused_inactive  	#50FA7B #50FA7B #44475A #50FA7B   #50FA7B
+client.unfocused        	#6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.urgent           	#FF5555 #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      	#BD93F9 #BD93F9 #F8F8F2 #BD93F9   #BD93F9
+
+## -------------------------- GTK Themes ------------------------------
+exec_always {
+  gsettings set org.gnome.desktop.interface gtk-theme 'Dracula'
+  gsettings set org.gnome.desktop.interface icon-theme 'Dracula'
+  gsettings set org.gnome.desktop.wm.preferences theme 'Dracula'
+}

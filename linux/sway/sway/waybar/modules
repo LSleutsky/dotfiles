@@ -1,0 +1,219 @@
+{
+  "sway/workspaces": {
+    "disable-scroll": false,
+    "disable-click": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": " ",
+      "2": " ",
+      "3": " ",
+      "4": " ",
+      "5": " ",
+      "6": " ",
+      "7": " ",
+      "8": " ",
+      "9": " ",
+      "10": "󰭻 " ,
+      "urgent": " ",
+      "focused": " ",
+      "default": " "
+    },
+    "smooth-scrolling-threshold": 1,
+    "disable-scroll-wraparound": false,
+    "enable-bar-scroll": false,
+    "disable-markup": false,
+    "current-only": false
+  },
+  
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+
+  "sway/window": {
+    "format": "{title}",
+    "max-length": 50
+  },
+
+  "keyboard-state": {
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+
+  "mpd": {
+    "interval": 2,
+    "unknown-tag": "N/A",
+    "format": "{artist} - {title} {stateIcon}",
+    "format-disconnected": " Disconnected",
+    "format-paused": "{artist} - {title} {stateIcon}",
+    "format-stopped": "Stopped ",
+    "state-icons": {
+      "paused": " ",
+      "playing": " "
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+    "on-click": "mpc toggle",
+    "on-click-middle": "foot -c ~/.config/sway/foot/foot.ini -e ncmpcpp",
+    "on-click-right": "mpc next",
+    "on-update": "",
+    "on-scroll-up": "volume --inc",
+    "on-scroll-down": "volume --dec",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "custom/spotify": {
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.config/sway/waybar/custom/spotify.sh",
+    "exec-if": "pgrep spotify",
+    "escape": true
+  },
+
+  "custom/weather": {
+    "format": " {} ",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click-right",
+    "interval": 1800,
+    "return-type": "json",
+    "exec": "~/.config/sway/waybar/custom/weather.sh",
+    "exec-if": "ping wttr.in -c1",
+  },
+
+  "bluetooth": {
+	  "format": "",
+	  "format-disabled": "",
+	  "format-connected": " {num_connections} connected",
+	  "tooltip-format": "{controller_alias}\t{controller_address}",
+	  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "󰤄 "
+    },
+    "start-activated": false,
+    "timeout": false,
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "  Mute",
+    "format-bluetooth": " {volume}% {format_source}",
+    "format-bluetooth-muted": " Mute",
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": "󰦢",
+      "headset": "󰋎",
+      "phone": "",
+      "portable": " ",
+      "car": " ",
+      "default": ["", "", " "]
+    },
+    "scroll-step": 5.0,
+    "on-click": "pulsemixer --toggle-mute",
+    "on-click-right": "pulsemixer --toggle-mute",
+    /* scroll behavior reversed due to natural scrolling enabled */
+    "on-scroll-up": "pulsemixer --max-volume 100 --change-volume -5",
+    "on-scroll-down": "pulsemixer --max-volume 100 --change-volume +5",
+    "smooth-scrolling-threshold": 1,
+    "tooltip": false
+  },
+
+  "backlight": {
+    "interval": 2,
+    "align": 0,
+    "rotate": 0,
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-click": "",
+    "on-click-middle": "",
+    "on-click-right": "",
+    "on-update": "",
+    /* scroll behavior reversed due to natural scrolling enabled */
+    "on-scroll-up": "light -U 1%",
+    "on-scroll-down": "light -A 1%",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "temperature": {
+    "critical-threshold": 175,
+    "format": " {temperatureF}°F",
+    "tooltip": false
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": " {used:0.1f}GiB",
+    "tooltip": false
+  },
+
+  "disk": {
+    "interval": 30,
+    "format-alt": " {used} / {total} ({percentage_used}%)",
+    "format": "󰋊 {free}",
+    "path": "/",
+    "tooltip": false
+  },
+
+  "network": {
+    "interval": 5,
+    "format-alt": " {bandwidthDownBytes} |  {bandwidthUpBytes}",
+    "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": "󰌙 Disconnected",
+    "format-disabled": "󱔑  Disabled",
+    "format-wifi": "  {essid}",
+    "tooltip-format": "󱕆 {ifname} via {gwaddr}",
+    "tooltip": false
+  },
+
+  "battery": {
+    "interval": 60,
+    "rotate": 0,
+    "full-at": 100,
+    "design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 25,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}% ({time})",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": "{icon} Full",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "format-time": "{H}:{m}",
+    "tooltip": false
+  },
+
+  "clock": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "  {:%a %b %d %I:%M %p}"
+  },
+
+  "custom/wlogout": {
+    "format": " ",
+    "interval": "once",
+    "on-click": "~/.config/sway/scripts/wlogout",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
+  }
+}
