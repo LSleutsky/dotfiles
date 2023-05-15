@@ -1,9 +1,0 @@
-##-- Output configuration ----------------
-
-# swaymsg -t get_outputs
-
-output * bg ~/.config/sway/wallpapers/wallpaper.png fill
-
-#output HDMI-A-1 resolution 1920x1080 position 1920,0
-#output eDP-1 resolution 1680x1050 position 1680,0
-#output HDMI1 scale 2
