@@ -88,8 +88,8 @@ def format_chances(hour):
     return ", ".join(conditions)
 
 
-data['text'] = WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
-    " "+weather['current_condition'][0]['temp_F']+"°"
+data['text'] = "<span font_size='17pt' rise='-0.5pt' letter_spacing='10000'>" + WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + "</span>" + \
+        "<span font_family='ComicShannsMono Nerd Font' font_size='16.5pt'>" + weather['current_condition'][0]['temp_F'] + "</span>" + "<span font='22pt'>°</span>"
 
 data['tooltip'] = f"<b>{weather['current_condition'][0]['weatherDesc'][0]['value']} {weather['current_condition'][0]['temp_F']}°F</b>\n"
 data['tooltip'] += f"Feels like: {weather['current_condition'][0]['FeelsLikeF']}°F\n"

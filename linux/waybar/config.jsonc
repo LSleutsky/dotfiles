@@ -53,14 +53,14 @@
     "exec": "~/.config/waybar/scripts/spotify.sh",
     "exec-if": "pgrep spotify",
     "escape": true,
-    "max-length": 30
+    "max-length": 35
   },
 
   "mpd": {
-    "format": "<span font='18'>{stateIcon}</span> <span font='17' rise='-0.75pt'>{artist} - {title}</span>",
+    "format": "<span font='18' letter_spacing='10000'>{stateIcon}</span> <span font='17' rise='-0.75pt'>{artist} - {title}</span>",
     "format-disconnected": "<span font='18'>󰎊</span>",
     "format-stopped": "<span font='18'> </span>",
-    "max-length": 45,
+    "max-length": 35,
     "tooltip-format": "{elapsedTime:%M:%S}/{totalTime:%M:%S}, Vol: {volume} %, Queue: {songPosition}/{queueLength}, Opts: {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
     "state-icons": {
       "paused": "",
