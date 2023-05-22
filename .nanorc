@@ -18,7 +18,8 @@ set breaklonglines
 set smarthome
 set multibuffer
 
-include "/usr/local/share/nano/*.nanorc"
+include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano/extra/*.nanorc"
 
 bind ^C copy main
 bind ^V paste main

@@ -1,0 +1,66 @@
+window {
+  font-family: "ComicShannsMono Nerd Font", "JetBrains Mono Nerd Font", "Iosevka Nerd Font", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: #cdd6f4;
+  background-color: rgba(30, 30, 46, 0.5);
+}
+
+button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+  border: none;
+  background-color: rgba(30, 30, 46, 0);
+  margin: 5px;
+  box-shadow: none
+}
+
+button:hover {
+  background-color: rgba(49, 50, 68, 0.1);
+}
+
+button:focus {
+  background-color: #cba6f7;
+  color: #1e1e2e;
+}
+
+#lock {
+  background-image: image(url("./lock.png"));
+}
+
+#lock:focus {
+  background-image: image(url("./lock-hover.png"));
+}
+
+#logout {
+  background-image: image(url("./logout.png"));
+}
+
+#logout:focus {
+  background-image: image(url("./logout-hover.png"));
+}
+
+#suspend {
+  background-image: image(url("./sleep.png"));
+}
+
+#suspend:focus {
+  background-image: image(url("./sleep-hover.png"));
+}
+
+#shutdown {
+  background-image: image(url("./power.png"));
+}
+
+#shutdown:focus {
+  background-image: image(url("./power-hover.png"));
+}
+
+#reboot {
+  background-image: image(url("./restart.png"));
+}
+
+#reboot:focus {
+  background-image: image(url("./restart-hover.png"));
+}

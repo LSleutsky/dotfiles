@@ -1,66 +1,32 @@
 #!/bin/sh
 
-IMAGE="$HOME/.config/hypr/wallpapers/CartoonSpace.png"
+IMAGE="$HOME/.config/hypr/wallpapers/CartoonAstronaut.png"
 
-bg='1e1e2e'	  	bgl='181825'  		fg='f5e0dc'
-red='f38ba8'		green='a6e3a1'		yellow='f9e2af'
-blue='89b4fa'		magenta='eba0ac'	cyan='94e2d5'
-alpha='11111b'
-
-swaylock -f \
-	\
-	`# General` \
-	--show-failed-attempts \
-	--hide-keyboard-layout \
-	--indicator-caps-lock \
-	\
-	`# Appearance` \
-	--color ${bg} \
+swaylock \
 	--image ${IMAGE} --scaling 'fill' \
-	--font 'ComicShannsMono Nerd Font' --font-size 18 \
-	\
-	`# Backspace` \
-	--key-hl-color ${green} \
-	--caps-lock-key-hl-color ${blue} \
-	--bs-hl-color ${red} \
-	--caps-lock-bs-hl-color ${red} \
-	\
-	`# Indicator` \
-	--indicator-radius 120 \
-	--indicator-thickness 10 \
-	\
-	`# Inside Circle` \
-	--inside-color ${alpha} \
-	--inside-clear-color ${alpha} \
-	--inside-caps-lock-color ${alpha} \
-	--inside-ver-color ${blue} \
-	--inside-wrong-color ${red} \
-	\
-	`# Layout` \
-	--layout-bg-color ${cyan} \
-	--layout-border-color ${cyan} \
-	--layout-text-color ${bg} \
-	\
-	`# Line` \
-	--line-color ${bg} \
-	--line-clear-color ${red} \
-	--line-caps-lock-color ${bg} \
-	--line-ver-color ${bg} \
-	--line-wrong-color ${bg} \
-	\
-	`# Ring` \
-	--ring-color ${cyan} \
-	--ring-clear-color ${bg} \
-	--ring-caps-lock-color ${magenta} \
-	--ring-ver-color ${blue} \
-	--ring-wrong-color ${red} \
-	\
-	`# Separator` \
-	--separator-color ${bg} \
-	\
-	`# Text` \
-	--text-color ${fg} \
-	--text-clear-color ${fg} \
-	--text-caps-lock-color ${fg} \
-	--text-ver-color ${bg} \
-	--text-wrong-color ${bg}
+	--effect-blur 35x20 \
+  --hide-keyboard-layout \
+  --indicator-radius 220 \
+  --indicator-thickness 7 \
+  --indicator-caps-lock \
+  --ring-color cba6f7 \
+  --ring-ver-color 89b4fa \
+  --ring-wrong-color f38ba8 \
+  --ring-clear-color a6e3a1 \
+  --key-hl-color 1e1e2e \
+  --bs-hl-color eba0ac \
+  --text-color 11111b \
+  --text-caps-lock-color 11111b \
+  --line-color 1e1e2e \
+  --line-ver-color 1e1e2e \
+  --line-wrong-color f38ba8 \
+  --line-clear-color a6e3a1 \
+  --separator-color 1e1e2e \
+  --inside-color cba6f7 \
+  --inside-ver-color 89b4fa\
+  --inside-wrong-color f38ba8 \
+  --inside-clear-color a6e3a1 \
+  --inside-caps-lock-color fab387 \
+  --color 1e1e2e80 \
+  --clock \
+  --indicator
