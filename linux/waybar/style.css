@@ -222,18 +222,17 @@ window#waybar {
 }
 
 #pulseaudio {
-  padding-top: 12px;
-  padding-right: 3px;
+  padding: 12px 8px 8px 10px;
   color: #89b4fa;
 }
 
 #pulseaudio.muted {
-  padding-right: 1px;
+  padding-right: 5px;
   color: #f38ba8;
 }
 
 #backlight {
-  padding: 8px 11px 8px;
+  padding: 8px 18px 8px 11px;
   color: #f9e2af;
 }
 
@@ -244,7 +243,7 @@ window#waybar {
 }
 
 #battery.full {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 #battery.full,

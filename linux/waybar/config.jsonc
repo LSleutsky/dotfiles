@@ -120,7 +120,7 @@
   },
 
   "pulseaudio": {
-    "format": "<span font='21' letter_spacing='22000'>{icon}</span><span font='16' rise='1pt'>{volume}%</span>",
+    "format": "<span font='20' letter_spacing='35000'>{icon}</span><span font='16' rise='0.5pt'>{volume}%</span>",
     "format-muted": "<span font='21'> </span>",
     "format-source": "",
     "format-source-muted": "",
@@ -131,17 +131,20 @@
       "phone": "",
       "portable": " ",
       "car": " ",
-      "default": ["󰕿", "󰖀", "󰕾"]
-      // "default": ["", "", " "]
+      "default": ""
     },
     "on-click": "pavucontrol &",
-    "tooltip-format": "{volume}%"
+    "on-click-right": "pulsemixer --toggle-mute",
+    // scroll behavior reversed due to natural scrolling enabled
+    "on-scroll-up": "pulsemixer --max-volume 100 --change-volume -2",
+    "on-scroll-down": "pulsemixer --max-volume 100 --change-volume +2",
+    "tooltip": false
   },
 
   "backlight": {
     "format": "<span font='19'>{icon}</span><span font='16' rise='-2pt'>{percent}%</span>",
-    "tooltip-format": "{percent}%",
-    "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "]
+    "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+    "tooltip": false
   },
 
   "battery": {
@@ -158,14 +161,14 @@
     "format": "<span font='19' letter_spacing='-6000'>{icon}</span> <span font='16' rise='0.5pt'>{capacity}%</span>",
     "format-charging": "<span font='19'>{icon}</span><span font='16' rise='-1.2pt'>{capacity}%</span>",
     "format-discharging": "<span font='19' rise='3.5pt' letter_spacing='-11000'>{icon}</span> <span font='16' rise='2.5pt'>{capacity}%</span>",
-    "format-plugged-full": "<span font='19' letter_spacing='12000'>{icon}</span><span font='16' rise='0.5pt'>{capacity}%</span>",
-    "format-full": "<span font='19' letter_spacing='12000'>{icon}</span><span font='16' rise='0.5pt'>{capacity}%</span>",
+    "format-plugged-full": "<span font='19' letter_spacing='12000'>{icon}</span><span font='16' rise='-0.25pt'>{capacity}%</span>",
+    "format-full": "<span font='19' letter_spacing='12000'>{icon}</span><span font='16' rise='-0.25pt'>{capacity}%</span>",
     "format-icons": {
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
       "charging": ["󰢜 ", "󰂆 ", "󰂇 ", "󰂈 ", "󰢝 ", "󰂉 ", "󰢞 ", "󰂊 ", "󰂋 ", "󰂅 "],
     },
     "format-time": "{H}h {m}m",
-    "tooltip-format": "{time} remaining"
+    "tooltip-format": "{time}"
   },
 
   "clock": {
