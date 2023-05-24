@@ -68,13 +68,15 @@ window#waybar {
 }
 
 #custom-pacman {
+  padding-right: 5px;
   padding-bottom: 4.5px;
   color: #cba6f7;
 }
 
 #tray {
+  padding-right: 5px;
   padding-bottom: 4.5px;
-  padding-left: 10px;
+  padding-left: 12px;
 }
 
 #tray > .passive {
@@ -82,7 +84,7 @@ window#waybar {
 }
 
 #tray > .needs-attention {
-  background-color: #eb4d4b;
+  background-color: #f38ba8;
   -gtk-icon-effect: highlight;
 }
 
@@ -98,15 +100,15 @@ window#waybar {
 }
 
 #mpd {
-  padding-bottom: 4px;
-  padding-left: 3px;
+  padding-bottom: 3px;
+  padding-left: 7px;
   color: #45475a;
 }
 
 #mpd.playing {
   padding-top: 7px;
-  padding-left: 8px;
-  color: #94e2d5;
+  padding-left: 7px;
+  color: #89b4fa;
 }
 
 #mpd.paused {
@@ -214,6 +216,10 @@ window#waybar {
   color: #fab387;
 }
 
+#battery.full {
+  padding-right: 13px;
+}
+
 #battery.critical:not(.charging) {
   padding-left: 15px;
   color: #f38ba8;
@@ -228,7 +234,7 @@ window#waybar {
 }
 
 #idle_inhibitor {
-  padding: 2px 0 1.5px 10px;
+  padding: 2.5px 0 1.5px 8px;
   color: #6c7086;
   font-size: 22px;
 }
