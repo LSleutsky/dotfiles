@@ -82,9 +82,3 @@
   merge-conflict-ours-diff-header-decoration-style = "#434C5E" box
   merge-conflict-theirs-diff-header-style = "#F1FA8C" bold
   merge-conflict-theirs-diff-header-decoration-style = "#434C5E" box
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential

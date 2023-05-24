@@ -1,4 +1,3 @@
-[ -s /opt/homebrew/opt/nvm/nvm.sh ] && \. /opt/homebrew/opt/nvm/nvm.sh
 [ -s /opt/homebrew/opt/nvm/etc/bash_completion.d/nvm ] && \. /opt/homebrew/opt/nvm/etc/bash_completion.d/nvm
 
 # This loads autojump
@@ -54,3 +53,4 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fnm env --use-on-cd)"
