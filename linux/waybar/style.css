@@ -64,19 +64,20 @@ window#waybar {
 }
 
 #memory {
+  padding-left: 14px;
   color: #eba0ac;
 }
 
 #custom-pacman {
-  padding-right: 5px;
+  padding-right: 10px;
   padding-bottom: 4.5px;
   color: #cba6f7;
 }
 
 #tray {
-  padding-right: 5px;
+  padding-right: 7px;
   padding-bottom: 4.5px;
-  padding-left: 12px;
+  padding-left: 8px;
 }
 
 #tray > .passive {
@@ -178,7 +179,7 @@ window#waybar {
 }
 
 #pulseaudio {
-  padding: 12px 8px 8px 10px;
+  padding: 12px 8px 8px 11px;
   color: #89b4fa;
 }
 
@@ -188,7 +189,7 @@ window#waybar {
 }
 
 #backlight {
-  padding: 8px 18px 8px 11px;
+  padding: 9.5px 18px 8px 11px;
   color: #f9e2af;
 }
 

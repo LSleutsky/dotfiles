@@ -15,7 +15,6 @@
   "cpu": {
     "interval": 10,
     "format": "<span font='20' rise='12pt'>󰓅 </span><span rise='12pt'>{}%</span>",
-    "max-length": 10,
     "on-click": ""
   },
 
@@ -23,8 +22,7 @@
     "interval": 30,
     "format": "<span font='18' rise='-3pt' letter_spacing='-8000'> </span> <span font='16' rise='-1pt'>{}%</span>",
     "format-alt":"<span font='18' rise='-6pt'> </span><span font='16' rise='-4pt'>{used:0.1f}GB</span>",
-    "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB",
-    "max-length": 10
+    "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB"
   },
 
   "custom/pacman": {
@@ -120,11 +118,10 @@
   },
 
   "pulseaudio": {
-    "format": "<span font='20' letter_spacing='35000'>{icon}</span><span font='16' rise='0.5pt'>{volume}%</span>",
+    "format": "<span font='20' letter_spacing='30000'>{icon}</span><span font='16' rise='0.5pt'>{volume}%</span>",
     "format-muted": "<span font='21'> </span>",
-    "format-source": "",
-    "format-source": "<span font='20' letter_spacing='35000'></span>",
-    "format-source-muted": "",
+    "format-source": "<span font='18' rise='1.5pt' letter_spacing='15000'></span><span font='16'>{volume}%</span>",
+    "format-source-muted": "<span font='18'></span>",
     "format-icons": {
       "headphone": " ",
       "hands-free": "󰦢",
@@ -143,7 +140,7 @@
   },
 
   "backlight": {
-    "format": "<span font='19'>{icon}</span><span font='16' rise='-2pt'>{percent}%</span>",
+    "format": "<span font='19'>{icon}</span><span font='17' rise='-2.5pt'>{percent}%</span>",
     "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
     "tooltip": false
   },
@@ -176,8 +173,7 @@
     "interval": 60,
     "align": 0,
     "rotate": 0,
-    "format": "<span font='19' rise='-4pt' letter_spacing='25000'></span><span font='16' rise='-4.5pt'>{:%R}</span>",
-    "format-alt": "<span rise='-2pt' letter_spacing='3000'> </span><span rise='-3.5pt'>{:%m/%d}</span>",
+    "format": "<span font='19' rise='-4.5pt' letter_spacing='25000'></span><span rise='-4.5pt'>{:%R}</span>",
     "tooltip-format": "<span size='18pt'>{calendar}</span>",
     "calendar": {
       "format": {

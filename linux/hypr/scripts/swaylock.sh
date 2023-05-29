@@ -27,6 +27,6 @@ swaylock \
   --inside-wrong-color f38ba8 \
   --inside-clear-color a6e3a1 \
   --inside-caps-lock-color fab387 \
-  --color 1e1e2e80 \
+  --color 1e1e2e \
   --clock \
   --indicator

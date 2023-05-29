@@ -49,6 +49,8 @@ lvim.keys.normal_mode["<C-a>"] = "gg0VG"
 lvim.keys.normal_mode["<C-c>"] = "<cmd> %y+ <cr>"
 lvim.keys.normal_mode["<C-x>"] = "<C-w>c"
 lvim.keys.normal_mode["<leader>t"] = "<cmd> TroubleToggle <cr>"
+lvim.keys.normal_mode["<S-Up>"] = "<cmd> m-2 <cr>"
+lvim.keys.normal_mode["<S-Down>"] = "<cmd> m+ <cr>"
 
 -- insert mode
 lvim.keys.insert_mode["<C-s>"] = "<esc> :w <cr>"
@@ -60,6 +62,8 @@ lvim.keys.insert_mode["<C-l>"] = "<Right>"
 lvim.keys.insert_mode["<C-a>"] = "<Home>"
 lvim.keys.insert_mode["<C-b>"] = "<esc>^i"
 lvim.keys.insert_mode["<C-e>"] = "<End>"
+lvim.keys.insert_mode["<S-Up>"] = "<Esc> <cmd> m-2 <cr>"
+lvim.keys.insert_mode["<S-Down>"] = "<Esc> <cmd> m+ <cr>"
 
 -- visual mode
 lvim.keys.visual_mode["x"] = '"_x'
@@ -402,6 +406,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = "*.sh",
+	pattern = { "*.sh", ".bashrc", ".bash_profile" },
 	command = "setf bash",
 })
