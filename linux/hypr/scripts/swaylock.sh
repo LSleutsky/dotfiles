@@ -10,9 +10,9 @@ swaylock \
   --indicator-thickness 7 \
   --indicator-caps-lock \
   --ring-color cba6f7 \
-  --ring-ver-color 89b4fa \
+  --ring-ver-color a6e3a1 \
   --ring-wrong-color f38ba8 \
-  --ring-clear-color a6e3a1 \
+  --ring-clear-color 89b4fa \
   --key-hl-color 1e1e2e \
   --bs-hl-color eba0ac \
   --text-color 11111b \
@@ -20,12 +20,12 @@ swaylock \
   --line-color 1e1e2e \
   --line-ver-color 1e1e2e \
   --line-wrong-color f38ba8 \
-  --line-clear-color a6e3a1 \
+  --line-clear-color 89b4fa \
   --separator-color 1e1e2e \
   --inside-color cba6f7 \
-  --inside-ver-color 89b4fa\
+  --inside-ver-color a6e3a1 \
   --inside-wrong-color f38ba8 \
-  --inside-clear-color a6e3a1 \
+  --inside-clear-color 89b4fa \
   --inside-caps-lock-color fab387 \
   --color 1e1e2e \
   --clock \

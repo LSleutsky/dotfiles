@@ -58,7 +58,7 @@
     "format": "<span font='18' letter_spacing='10000'>{stateIcon}</span> <span font='17' rise='-0.75pt'>{title}</span>",
     "format-disconnected": "<span font='18'>󰎊</span>",
     "format-stopped": "",
-    "tooltip-format": "{artist}, {elapsedTime:%M:%S}/{totalTime:%M:%S}, Vol: {volume} %, Opts: {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
+    "tooltip-format": "{artist} | {album}, {elapsedTime:%M:%S}/{totalTime:%M:%S}, Vol: {volume} %, Opts: {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
     "on-click": "mpc toggle",
     "state-icons": {
       "paused": "",
@@ -142,6 +142,9 @@
   "backlight": {
     "format": "<span font='19'>{icon}</span><span font='17' rise='-2.5pt'>{percent}%</span>",
     "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+    // scroll behavior reversed due to natural scrolling enabled
+    "on-scroll-up": "light -U 2",
+    "on-scroll-down": "light -A 2",
     "tooltip": false
   },
 
@@ -158,8 +161,8 @@
     },
     "format": "<span font='19' letter_spacing='-6000'>{icon}</span> <span font='16' rise='0.5pt'>{capacity}%</span>",
     "format-charging": "<span font='19'>{icon}</span><span font='16' rise='-1.2pt'>{capacity}%</span>",
-    "format-discharging": "<span font='19' rise='3.5pt' letter_spacing='-11000'>{icon}</span> <span font='16' rise='2.5pt'>{capacity}%</span>",
-    "format-plugged-full": "<span font='19' letter_spacing='12000'>{icon}</span><span font='16' rise='-0.25pt'>{capacity}%</span>",
+    "format-discharging": "<span font='19' rise='3pt' letter_spacing='-11000'>{icon}</span> <span font='16' rise='2pt'>{capacity}%</span>",
+    "format-plugged-full": "<span font='19' rise='4pt' letter_spacing='12000'>{icon}</span><span font='16' rise='3pt'>{capacity}%</span>",
     "format-full": "<span font='19' letter_spacing='12000'>{icon}</span><span font='16' rise='-0.25pt'>{capacity}%</span>",
     "format-icons": {
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
@@ -173,7 +176,7 @@
     "interval": 60,
     "align": 0,
     "rotate": 0,
-    "format": "<span font='19' rise='-4.5pt' letter_spacing='25000'></span><span rise='-4.5pt'>{:%R}</span>",
+    "format": "<span font='19' rise='-2.75pt' letter_spacing='25000'></span><span font='16' rise='-3pt'>{:%R}</span>",
     "tooltip-format": "<span size='18pt'>{calendar}</span>",
     "calendar": {
       "format": {
