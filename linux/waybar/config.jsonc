@@ -149,7 +149,7 @@
   },
 
   "battery": {
-    "interval": 60,
+    "interval": 30,
     "rotate": 0,
     "full-at": 100,
     "design-capacity": false,
