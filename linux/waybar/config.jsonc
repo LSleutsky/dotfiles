@@ -29,7 +29,7 @@
     "interval": 350,
     "format": "<span font='18' rise='3pt' letter_spacing='3000'> </span><span font='17' rise='1.5pt'>{}</span>",
     "exec": "checkupdates | wc -l",
-    "on-click": "kitty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
+    "on-click": "alacritty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
     "signal": 8,
     "tooltip": false
   },

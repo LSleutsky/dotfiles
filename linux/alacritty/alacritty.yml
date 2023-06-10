@@ -24,7 +24,6 @@ cursor:
   style:
     shape: Beam
     blinking: Off
-  thickness: 0.15
 
 import:
   - /home/lush/.config/alacritty/catppuccin-mocha.yml
