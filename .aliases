@@ -53,6 +53,7 @@ alias reload='source /home/lush/.config/fish/config.fish'
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 alias na='lvim ~/.aliases'
+alias nA='lvim ~/.config/alacritty/alacritty.yml'
 alias nb='lvim ~/.bash_profile'
 alias nB='lvim ~/Brewfile'
 alias nf='lvim ~/.config/fish/config.fish'
