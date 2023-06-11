@@ -120,6 +120,7 @@ lvim.builtin.treesitter.ensure_installed = {
 	"diff",
 	"dockerfile",
 	"dot",
+	"fish",
 	"git_rebase",
 	"gitattributes",
 	"gitcommit",
@@ -147,6 +148,7 @@ lvim.builtin.treesitter.ensure_installed = {
 	"ruby",
 	"rust",
 	"scss",
+	"svelte",
 	"todotxt",
 	"toml",
 	"tsx",
@@ -406,6 +408,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = { "*.sh", ".bashrc", ".bash_profile" },
+	pattern = { ".sh", ".bashrc", ".bash_profile" },
 	command = "setf bash",
 })
