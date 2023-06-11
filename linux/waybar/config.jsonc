@@ -60,7 +60,6 @@
     "format-stopped": "",
     "tooltip-format": "{artist} | {album}, {elapsedTime:%M:%S}/{totalTime:%M:%S}, Vol: {volume} %, Opts: {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
     "on-click": "mpc toggle",
-    "max-length": 35,
     "state-icons": {
       "paused": "",
       "playing": ""
