@@ -24,6 +24,9 @@ cursor:
   style:
     shape: Beam
     blinking: Off
+  vi_mode_style:
+    shape: Block
+    blinking: Off
 
 import:
   - /home/lush/.config/alacritty/catppuccin-mocha.yml
