@@ -198,7 +198,6 @@ require("lvim.lsp.null-ls.code_actions").setup({
 --  ╰────────────────────────────────────────────────────────────────────────────────────────╯
 lvim.plugins = {
 	-- general
-	{ "nathom/filetype.nvim" },
 	{
 		"gorbit99/codewindow.nvim",
 		config = function()
@@ -391,7 +390,7 @@ lvim.plugins = {
 --  │ autocommands                                                                           │
 --  ╰────────────────────────────────────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "zsh",
+	pattern = { "zsh", "*.sh", "*bash*" },
 	callback = function()
 		require("nvim-treesitter.highlight").attach(0, "bash")
 	end,
@@ -405,9 +404,4 @@ vim.api.nvim_create_autocmd("VimResized", {
 vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = { ".conf", "config" },
 	command = "setf dosini",
-})
-
-vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = { ".sh", ".bashrc", ".bash_profile" },
-	command = "setf bash",
 })

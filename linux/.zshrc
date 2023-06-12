@@ -32,7 +32,7 @@ plugins=(
 
 eval "$(starship init zsh)"
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source /usr/share/nvm/init-nvm.sh
 
