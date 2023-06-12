@@ -46,7 +46,7 @@ alias ag='ag --path-to-ignore ~/.ignore'
 alias bg='batgrep'
 alias rg="rg -g '!{**/node_modules/**, node_modules/**, node_modules}' -g '!package-lock.json'"
 alias tree='tree -d --gitignore -C -L 2'
-alias reload='source /home/lush/.config/fish/config.fish'
+alias grep='grep --color=auto'
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ DOTFILES                                                                                         │
@@ -55,7 +55,7 @@ alias reload='source /home/lush/.config/fish/config.fish'
 alias na='lvim ~/.aliases'
 alias nA='lvim ~/.config/alacritty/alacritty.yml'
 alias nb='lvim ~/.bash_profile'
-alias nB='lvim ~/Brewfile'
+alias nB='lvim ~/.bashrc'
 alias nf='lvim ~/.config/fish/config.fish'
 alias ng='lvim ~/.gitconfig'
 alias nh='lvim ~/.config/hypr/hyprland.conf'

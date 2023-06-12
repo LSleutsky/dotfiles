@@ -47,9 +47,9 @@ only_with_files = true
 disabled = false
 detect_extensions = []
 detect_files = [
-    'docker-compose.yml',
-    'docker-compose.yaml',
-    'Dockerfile',
+  'docker-compose.yml',
+  'docker-compose.yaml',
+  'Dockerfile',
 ]
 detect_folders = ['docker']
 
@@ -86,18 +86,20 @@ style = 'bold green'
 disabled = false
 not_capable_style = 'bold red'
 detect_extensions = [
-    'js',
-    'jsx',
-    'mjs',
-    'cjs',
-    'ts',
-    'tsx',
-    'mts',
-    'cts',
+  'js',
+  'jsx',
+  'mjs',
+  'cjs',
+  'ts',
+  'tsx',
+  'mts',
+  'cts',
 ]
 detect_files = [
-    'package.json',
-    '.node-version',
-    '.nvmrc',
+  'package.json',
+  '.node-version',
+  '.nvmrc',
+  '.yarnrc',
+  '.npmrc'
 ]
 detect_folders = ['.nvm', 'js', 'node_modules']
