@@ -36,7 +36,7 @@
 
   "custom/weather": {
     "exec": "python3 ~/.config/waybar/scripts/weather.py",
-    "restart-interval": 300,
+    "restart-interval": 30,
     "return-type": "json"
   },
 
