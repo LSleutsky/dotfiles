@@ -10,6 +10,17 @@ zsh-backward-kill-word () {
   zle backward-kill-word
 }
 
+source /home/lush/.aliases
+
+[ -f /etc/profile.d/autojump.sh ] \
+  && source /etc/profile.d/autojump.sh
+
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] \
+  && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] \
+  && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 setopt append_history
 setopt auto_cd
 setopt auto_pushd
