@@ -11,9 +11,15 @@ zsh-backward-kill-word () {
 }
 
 source /home/lush/.aliases
-source /etc/profile.d/autojump.sh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+[ -f /etc/profile.d/autojump.sh ] \
+  && source /etc/profile.d/autojump.sh
+
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] \
+  && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh] \
+  && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 setopt append_history
 setopt auto_cd
@@ -30,6 +36,7 @@ zle -N zsh-backward-kill-word
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' list-colors ''
+zstyle ':completion::complete:*' gain-privileges 1
 
 if [[ "$CASE_SENSITIVE" = true ]]; then
   zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
