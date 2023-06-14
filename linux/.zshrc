@@ -10,16 +10,20 @@ zsh-backward-kill-word () {
   zle backward-kill-word
 }
 
-source /home/lush/.aliases
+[[ -s /home/lush/.autojump/etc/profile.d/autojump.sh ]] && source /home/lush/.autojump/etc/profile.d/autojump.sh
 
-[ -f /etc/profile.d/autojump.sh ] \
-  && source /etc/profile.d/autojump.sh
+source ~/.aliases
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
-[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] \
-  && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# [ -f /etc/profile.d/autojump.sh ] \
+#   && source /etc/profile.d/autojump.sh
 
-[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] \
-  && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] \
+#   && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] \
+#   && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 setopt append_history
 setopt auto_cd
@@ -29,7 +33,7 @@ setopt menu_complete
 setopt complete_in_word
 setopt always_to_end
 
-autoload -U compinit; compinit
+autoload -U compinit && compinit -u
 _comp_options+=(globdots)
 
 zle -N zsh-backward-kill-word
