@@ -36,7 +36,7 @@
 
   "custom/weather": {
     "exec": "python3 ~/.config/waybar/scripts/weather.py",
-    "restart-interval": 30,
+    "restart-interval": 10,
     "return-type": "json"
   },
 
@@ -74,8 +74,8 @@
   },
 
   "tray": {
-    "spacing": 16,
-    "icon-size": 22
+    "spacing": 13,
+    "icon-size": 23
   },
 
   "wlr/taskbar": {

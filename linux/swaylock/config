@@ -5,7 +5,7 @@ effect-blur=35x20
 hide-keyboard-layout
 
 clock
-timestr=%R
+timestr=%T
 
 indicator
 indicator-radius=220
