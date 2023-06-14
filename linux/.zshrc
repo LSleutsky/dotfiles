@@ -2,8 +2,6 @@
 # ~/.zshrc
 #
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-
 zsh-backward-kill-word () {
   local WORDCHARS=''
   zle -f kill
