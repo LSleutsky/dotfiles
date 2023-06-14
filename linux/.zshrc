@@ -2,8 +2,6 @@
 # ~/.zshrc
 #
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-
 zsh-backward-kill-word () {
   local WORDCHARS=''
   zle -f kill
@@ -15,15 +13,6 @@ zsh-backward-kill-word () {
 source ~/.aliases
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
-# [ -f /etc/profile.d/autojump.sh ] \
-#   && source /etc/profile.d/autojump.sh
-
-# [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] \
-#   && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] \
-#   && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 setopt append_history
 setopt auto_cd
