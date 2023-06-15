@@ -13,6 +13,7 @@ zsh-backward-kill-word () {
 source ~/.aliases
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.zsh/zsh-functions.zsh
 
 setopt append_history
 setopt auto_cd
