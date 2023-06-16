@@ -11,6 +11,7 @@ alias gbd='git branch -D'
 alias gbD='git push origin --delete'
 alias gcam='git add . && git commit --amend'
 alias gcb='git checkout -b'
+alias gco='git checkout'
 alias gcod='git checkout $(git_develop_branch)'
 alias gcof='git checkout --'
 alias gcom='git checkout $(git_main_branch)'
@@ -118,6 +119,7 @@ alias update='sudo pacman -Syyu && yay -Syu'
 alias pow='sudo shutdown now'
 alias reb='sudo reboot now'
 alias checkports='sudo lsof -i -P -n | grep LISTEN'
+alias waybug='env GTK_DEBUG=interactive waybar'
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ MAC OS                                                                                           │
