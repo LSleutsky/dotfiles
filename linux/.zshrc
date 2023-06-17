@@ -11,17 +11,22 @@ zsh-backward-kill-word () {
 [[ -s /home/lush/.autojump/etc/profile.d/autojump.sh ]] && source /home/lush/.autojump/etc/profile.d/autojump.sh
 
 source ~/.aliases
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-functions.zsh
 
+setopt always_to_end
 setopt append_history
 setopt auto_cd
-setopt auto_pushd
 setopt auto_list
-setopt menu_complete
+setopt auto_menu
+setopt auto_pushd
 setopt complete_in_word
-setopt always_to_end
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+setopt inc_append_history
+setopt menu_complete
+
 
 autoload -U compinit && compinit -u
 _comp_options+=(globdots)
