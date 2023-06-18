@@ -185,7 +185,7 @@ window#waybar {
   padding-top: 5px;
   padding-right: 20px;
   padding-left: 10px;
-  color: #cba6f7;
+  color: #fab387;
 }
 
 #network.disconnected {
@@ -193,7 +193,7 @@ window#waybar {
 }
 
 #pulseaudio {
-  padding: 12px 8px 8px 11px;
+  padding: 12px 16px 8px 3px;
   color: #89b4fa;
 }
 
@@ -203,8 +203,8 @@ window#waybar {
 }
 
 #backlight {
-  padding: 10px 18px 8px 11px;
-  color: #f9e2af;
+  padding: 10px 18px 8px 8px;
+  color: #cba6f7;
 }
 
 #battery {
@@ -224,7 +224,7 @@ window#waybar {
 
 #battery.charging:not(.full) {
   padding-right: 15px;
-  color: #89dceb;
+  color: #a6e3a1;
 }
 
 #battery.warning {
@@ -239,7 +239,7 @@ window#waybar {
 #clock {
   padding-bottom: 0.5px;
   padding-left: 7px;
-  color: #f5e0dc;
+  color: #f9e2af;
   font-size: 21px;
   font-weight: bold;
 }
@@ -252,7 +252,7 @@ window#waybar {
 
 #idle_inhibitor.activated {
   padding: 2px 11px 4px;
-  color: #fab387;
+  color: #b4befe;
 }
 
 tooltip {

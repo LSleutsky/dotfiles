@@ -4,7 +4,7 @@
   "fixed-center": true,
   "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "custom/spotify", "mpd", "tray", "wlr/taskbar"],
   "modules-center": ["wlr/workspaces"],
-  "modules-right": ["keyboard-state", "bluetooth", "network", "pulseaudio", "backlight", "battery", "clock", "idle_inhibitor"],
+  "modules-right": ["keyboard-state", "bluetooth", "network", "backlight", "pulseaudio", "battery", "clock", "idle_inhibitor"],
 
   "temperature": {
     "critical-threshold": 100,
@@ -122,7 +122,7 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "kitty -e bluetoothctl"
+    "on-click": "bluetooth toggle"
   }, 
 
   "network": {
@@ -133,6 +133,15 @@
     "tooltip-format": "{essid} ({signalStrength}%)",
     "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh",
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+  },
+
+  "backlight": {
+    "format": "<span font='19'>{icon}</span><span font='17' rise='-2.5pt'>{percent}%</span>",
+    "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+    // scroll behavior reversed due to natural scrolling enabled
+    "on-scroll-up": "light -U 2",
+    "on-scroll-down": "light -A 2",
+    "tooltip": false
   },
 
   "pulseaudio": {
@@ -154,15 +163,6 @@
     // scroll behavior reversed due to natural scrolling enabled
     "on-scroll-up": "pulsemixer --max-volume 100 --change-volume -2",
     "on-scroll-down": "pulsemixer --max-volume 100 --change-volume +2",
-    "tooltip": false
-  },
-
-  "backlight": {
-    "format": "<span font='19'>{icon}</span><span font='17' rise='-2.5pt'>{percent}%</span>",
-    "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
-    // scroll behavior reversed due to natural scrolling enabled
-    "on-scroll-up": "light -U 2",
-    "on-scroll-down": "light -A 2",
     "tooltip": false
   },
 
