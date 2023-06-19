@@ -198,7 +198,7 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-  padding-right: 5px;
+  padding-right: 14px;
   color: #f38ba8;
 }
 
@@ -239,20 +239,20 @@ window#waybar {
 #clock {
   padding-bottom: 0.5px;
   padding-left: 7px;
-  color: #f9e2af;
+  color: #f5e0dc;
   font-size: 21px;
   font-weight: bold;
 }
 
 #idle_inhibitor {
-  padding: 4px 0 1.5px 8px;
+  padding: 4.5px 0 1.5px 8px;
   color: #6c7086;
   font-size: 22px;
 }
 
 #idle_inhibitor.activated {
   padding: 2px 11px 4px;
-  color: #b4befe;
+  color: #f9e2af;
 }
 
 tooltip {

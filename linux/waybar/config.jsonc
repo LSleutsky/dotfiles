@@ -26,7 +26,7 @@
   },
 
   "custom/pacman": {
-    "interval": 350,
+    "interval": 150,
     "format": "<span font='18' rise='3pt' letter_spacing='3000'> </span><span font='17' rise='1.5pt'>{}</span>",
     "exec": "checkupdates | wc -l",
     "on-click": "alacritty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
