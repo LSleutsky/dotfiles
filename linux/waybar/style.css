@@ -227,17 +227,11 @@ window#waybar {
   color: #a6e3a1;
 }
 
-#battery.warning {
-  color: #fab387;
-}
-
 #battery.critical:not(.charging) {
-  padding-left: 15px;
   color: #f38ba8;
 }
 
 #clock {
-  padding-bottom: 0.5px;
   padding-left: 7px;
   color: #f5e0dc;
   font-size: 21px;

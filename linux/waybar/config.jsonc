@@ -194,7 +194,7 @@
     "interval": 30,
     "align": 0,
     "rotate": 0,
-    "format": "<span font='19' rise='-2.75pt' letter_spacing='25000'></span><span font='16' rise='-3pt'>{:%R}</span>",
+    "format": "<span font='19' rise='-1pt' letter_spacing='25000'></span><span font='16' rise='-1.5pt'>{:%R}</span>",
     "tooltip-format": "<span size='18pt'>{calendar}</span>",
     "calendar": {
       "format": {
