@@ -96,6 +96,7 @@ alias nZ='lvim ~/.zshenv'
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 alias df='df -h'
+alias history='history -i'
 alias ls='colorls -lA --sd'
 alias man='batman'
 alias mkdir='mkdir -p'
