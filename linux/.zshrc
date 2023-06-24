@@ -29,11 +29,15 @@ setopt hist_reduce_blanks
 setopt inc_append_history
 setopt menu_complete
 
-
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
 autoload -U compinit && compinit -u
 _comp_options+=(globdots)
 
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 zle -N zsh-backward-kill-word
+
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' list-colors ''
@@ -59,6 +63,8 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
 bindkey '^w' zsh-backward-kill-word
 
 eval "$(starship init zsh)"
