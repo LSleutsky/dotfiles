@@ -111,7 +111,7 @@ alias wtr='curl wttr.in'
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
 alias free='free -mth'
 alias google-chrome='google-chrome-unstable'
-alias grep='grep -r --color=auto'
+alias grep='grep --color=auto'
 alias pacman='sudo pacman'
 alias packill='sudo rm -rf /var/lib/pacman/db.lck'
 alias pacdel='sudo pacman -Rnsudd'
@@ -121,6 +121,7 @@ alias pow='sudo shutdown now'
 alias reb='sudo reboot now'
 alias checkports='sudo lsof -i -P -n | grep LISTEN'
 alias waybug='env GTK_DEBUG=interactive waybar'
+alias uuid='lsblk -dno UUID'
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ MAC OS                                                                                           │
