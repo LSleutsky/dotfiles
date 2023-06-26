@@ -158,7 +158,7 @@
       "car": " ",
       "default": ""
     },
-    "on-click": "pavucontrol &",
+    "on-click": "pavucontrol",
     "on-click-right": "pulsemixer --toggle-mute",
     // scroll behavior reversed due to natural scrolling enabled
     "on-scroll-up": "pulsemixer --max-volume 100 --change-volume -2",
