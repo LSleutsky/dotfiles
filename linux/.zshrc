@@ -24,8 +24,10 @@ setopt auto_pushd
 setopt complete_in_word
 setopt extended_history
 setopt hist_find_no_dups
+setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
+setopt hist_save_no_dups
 setopt inc_append_history
 setopt menu_complete
 
