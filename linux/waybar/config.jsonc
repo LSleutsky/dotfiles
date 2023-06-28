@@ -50,7 +50,7 @@
   },
 
   "tray": {
-    "spacing": 13,
+    "spacing": 20,
     "icon-size": 23
   },
 
@@ -69,7 +69,8 @@
       "discord",
       "Volume Control",
       "thunar",
-      "VLC media player"
+      "VLC media player",
+      "Authentication required"
     ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"
