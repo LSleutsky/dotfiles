@@ -39,8 +39,8 @@ window#waybar {
 #tray,
 #custom-weather,
 #custom-spotify,
-#mpd,
 #taskbar,
+#mpd,
 #workspaces,
 #keyboard-state,
 #bluetooth,
@@ -87,22 +87,6 @@ window#waybar {
   color: #a6e3a1;
 }
 
-#mpd {
-  padding-bottom: 3px;
-  padding-left: 7px;
-  color: #45475a;
-}
-
-#mpd.playing {
-  padding-top: 7px;
-  padding-left: 7px;
-  color: #89b4fa;
-}
-
-#mpd.paused {
-  color: #f5c2e7;
-}
-
 #tray {
   padding: 7px 10px 5px 6px
 }
@@ -124,6 +108,21 @@ window#waybar {
   background: transparent;
   border: none;
   box-shadow: none;
+}
+
+#mpd {
+  padding-bottom: 3px;
+  padding-left: 7px;
+}
+
+#mpd.playing {
+  padding-top: 7px;
+  padding-left: 10px;
+  color: #89b4fa;
+}
+
+#mpd.paused {
+  color: #45475a;
 }
 
 .modules-left > widget:last-child > #custom-spotify {

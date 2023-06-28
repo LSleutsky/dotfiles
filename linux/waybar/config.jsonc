@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "fixed-center": true,
-  "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "custom/spotify", "mpd", "tray", "wlr/taskbar"],
+  "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "custom/spotify", "tray", "wlr/taskbar", "mpd"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": ["keyboard-state", "bluetooth", "network", "backlight", "pulseaudio", "battery", "clock", "idle_inhibitor"],
 
@@ -49,30 +49,6 @@
     "max-length": 35
   },
 
-  "mpd": {
-    "format": "<span font='18' letter_spacing='10000'>{stateIcon}</span> <span font='17' rise='-0.75pt'>{title}</span>",
-    "format-disconnected": "<span font='18'>󰎊</span>",
-    "format-stopped": "",
-    "tooltip-format": "{artist} | {album}, {elapsedTime:%M:%S}/{totalTime:%M:%S}, Vol: {volume} %, Opts: {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
-    "on-click": "mpc toggle",
-    "state-icons": {
-      "paused": "",
-      "playing": ""
-    },
-    "consume-icons": {
-      "on": ""
-    },
-    "random-icons": {
-      "on": "  "
-    },
-    "repeat-icons": {
-      "on": " "
-    },
-    "single-icons": {
-      "on": "1 "
-    }
-  },
-
   "tray": {
     "spacing": 13,
     "icon-size": 23
@@ -97,6 +73,30 @@
     ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"
+    }
+  },
+
+  "mpd": {
+    "format": "<span font='18' letter_spacing='10000'>{stateIcon}</span> <span font='17' rise='-0.75pt'>{title}</span>",
+    "format-disconnected": "<span font='18'>󰎊</span>",
+    "format-stopped": "",
+    "tooltip-format": "{artist} | {album}, {elapsedTime:%M:%S}/{totalTime:%M:%S}, Vol: {volume} %, Opts: {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
+    "on-click": "mpc toggle",
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "consume-icons": {
+      "on": ""
+    },
+    "random-icons": {
+      "on": "  "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
     }
   },
 
