@@ -92,7 +92,8 @@
       "Oracle VM VirtualBox Manager",
       "discord",
       "Volume Control",
-      "thunar"
+      "thunar",
+      "VLC media player"
     ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"
