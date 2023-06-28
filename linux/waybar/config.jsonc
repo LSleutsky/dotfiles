@@ -89,7 +89,10 @@
       "Alacritty",
       "Spotify",
       "1Password",
-      "Oracle VM VirtualBox Manager"
+      "Oracle VM VirtualBox Manager",
+      "discord",
+      "Volume Control",
+      "thunar"
     ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"

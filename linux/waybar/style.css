@@ -104,7 +104,7 @@ window#waybar {
 }
 
 #tray {
-  padding: 7px 7px 5px 6px
+  padding: 7px 10px 5px 6px
 }
 
 #tray > .passive {
