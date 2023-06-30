@@ -70,7 +70,8 @@
       "Volume Control",
       "thunar",
       "VLC media player",
-      "Authentication required"
+      "Authentication required",
+      "org.pwmt.zathura"
     ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"
