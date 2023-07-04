@@ -112,7 +112,8 @@ alias wtr='curl wttr.in'
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
-alias clock='tty-clock -bcsDC4'
+alias clock='tty-clock -bcsC4 -f %a,\ %b\ %d'
+alias find='fd'
 alias free='free -mth'
 alias google-chrome='google-chrome-unstable'
 alias grep='grep --color=auto'
