@@ -6,21 +6,30 @@ window#waybar {
   background: transparent;
 }
 
-.modules-left,
-.modules-right,
-#workspaces {
+
+window > box {
   margin: 10px;
+  background: #11111b;
+  opacity: 0.85;
   border: 4px solid #313244;
   border-radius: 10px;
-  background: #11111b;
 }
 
-.modules-left > widget:first-child,
-.modules-left > widget:last-child,
-.modules-right > widget:first-child,
-.modules-right > widget:last-child {
-  border-radius: 8px;
-}
+/* .modules-left, */
+/* .modules-right, */
+/* #workspaces { */
+/*   margin: 10px; */
+/*   border: 4px solid #313244; */
+/*   border-radius: 10px; */
+/*   background: #11111b; */
+/* } */
+
+/* .modules-left > widget:first-child, */
+/* .modules-left > widget:last-child, */
+/* .modules-right > widget:first-child, */
+/* .modules-right > widget:last-child { */
+/*   border-radius: 8px; */
+/* } */
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -36,11 +45,11 @@ window#waybar {
 #cpu,
 #memory,
 #custom-pacman,
-#tray,
 #custom-weather,
+#tray,
+#taskbar,
 #custom-spotify,
 #mpd,
-#taskbar,
 #workspaces,
 #keyboard-state,
 #bluetooth,
@@ -81,28 +90,6 @@ window#waybar {
   font-family: ComicShannsMono Nerd Font;
 }
 
-#custom-spotify {
-  padding: 3px 18px 0 8px;
-  font-size: 23px;
-  color: #a6e3a1;
-}
-
-#mpd {
-  padding-bottom: 3px;
-  padding-left: 7px;
-  color: #45475a;
-}
-
-#mpd.playing {
-  padding-top: 7px;
-  padding-left: 7px;
-  color: #89b4fa;
-}
-
-#mpd.paused {
-  color: #f5c2e7;
-}
-
 #tray {
   padding: 7px 10px 5px 6px
 }
@@ -124,6 +111,28 @@ window#waybar {
   background: transparent;
   border: none;
   box-shadow: none;
+}
+
+#custom-spotify {
+  padding: 3px 18px 0 8px;
+  font-size: 23px;
+  color: #a6e3a1;
+}
+
+#mpd {
+  padding-bottom: 3px;
+  padding-left: 7px;
+  color: #45475a;
+}
+
+#mpd.playing {
+  padding-top: 7px;
+  padding-left: 7px;
+  color: #89b4fa;
+}
+
+#mpd.paused {
+  color: #f5c2e7;
 }
 
 .modules-left > widget:last-child > #custom-spotify {

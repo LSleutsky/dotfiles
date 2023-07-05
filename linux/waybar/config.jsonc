@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "fixed-center": true,
-  "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "custom/spotify", "tray", "wlr/taskbar", "mpd"],
+  "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "tray", "wlr/taskbar", "custom/spotify", "mpd"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": ["keyboard-state", "bluetooth", "network", "backlight", "pulseaudio", "battery", "clock", "idle_inhibitor"],
 
@@ -40,15 +40,6 @@
     "return-type": "json"
   },
 
-  "custom/spotify": {
-    "interval": 1,
-    "return-type": "json",
-    "exec": "~/.config/waybar/scripts/spotify.sh",
-    "exec-if": "pgrep spotify",
-    "escape": true,
-    "max-length": 35
-  },
-
   "tray": {
     "spacing": 20,
     "icon-size": 23
@@ -76,6 +67,15 @@
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"
     }
+  },
+
+  "custom/spotify": {
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/spotify.sh",
+    "exec-if": "pgrep spotify",
+    "escape": true,
+    "max-length": 35
   },
 
   "mpd": {
