@@ -9,28 +9,12 @@ window#waybar {
 
 window > box {
   margin: 10px;
+  padding: 5px 0;
   background: #11111b;
   opacity: 0.85;
   border: 4px solid #313244;
   border-radius: 10px;
 }
-
-/* .modules-left, */
-/* .modules-right, */
-/* #workspaces { */
-/*   margin: 10px; */
-/*   border: 4px solid #313244; */
-/*   border-radius: 10px; */
-/*   background: #11111b; */
-/* } */
-
-/* .modules-left > widget:first-child, */
-/* .modules-left > widget:last-child, */
-/* .modules-right > widget:first-child, */
-/* .modules-right > widget:last-child { */
-/*   border-radius: 8px; */
-/* } */
-
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
   margin-left: 0;
@@ -56,7 +40,7 @@ window > box {
 #battery,
 #clock,
 #idle_inhibitor {
-  padding: 6px 10px 2px 10px;
+  padding: 0 10px;
   font-size: 20px;
 }
 
@@ -80,18 +64,16 @@ window > box {
 
 #custom-pacman {
   padding-right: 10px;
-  padding-bottom: 4.5px;
   color: #cba6f7;
 }
 
 #custom-weather {
-  padding-top: 5.5px;
   color: #cdd6f4;
   font-family: ComicShannsMono Nerd Font;
 }
 
 #tray {
-  padding: 7px 10px 5px 6px
+  padding: 0 10px 0 8px
 }
 
 #tray > .passive {
@@ -104,7 +86,7 @@ window > box {
 }
 
 #taskbar {
-  padding: 3px 0 0 0;
+  padding: 0;
 }
 
 #taskbar button:hover {
@@ -114,19 +96,17 @@ window > box {
 }
 
 #custom-spotify {
-  padding: 3px 18px 0 8px;
+  padding: 0 18px 0 10px;
   font-size: 23px;
   color: #a6e3a1;
 }
 
 #mpd {
-  padding-bottom: 3px;
   padding-left: 7px;
   color: #45475a;
 }
 
 #mpd.playing {
-  padding-top: 7px;
   padding-left: 7px;
   color: #89b4fa;
 }
@@ -164,13 +144,8 @@ window > box {
   padding-left: 5px;
 }
 
-#keyboard-state {
-  padding-top: 8px;
-}
-
 #keyboard-state label {
   padding-right: 2px;
-  padding-bottom: 2px;
 }
 
 #keyboard-state label.capslock {
@@ -191,7 +166,6 @@ window > box {
 }
 
 #network {
-  padding-top: 5px;
   padding-right: 20px;
   padding-left: 10px;
   color: #fab387;
@@ -202,7 +176,7 @@ window > box {
 }
 
 #pulseaudio {
-  padding: 12px 16px 8px 3px;
+  padding: 0 16px 0 3px;
   color: #89b4fa;
 }
 
@@ -212,12 +186,12 @@ window > box {
 }
 
 #backlight {
-  padding: 10px 18px 8px 8px;
+  padding: 0 18px 0 8px;
   color: #cba6f7;
 }
 
 #battery {
-  padding: 9px 15px 6.5px 3px;
+  padding: 0 15px 0 3px;
   color: #a6e3a1;
   font-size: 20px;
 }
@@ -248,13 +222,13 @@ window > box {
 }
 
 #idle_inhibitor {
-  padding: 4.5px 0 1.5px 8px;
+  padding: 0 0 0 8px;
   color: #6c7086;
   font-size: 22px;
 }
 
 #idle_inhibitor.activated {
-  padding: 2px 11px 4px;
+  padding: 0 11px 0;
   color: #f9e2af;
 }
 

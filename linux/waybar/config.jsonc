@@ -113,7 +113,7 @@
 
   "keyboard-state": {
     "capslock": true,
-    "format": "<span font='15'>{icon}</span>",
+    "format": "<span font='16' rise='1pt'>{icon}</span>",
     "format-icons": {
       "locked": "󰘲",
       "unlocked": "󰘲"
@@ -122,7 +122,7 @@
 
   "bluetooth": {
     "format": "<span font='19'>󰂲</span>",
-    "format-on": "<span font='16'></span>",
+    "format-on": "<span font='18'></span>",
     "format-connected": "<span font='16'></span>",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
@@ -200,7 +200,7 @@
     "interval": 30,
     "align": 0,
     "rotate": 0,
-    "format": "<span font='19' rise='-1pt' letter_spacing='25000'></span><span font='16' rise='-1.5pt'>{:%R}</span>",
+    "format": "<span font='19' rise='-1.5pt' letter_spacing='25000'></span><span font='16' rise='-2.5pt'>{:%R}</span>",
     "tooltip-format": "<span size='18pt'>{calendar}</span>",
     "calendar": {
       "format": {
