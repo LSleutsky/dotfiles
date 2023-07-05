@@ -145,8 +145,8 @@
     "format": "<span font='19'>{icon}</span><span font='17' rise='-2.5pt'>{percent}%</span>",
     "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
     // scroll behavior reversed due to natural scrolling enabled
-    "on-scroll-up": "light -U 2",
-    "on-scroll-down": "light -A 2",
+    "on-scroll-up": "brillo -U 2",
+    "on-scroll-down": "brillo -A 2",
     "tooltip": false
   },
 
