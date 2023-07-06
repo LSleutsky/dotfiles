@@ -20,8 +20,8 @@
 
   "memory": {
     "interval": 30,
-    "format": "<span font='18' rise='-3pt' letter_spacing='-8000'> </span> <span font='16' rise='-1pt'>{}%</span>",
-    "format-alt":"<span font='18' rise='-6pt'> </span><span font='16' rise='-4pt'>{used:0.1f}GB</span>",
+    "format": "<span font='18' rise='-4pt' letter_spacing='-8000'> </span> <span font='16' rise='-1pt'>{}%</span>",
+    "format-alt":"<span font='18' rise='-6.5pt'> </span><span font='16' rise='-4pt'>{used:0.1f}GB</span>",
     "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB"
   },
 
