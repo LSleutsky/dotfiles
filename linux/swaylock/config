@@ -6,6 +6,7 @@ hide-keyboard-layout
 
 clock
 timestr=%T
+datestr=%a, %b %d
 
 indicator
 indicator-radius=220
