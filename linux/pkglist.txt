@@ -23,6 +23,7 @@ btrfs-progs
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
 cava
+cliphist
 clipman
 clonezilla-unstable
 cmatrix
@@ -40,6 +41,7 @@ duf
 dunst
 efibootmgr
 evtest
+exa
 fd
 feh
 figlet
@@ -120,12 +122,13 @@ pulsemixer
 pydf
 python-pywal
 qbittorrent
+qt5-imageformats
 qt5-wayland
 qt5ct
 qutebrowser
 ranger
 reflector
-rofi
+rofi-lbonn-wayland-git
 rsync
 ruby-clocale
 ruby-colorls
@@ -140,6 +143,7 @@ spotify
 spotify-player
 squashfs-tools
 starship
+swappy
 sway
 sway-audio-idle-inhibit-git
 swaybg
