@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IMAGE="$HOME/.config/hypr/wallpapers/ColorfulGalaxy.png"
+IMAGE="$HOME/.config/hypr/wallpapers/GlowingBlackHole.png"
 
 swaylock \
 	--image ${IMAGE} --scaling 'fill' \
