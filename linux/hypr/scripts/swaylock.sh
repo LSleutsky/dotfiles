@@ -4,7 +4,7 @@ IMAGE="$HOME/.config/hypr/wallpapers/ColorfulGalaxy.png"
 
 swaylock \
 	--image ${IMAGE} --scaling 'fill' \
-	--effect-blur 35x20 \
+	--effect-blur 10x30 \
   --hide-keyboard-layout \
   --indicator-radius 220 \
   --indicator-thickness 7 \

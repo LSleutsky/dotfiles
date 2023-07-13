@@ -1,6 +1,6 @@
 image=~/.config/hypr/wallpapers/ColorfulGalaxy.png
 scaling=fill
-effect-blur=35x20
+effect-blur=10x30
 
 hide-keyboard-layout
 
