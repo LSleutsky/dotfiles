@@ -23,6 +23,7 @@ btrfs-progs
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
 cava
+cavalier
 cliphist
 clipman
 clonezilla-unstable
