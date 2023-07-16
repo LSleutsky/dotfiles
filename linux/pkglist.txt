@@ -28,6 +28,8 @@ cliphist
 clipman
 clonezilla-unstable
 cmatrix
+cowfortune
+cowsay
 dialog
 discord
 dmenu
