@@ -4,7 +4,7 @@
   "fixed-center": true,
   "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "tray", "wlr/taskbar", "custom/spotify", "mpd"],
   "modules-center": ["wlr/workspaces"],
-  "modules-right": ["keyboard-state", "bluetooth", "network", "backlight", "pulseaudio", "battery", "clock", "idle_inhibitor"],
+  "modules-right": ["bluetooth", "network", "backlight", "pulseaudio", "battery", "clock", "idle_inhibitor"],
 
   "temperature": {
     "critical-threshold": 100,
@@ -108,15 +108,6 @@
     "format-icons": {
       "active": "󰮯",
       "default": ""
-    }
-  },
-
-  "keyboard-state": {
-    "capslock": true,
-    "format": "<span font='16' rise='1pt'>{icon}</span>",
-    "format-icons": {
-      "locked": "󰘲",
-      "unlocked": "󰘲"
     }
   },
 
