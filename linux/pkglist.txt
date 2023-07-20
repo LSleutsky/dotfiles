@@ -167,7 +167,6 @@ unarchiver
 unzip
 viewnior
 vim
-virtualbox
 virtualbox-ext-oracle
 visual-studio-code-bin
 vlc
