@@ -4,7 +4,7 @@
   "fixed-center": true,
   "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "tray", "wlr/taskbar", "custom/spotify", "mpd"],
   "modules-center": ["wlr/workspaces"],
-  "modules-right": ["bluetooth", "network", "backlight", "pulseaudio", "pulseaudio#microphone", "battery", "clock", "idle_inhibitor"],
+  "modules-right": ["bluetooth", "network", "backlight", "pulseaudio#volume", "pulseaudio#microphone", "battery", "clock", "idle_inhibitor"],
 
   "temperature": {
     "critical-threshold": 100,
@@ -141,7 +141,7 @@
     "tooltip": false
   },
 
-  "pulseaudio": {
+  "pulseaudio#volume": {
     "format": "<span font='20' letter_spacing='30000'>{icon}</span><span font='16' rise='0.5pt'>{volume}%</span>",
     "format-muted": "<span font='21'> </span>",
     "format-icons": {

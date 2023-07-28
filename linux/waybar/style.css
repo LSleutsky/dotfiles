@@ -197,24 +197,35 @@ window > box {
 }
 
 #pulseaudio {
-  margin-right: 12px;
-  padding: 4px 16px;
+  padding: 4px 0px 4px 16px;
   color: #89b4fa;
   background: #11111b;
-  border: 4px solid #313244;
-  border-radius: 10px;
+  border-top: 4px solid #313244;
+  border-bottom: 4px solid #313244;
+  border-left: 4px solid #313244;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-#pulseaudio.muted {
-  padding-right: 14px;
+#pulseaudio.muted:not(.microphone) {
   color: #f38ba8;
 }
 
 #pulseaudio.microphone {
-  color: #89dceb;
+  margin-right: 12px;
+  padding-right: 15px;
+  border-top: 4px solid #313244;
+  border-right: 4px solid #313244;
+  border-bottom: 4px solid #313244;
+  border-left: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
 }
 
-#pulseaudio.source-muted {
+#pulseaudio.source-muted:not(.volume) {
+  padding-right: 18px;
   color: #f38ba8;
 }
 
@@ -249,7 +260,7 @@ window > box {
 #clock {
   margin-right: 8px;
   padding: 4px 14px;
-  color: #f5e0dc;
+  color: #f5c2e7;
   font-size: 21px;
   font-weight: bold;
   background: #11111b;
@@ -258,7 +269,7 @@ window > box {
 }
 
 #idle_inhibitor {
-  padding: 4px 0 4px 12px;
+  padding: 4px 4px 4px 16px;
   color: #6c7086;
   font-size: 22px;
   background: #11111b;
@@ -267,7 +278,7 @@ window > box {
 }
 
 #idle_inhibitor.activated {
-  padding: 7px 8px 7px 10px;
+  padding: 7px 10px 7px 12px;
   color: #f9e2af;
 }
 
