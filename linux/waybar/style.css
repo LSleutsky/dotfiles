@@ -9,9 +9,9 @@ window#waybar {
 window > box {
   margin: 10px 16px 0 16px;
   padding: 5px 0 3px 0;
-  background: #11111b;
+  /* background: #11111b; */
   opacity: 0.85;
-  border: 4px solid #313244;
+  /* border: 4px solid #313244; */
   border-radius: 18px;
 }
 
@@ -124,6 +124,11 @@ window > box {
   padding-right: 20px;
 }
 
+#workspaces {
+  border: 4px solid #313244;
+  border-radius: 10px;
+}
+
 #workspaces button {
   transition: all .5s cubic-bezier(.55, -.68, .48, 1.68);
   color: #89b4fa;
@@ -146,11 +151,18 @@ window > box {
 }
 
 #workspaces button.active:last-child {
-  padding-left: 5px;
+  padding-left: 7px;
 }
 
 #bluetooth {
+  padding-left: 12px;
   color: #45475a;
+  background: #11111b;
+  border-top: 4px solid #313244;
+  border-left: 4px solid #313244;
+  border-bottom: 4px solid #313244;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 #bluetooth.on,
@@ -159,18 +171,38 @@ window > box {
 }
 
 #network {
-  padding-right: 20px;
-  padding-left: 10px;
+  margin-right: 12px;
+  padding-right: 23px;
+  padding-left: 2px;
   color: #fab387;
+  background: #11111b;
+  border-top: 4px solid #313244;
+  border-right: 4px solid #313244;
+  border-bottom: 4px solid #313244;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #network.disconnected {
   color: #f38ba8;
 }
 
+#backlight {
+  margin-right: 12px;
+  padding: 4px 18px 4px 16px;
+  color: #cba6f7;
+  background: #11111b;
+  border: 4px solid #313244;
+  border-radius: 10px;
+}
+
 #pulseaudio {
-  padding: 0 16px 0 3px;
+  margin-right: 12px;
+  padding: 4px 16px;
   color: #89b4fa;
+  background: #11111b;
+  border: 4px solid #313244;
+  border-radius: 10px;
 }
 
 #pulseaudio.muted {
@@ -178,15 +210,22 @@ window > box {
   color: #f38ba8;
 }
 
-#backlight {
-  padding: 0 18px 0 8px;
-  color: #cba6f7;
+#pulseaudio.microphone {
+  color: #89dceb;
+}
+
+#pulseaudio.source-muted {
+  color: #f38ba8;
 }
 
 #battery {
-  padding: 0 15px 0 3px;
+  margin-right: 12px;
+  padding: 4px 15px 4px 16px;
   color: #a6e3a1;
   font-size: 20px;
+  background: #11111b;
+  border: 4px solid #313244;
+  border-radius: 10px;
 }
 
 #battery.full {
@@ -208,20 +247,27 @@ window > box {
 }
 
 #clock {
-  padding-left: 7px;
+  margin-right: 8px;
+  padding: 4px 14px;
   color: #f5e0dc;
   font-size: 21px;
   font-weight: bold;
+  background: #11111b;
+  border: 4px solid #313244;
+  border-radius: 10px;
 }
 
 #idle_inhibitor {
-  padding: 0 0 0 8px;
+  padding: 4px 0 4px 12px;
   color: #6c7086;
   font-size: 22px;
+  background: #11111b;
+  border: 4px solid #313244;
+  border-radius: 10px;
 }
 
 #idle_inhibitor.activated {
-  padding: 0 11px 2px;
+  padding: 7px 8px 7px 10px;
   color: #f9e2af;
 }
 

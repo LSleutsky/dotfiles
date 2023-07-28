@@ -4,7 +4,7 @@
   "fixed-center": true,
   "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "tray", "wlr/taskbar", "custom/spotify", "mpd"],
   "modules-center": ["wlr/workspaces"],
-  "modules-right": ["bluetooth", "network", "backlight", "pulseaudio", "battery", "clock", "idle_inhibitor"],
+  "modules-right": ["bluetooth", "network", "backlight", "pulseaudio", "pulseaudio#microphone", "battery", "clock", "idle_inhibitor"],
 
   "temperature": {
     "critical-threshold": 100,
@@ -144,8 +144,6 @@
   "pulseaudio": {
     "format": "<span font='20' letter_spacing='30000'>{icon}</span><span font='16' rise='0.5pt'>{volume}%</span>",
     "format-muted": "<span font='21'> </span>",
-    "format-source": "<span font='18' rise='1.5pt' letter_spacing='15000'></span><span font='16'>{volume}%</span>",
-    "format-source-muted": "<span font='18'></span>",
     "format-icons": {
       "headphone": " ",
       "hands-free": "󰦢",
@@ -156,10 +154,31 @@
       "default": ""
     },
     "on-click": "GTK_THEME=Catppuccin-Mocha-Standard-Mauve-dark pavucontrol",
-    "on-click-right": "pulsemixer --toggle-mute",
+    "on-click-right": "pulsemixer --id sink-45 --toggle-mute",
     // scroll behavior reversed due to natural scrolling enabled
-    "on-scroll-up": "pulsemixer --max-volume 100 --change-volume -2",
-    "on-scroll-down": "pulsemixer --max-volume 100 --change-volume +2",
+    "on-scroll-up": "pulsemixer --id sink-45 --max-volume 100 --change-volume -2",
+    "on-scroll-down": "pulsemixer --id sink-45 --max-volume 100 --change-volume +2",
+    "tooltip": false
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "<span font='16' rise='1.5pt' letter_spacing='15000'></span><span font='16'>{volume}%</span>",
+    "format-source-muted": "<span font='18'></span>",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": "󰦢",
+      "headset": "󰋎",
+      "phone": "",
+      "portable": " ",
+      "car": " ",
+      "default": ""
+    },
+    "on-click": "GTK_THEME=Catppuccin-Mocha-Standard-Mauve-dark pavucontrol --tab 4",
+    "on-click-right": "pulsemixer --id source-46 --toggle-mute",
+    // scroll behavior reversed due to natural scrolling enabled
+    "on-scroll-up": "pulsemixer --id source-46 --max-volume 100 --change-volume -2",
+    "on-scroll-down": "pulsemixer --id source-46 --max-volume 100 --change-volume +2",
     "tooltip": false
   },
 
