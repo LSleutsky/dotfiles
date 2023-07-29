@@ -212,6 +212,7 @@
     "rotate": 0,
     "format": "<span font='19' rise='-1.5pt' letter_spacing='25000'></span><span font='16' rise='-2.5pt'>{:%R}</span>",
     "tooltip-format": "<span size='18pt'>{calendar}</span>",
+    "tooltip": false,
     "calendar": {
       "format": {
         "months": "<b>{}</b>",
