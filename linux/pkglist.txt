@@ -24,6 +24,8 @@ catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
 cava
 cavalier
+cbindgen
+clang
 cliphist
 clipman
 clonezilla-unstable
@@ -41,6 +43,7 @@ dracut
 dracut-hook
 dropbox
 duf
+dump_syms
 dunst
 efibootmgr
 evtest
@@ -72,6 +75,8 @@ httpie
 hyprland-git
 hyprpicker-git
 imagemagick
+imake
+inetutils
 inotify-tools
 intel-media-driver
 intel-ucode
@@ -87,6 +92,8 @@ linux-firmware
 linux-zen
 linux-zen-docs
 linux-zen-headers
+lld
+llvm
 lshw
 mako
 mopidy
@@ -98,6 +105,7 @@ mpd-notification
 mpdris2
 mpv
 nano
+nasm
 ncmpcpp
 neofetch
 neovim
@@ -106,6 +114,7 @@ networkmanager
 nginx
 nim
 nitch
+nodejs
 noise-suppression-for-voice
 nvim-packer-git
 nvm
@@ -171,6 +180,10 @@ virtualbox-ext-oracle
 visual-studio-code-bin
 vlc
 vulkan-intel
+wasi-compiler-rt
+wasi-libc
+wasi-libc++
+wasi-libc++abi
 waybar-hyprland-git
 wf-recorder
 wget
@@ -183,9 +196,11 @@ xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 xdg-utils
 xorg-server
+xorg-server-xvfb
 xorg-xinit
 xorg-xwayland
 yad
+yasm
 yay
 zathura
 zathura-pdf-mupdf

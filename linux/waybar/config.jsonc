@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "fixed-center": true,
-  "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "tray", "wlr/taskbar", "custom/spotify", "mpd"],
+  "modules-left": ["temperature", "cpu", "memory", "custom/pacman", "custom/weather", "tray", "custom/spotify", "mpd"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": ["bluetooth", "network", "backlight", "pulseaudio#volume", "pulseaudio#microphone", "battery", "clock", "idle_inhibitor"],
 
@@ -41,32 +41,8 @@
   },
 
   "tray": {
-    "spacing": 20,
+    "spacing": 14,
     "icon-size": 23
-  },
-
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 20,
-    "icon-theme": "Numix-Circle",
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [
-      "Alacritty",
-      "Spotify",
-      "1Password",
-      "Oracle VM VirtualBox Manager",
-      "discord",
-      "Volume Control",
-      "thunar",
-      "VLC media player",
-      "Authentication required",
-      "org.pwmt.zathura"
-    ],
-    "app_ids-mapping": {
-      "firefoxdeveloperedition": "firefox-developer-edition"
-    }
   },
 
   "custom/spotify": {

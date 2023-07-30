@@ -93,7 +93,11 @@ window > box {
 }
 
 #tray {
-  padding: 0 10px 0 8px
+  margin-right: 11px;
+  padding: 0 8px;
+  background: #11111b;
+  border: 4px solid #313244;
+  border-radius: 12px;
 }
 
 #tray > .passive {
@@ -105,18 +109,9 @@ window > box {
   -gtk-icon-effect: highlight;
 }
 
-#taskbar {
-  padding: 0;
-}
-
-#taskbar button:hover {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
 #custom-spotify {
-  padding: 2.5px 18px 0 10px;
+  margin-right: 11px;
+  padding: 4px 17px 4px 12px;
   font-size: 23px;
   color: #a6e3a1;
   background: #11111b;
@@ -124,10 +119,13 @@ window > box {
   border-radius: 10px;
 }
 
+#custom-spotify.playing {
+  padding: 4px 12px 4px 14px;
+}
+
 #mpd {
   margin-right: 11px;
   padding: 4px 12px;
-  color: #45475a;
   background: #11111b;
   border: 4px solid #313244;
   border-radius: 12px;
@@ -169,7 +167,7 @@ window > box {
 }
 
 #workspaces button.active:not(:first-child) {
-  padding-right: 12px;
+  padding-right: 10.5px;
 }
 
 #workspaces button.active:last-child {
@@ -193,7 +191,7 @@ window > box {
 }
 
 #network {
-  margin-right: 12px;
+  margin-right: 11px;
   padding-right: 23px;
   padding-left: 2px;
   color: #fab387;
@@ -210,7 +208,7 @@ window > box {
 }
 
 #backlight {
-  margin-right: 12px;
+  margin-right: 11px;
   padding: 4px 18px 4px 16px;
   color: #cba6f7;
   background: #11111b;
@@ -230,11 +228,12 @@ window > box {
 }
 
 #pulseaudio.muted:not(.microphone) {
+  padding-left: 14px;
   color: #f38ba8;
 }
 
 #pulseaudio.microphone {
-  margin-right: 12px;
+  margin-right: 11px;
   padding-right: 15px;
   border-top: 4px solid #313244;
   border-right: 4px solid #313244;
@@ -248,11 +247,12 @@ window > box {
 
 #pulseaudio.source-muted:not(.volume) {
   padding-right: 18px;
+  padding-left: 12px;
   color: #f38ba8;
 }
 
 #battery {
-  margin-right: 12px;
+  margin-right: 11px;
   padding: 4px 15px 4px 16px;
   color: #a6e3a1;
   font-size: 20px;
