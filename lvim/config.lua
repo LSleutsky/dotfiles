@@ -72,8 +72,10 @@ lvim.keys.visual_mode["X"] = '"_X'
 -- which key
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects <cr>", "Projects" }
 lvim.builtin.which_key.mappings["sw"] = { "<cmd>Telescope grep_string <cr>", "Word under cursor" }
-lvim.builtin.which_key.mappings["gy"] =
-	{ '<cmd>lua require("gitlinker").get_buf_range_url("n") <cr>', "Git path permalink" }
+lvim.builtin.which_key.mappings["gy"] = {
+	'<cmd>lua require("gitlinker").get_buf_range_url("n") <cr>',
+	"Git path permalink",
+}
 
 --  ╭────────────────────────────────────────────────────────────────────────────────────────╮
 --  │ builtins                                                                               │
@@ -155,6 +157,9 @@ lvim.builtin.treesitter.ensure_installed = {
 	"typescript",
 	"vim",
 	"yaml",
+}
+lvim.builtin.treesitter.ignore_install = {
+	"help",
 }
 
 --  ╭────────────────────────────────────────────────────────────────────────────────────────╮
@@ -267,7 +272,14 @@ lvim.plugins = {
 		"s1n7ax/nvim-search-and-replace",
 		config = function()
 			require("nvim-search-and-replace").setup({
-				ignore = { "**/node_modules/**", "**/.git/**", "**/.github/**", "**/.gitignore", "build/**", "dist/**" },
+				ignore = {
+					"**/node_modules/**",
+					"**/.git/**",
+					"**/.github/**",
+					"**/.gitignore",
+					"build/**",
+					"dist/**",
+				},
 			})
 		end,
 	},
