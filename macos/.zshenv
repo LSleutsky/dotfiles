@@ -3,7 +3,6 @@ export KUBE_EDITOR="lvim"
 export LANGUAGE=en_US
 export LC_ALL=en_US.UTF-8
 export MYVIMRC="$HOME/.vimrc"
-export NVM_DIR="$HOME/.nvm"
 
 # fnm
 export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
