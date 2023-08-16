@@ -45,4 +45,3 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 eval "$(starship init zsh)"
 eval "$(pyenv init -)"
-eval "$(fnm env --use-on-cd)"
