@@ -1,5 +1,5 @@
-export EDITOR="lvim"
-export KUBE_EDITOR="lvim"
+export EDITOR="nvim"
+export KUBE_EDITOR="nvim"
 export LANGUAGE=en_US
 export LC_ALL=en_US.UTF-8
 export MYVIMRC="$HOME/.vimrc"
