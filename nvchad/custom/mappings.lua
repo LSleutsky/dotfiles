@@ -78,8 +78,8 @@ M.custom = {
   },
 
   n = {
-    ["J"] = {"<cmd> move .+1 <CR>==", "move selected text down"},
-    ["K"] = {"<cmd> move .-2 <CR>==", "move selected text up"},
+    ["<S-up>"] = {"<cmd> m-2 <CR>==", "move selected text up"},
+    ["<S-down>"] = {"<cmd> m+ <CR>==", "move selected text down"},
     ["x"] = {'"_x', "don't yank deleted character"},
     ["X"] = {'"_X', "don't yank deleted character"},
     ["<leader>w"] = {"<cmd> bw <CR>", "wipe out buffer"},
