@@ -464,7 +464,7 @@
           ];
           exec-once = [
             "hyprctl setcursor Bibata-Modern-Classic 24"
-             "waybar"
+            "waybar"
           ];
           input = {
             repeat_rate = 50;
@@ -508,9 +508,9 @@
             bezier = "overshot,0.13,0.99,0.29,1.1";
             animation = [
               "windows,1,4,overshot,slide"
-               "fade,1,10,default"
-               "workspaces,1,8.8,overshot,slide"
-               "border,1,14,default"
+              "fade,1,10,default"
+              "workspaces,1,8.8,overshot,slide"
+              "border,1,14,default"
             ];
           };
           dwindle = {
@@ -531,16 +531,16 @@
           };
           bind = [
             "ALT, RETURN, exec, alacritty --fly_is_alacritty"
-             "$mainMod, RETURN, exec, alacritty" 
-             "$mainModShift, Q, exit"
+            "$mainMod, RETURN, exec, alacritty" 
+            "$mainModShift, Q, exit"
           ];
           bindm = [
             "$mainMod, mouse:272, movewindow"
-             "$mainMod, mouse:273, resizewindow"
+            "$mainMod, mouse:273, resizewindow"
           ];
           windowrule = [
             "float,title:^(fly_is_alacritty)$"
-             "tile,title:^(alacritty)$"
+            "tile,title:^(alacritty)$"
           ];
         };
       };
