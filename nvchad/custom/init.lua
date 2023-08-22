@@ -5,6 +5,7 @@ local opt = vim.opt
 --  │ general settings                                                                                 │
 --  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
+opt.autoindent = true;
 opt.preserveindent = true
 opt.relativenumber = true
 
