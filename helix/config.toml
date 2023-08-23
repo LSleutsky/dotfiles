@@ -1,0 +1,34 @@
+theme = "catppuccin_mocha"
+
+[editor]
+auto-completion = true
+auto-format = true
+auto-pairs = true
+auto-save = true
+bufferline = "multiple"
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
+line-number = "relative"
+mouse = true
+rulers = [100]
+shell = ["zsh", "-c"]
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "┊"
+render = true
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.statusline]
+left = ["mode", "spinner", "separator", "file-name", "file-modification-indicator", "separator", "spacer", "spacer", "version-control", "spacer"]
+right = ["diagnostics", "separator", "position", "separator", "spacer", "position-percentage"]
+mode.insert = "INSERT"
+mode.normal = "NORMAL"
+mode.select = "SELECT"
