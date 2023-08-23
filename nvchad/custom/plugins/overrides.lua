@@ -57,42 +57,13 @@ M.gitsigns = {
   current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>"
 }
 
-M.nvchad = {
+M.ui = {
   statusline = {
-    overriden_modules = function()
-      local st_modules = require "nvchad_ui.statusline.modules"
-      local separators = require("nvchad_ui.icons").statusline_separators["arrow"]
-
-      return {
-        cursor_position = function()
-          local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-          local cp = st_modules.cursor_position()
-
-          return cp .. "| " .. line .. ":" .. (col + 1) .. " "
-        end,
-        fileInfo = function()
-          local icon = "  "
-          local path = (vim.fn.expand "%" == "" and "") or vim.fn.expand "%"
-
-          if path ~= "" then
-            local devicons_present, devicons = pcall(require, "nvim-web-devicons")
-
-            if devicons_present then
-              local ft_icon = devicons.get_icon(path)
-              icon = (ft_icon ~= nil and " " .. ft_icon) or ""
-            end
-
-            path = " " .. path .. " "
-          end
-
-          return "%#St_file_info#" .. icon .. path .. "%#St_file_sep#" .. separators["right"]
-        end
-      }
-    end
+    -- modules arg here is the default table of modules
+    overriden_modules = function(modules)
+      table.insert(modules, " Ln %l, Col %c")
+    end,
   },
-  tabufline = {
-    enabled = false
-  }
 }
 
 M.mason = {

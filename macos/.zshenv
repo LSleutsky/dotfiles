@@ -4,6 +4,9 @@ export LANGUAGE=en_US
 export LC_ALL=en_US.UTF-8
 export MYVIMRC="$HOME/.vimrc"
 
+# nix
+export NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1
+
 # fnm
 export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
 export FNM_ARCH="arm64"
