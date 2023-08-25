@@ -1,0 +1,20 @@
+[[language]]
+name = "javascript"
+formatter = { command = "prettier" }
+language-server = { command = "typescript-language-server" }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = "prettier" }
+language-server = { command = "typescript-language-server" }
+auto-format = true
+
+[[language]]
+name = "rust"
+
+[[language]]
+name = "toml"
+formatter = { command = "prettier" }
+language-server = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true

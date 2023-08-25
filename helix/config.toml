@@ -5,9 +5,12 @@ auto-completion = true
 auto-format = true
 auto-pairs = true
 auto-save = true
-bufferline = "multiple"
+bufferline = "always"
+color-modes = true
+cursorline = true
 gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
 line-number = "relative"
+middle-click-paste = true
 mouse = true
 rulers = [100]
 shell = ["zsh", "-c"]
@@ -23,12 +26,26 @@ character = "┊"
 render = true
 
 [editor.lsp]
+enable = true
 display-messages = true
 display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "spinner", "separator", "file-name", "file-modification-indicator", "separator", "spacer", "spacer", "version-control", "spacer"]
-right = ["diagnostics", "separator", "position", "separator", "spacer", "position-percentage"]
+left = ["mode", "spacer", "file-name", "separator", "spacer", "version-control"]
+right = ["spinner", "spacer", "workspace-diagnostics", "separator", "spacer", "diagnostics", "position", "file-encoding", "file-type"]
 mode.insert = "INSERT"
 mode.normal = "NORMAL"
 mode.select = "SELECT"
+
+[keys.normal]
+q = ":buffer-close"
+D = "kill_to_line_end"
+G = "goto_last_line"
+tab = ":bn"
+S-tab = ":bp"
+
+[keys.normal.space]
+c = "toggle_comments"
+o = ":config-open"
+r = ":config-reload"
+w = ":w"
