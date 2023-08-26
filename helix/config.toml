@@ -32,7 +32,8 @@ display-inlay-hints = true
 
 [editor.statusline]
 left = ["mode", "spacer", "file-name", "separator", "spacer", "version-control"]
-right = ["spinner", "spacer", "workspace-diagnostics", "separator", "spacer", "diagnostics", "position", "file-encoding", "file-type"]
+right = ["spinner", "spacer", "separator", "position", "separator", "spacer", "position-percentage", "spacer", "separator", "file-encoding", "file-type"]
+center = ["workspace-diagnostics", "spacer", "diagnostics"]
 mode.insert = "INSERT"
 mode.normal = "NORMAL"
 mode.select = "SELECT"
@@ -41,11 +42,12 @@ mode.select = "SELECT"
 q = ":buffer-close"
 D = "kill_to_line_end"
 G = "goto_last_line"
+Q = ":quit!"
+esc = ["collapse_selection", "keep_primary_selection"]
 tab = ":bn"
 S-tab = ":bp"
 
 [keys.normal.space]
-c = "toggle_comments"
 o = ":config-open"
 r = ":config-reload"
 w = ":w"
