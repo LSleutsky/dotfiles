@@ -1,21 +1,30 @@
+---@type MappingsTable
 local M = {}
 
-M.barbar = {
+M.general = {
+  i = {
+    ["<C-s>"] = {"<ESC> <cmd> w <CR>", "Save"},
+    ["<C-S-s>"] = {"<ESC> <cmd> wa <CR>", "Save all"}
+  },
+
   n = {
-    ["<TAB>"] = {"<cmd> BufferNext <CR>", "Go to next buffer"},
-    ["<S-TAB>"] = {"<cmd> BufferPrevious <CR>", "Go to previous buffer"},
-    ["<S-q>"] = {"<cmd> BufferClose <CR>", "Close current buffer"},
-    ["<Space>1"] = {"<cmd> BufferGoto 1 <CR>", "Go to buffer 1"},
-    ["<Space>2"] = {"<cmd> BufferGoto 2 <CR>", "Go to buffer 2"},
-    ["<Space>3"] = {"<cmd> BufferGoto 3 <CR>", "Go to buffer 3"},
-    ["<Space>4"] = {"<cmd> BufferGoto 4 <CR>", "Go to buffer 4"},
-    ["<Space>5"] = {"<cmd> BufferGoto 5 <CR>", "Go to buffer 5"},
-    ["<Space>6"] = {"<cmd> BufferGoto 6 <CR>", "Go to buffer 6"},
-    ["<Space>7"] = {"<cmd> BufferGoto 7 <CR>", "Go to buffer 7"},
-    ["<Space>8"] = {"<cmd> BufferGoto 8 <CR>", "Go to buffer 8"},
-    ["<Space>9"] = {"<cmd> BufferGoto 9 <CR>", "Go to buffer 9"},
-    ["`"] = {"<cmd> BufferMoveNext <CR>", "Move buffer right"},
-    ["<C-`>"] = {"<cmd> BufferMovePrevious <CR>", "Move buffer left"}
+    [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<S-up>"] = {"<cmd> m-2 <CR>==", "Move selected text up"},
+    ["<S-down>"] = {"<cmd> m+ <CR>==", "Move selected text down"},
+    ["x"] = {'"_x', "Don't yank deleted char"},
+    ["X"] = {'"_X', "Don't yank deleted char"},
+    ["<leader>w"] = {"<cmd> bw <CR>", "Wipe out buffer"},
+    ["<C-a>"] = {"gg0VG", "Select all text"},
+    ["<C-x>"] = {"<C-w>c", "Close window"},
+    ["<C-S-s>"] = {"<cmd> wa <CR>", "Save all"},
+    ["<leader>fp"] = {"<cmd> !echo -n % | pbcopy <CR>", "Copy file path"},
+    ["<F5>"] = {"<cmd> bufdo e <CR>", "Reload open buffers"},
+    ["-"] = {"<cmd> qa <CR>", "Exit neovim"}
+  },
+
+  v = {
+    ["x"] = {'"_x', "Don't yank deleted char"},
+    ["X"] = {'"_X', "Don't yank deleted char"}
   }
 }
 
@@ -51,12 +60,6 @@ M.mru = {
   }
 }
 
-M.nvimtree = {
-  n = {
-    ["<C-e>"] = {"<cmd> NvimTreeToggle <CR>", "Toggle NvimTree"}
-  }
-}
-
 M.telescope = {
   n = {
     ["<leader>fs"] = {"<cmd> Telescope live_grep <CR>", "Live grep"},
@@ -68,32 +71,6 @@ M.telescope = {
 M.trouble = {
   n = {
     ["<leader>t"] = {"<cmd> TroubleToggle <CR>", "Toggle Trouble"}
-  }
-}
-
-M.custom = {
-  i = {
-    ["<C-s>"] = {"<ESC> <cmd> w <CR>", "Save"},
-    ["<C-S-s>"] = {"<ESC> <cmd> wa <CR>", "Save all"}
-  },
-
-  n = {
-    ["<S-up>"] = {"<cmd> m-2 <CR>==", "Move selected text up"},
-    ["<S-down>"] = {"<cmd> m+ <CR>==", "Move selected text down"},
-    ["x"] = {'"_x', "Don't yank deleted char"},
-    ["X"] = {'"_X', "Don't yank deleted char"},
-    ["<leader>w"] = {"<cmd> bw <CR>", "Wipe out buffer"},
-    ["<C-a>"] = {"gg0VG", "Select all text"},
-    ["<C-x>"] = {"<C-w>c", "Close window"},
-    ["<C-S-s>"] = {"<cmd> wa <CR>", "Save all"},
-    ["<leader>fp"] = {"<cmd> !echo -n % | pbcopy <CR>", "Copy file path"},
-    ["<F5>"] = {"<cmd> bufdo e <CR>", "Reload open buffers"},
-    ["-"] = {"<cmd> qa <CR>", "Exit neovim"}
-  },
-
-  v = {
-    ["x"] = {'"_x', "Don't yank deleted char"},
-    ["X"] = {'"_X', "Don't yank deleted char"}
   }
 }
 

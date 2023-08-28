@@ -1,49 +1,5 @@
 local M = {}
 
-local function button(sc, txt, keybind)
-  local sc_ = sc:gsub("%s", ""):gsub("SPC", "<leader>")
-
-  local opts = {
-    position = "center",
-    text = txt,
-    shortcut = sc,
-    cursor = 5,
-    width = 36,
-    align_shortcut = "right",
-    hl = "AlphaButtons"
-  }
-
-  if keybind then
-    opts.keymap = { "n", sc_, keybind, { noremap = true, silent = true } }
-  end
-
-  return {
-    type = "button",
-    val = txt,
-    on_press = function()
-      local key = vim.api.nvim_replace_termcodes(sc_, true, false, true) or ""
-      vim.api.nvim_feedkeys(key, "normal", false)
-    end,
-    opts = opts
-  }
-end
-
-M.alpha = {
-  buttons = {
-    type = "group",
-    val = {
-      button("SPC f f", "  Project Files  ", "<cmd> Telescope find_files <CR>"),
-      button("SPC f a", "  All Files  ", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>"),
-      button("SPC f o", "  Recent Files  ", "<cmd> Telescope oldfiles <CR>"),
-      button("SPC f s", "  Live Grep ", "<cmd> Telescope live_grep <CR>"),
-      button("-", "  Exit", "<cmd> exit <CR>")
-    },
-    opts = {
-      spacing = 1
-    }
-  }
-}
-
 M.gitsigns = {
   signs = {
     add = { hl = "GitGutterAdd", text = "▎", numhl = "GitSignsAddNr" },
@@ -68,39 +24,27 @@ M.ui = {
 
 M.mason = {
   ensure_installed = {
-    -- dap
-    "chrome-debug-adapter",
-    "firefox-debug-adapter",
-    "node-debug2-adapter",
-
-    -- formatters
-    "prettier",
-    "prettierd",
-    "stylua",
-
-    -- linters
-    "commitlint",
-    "eslint_d",
-    "jsonlint",
-    "yamllint",
-
-    -- lsp
     "bash-language-server",
     "css-lsp",
     "cssmodules-language-server",
     "diagnostic-languageserver",
-    "dockerfile-language-server",
     "docker-compose-language-service",
-    "dot-language-server",
+    "dockerfile-language-server",
+    "eslint_d",
     "eslint-lsp",
     "html-lsp",
     "json-lsp",
+    "jsonlint",
     "lua-language-server",
     "lua-lsp",
+    "prettier",
+    "stylua",
     "tailwindcss-language-server",
     "typescript-language-server",
+    "yamllint",
     "vim-language-server",
-    "yaml-language-server"
+    "yaml-language-server",
+    "yamllint"
   },
   ui = {
     icons = {
@@ -161,31 +105,55 @@ M.treesitter = {
   ensure_installed = {
     "bash",
     "comment",
+    "cpp",
     "css",
+    "csv",
     "diff",
     "dockerfile",
     "dot",
+    "fish",
+    "git_config",
+    "git_rebase",
     "gitattributes",
+    "gitcommit",
     "gitignore",
-    "help",
+    "graphql",
     "hjson",
     "html",
+    "htmldjango",
     "http",
+    "ini",
     "javascript",
     "jsdoc",
     "json",
     "jsonc",
     "json5",
     "lua",
+    "luap",
+    "luau",
     "markdown",
+    "markdown_inline",
+    "mermaid",
+    "passwd",
+    "php",
+    "pug",
+    "python",
+    "query",
     "regex",
+    "ruby",
+    "rust",
     "scss",
+    "sql",
+    "svelte",
     "todotxt",
     "toml",
     "tsx",
     "typescript",
     "vim",
-    "yaml"
+    "yaml",
+    "yuck",
+    "xml",
+    "zig"
   },
   incremental_selection = {
     enable = true,

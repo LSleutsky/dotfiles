@@ -1,9 +1,4 @@
-local present, null_ls = pcall(require, "null-ls")
-
-if not present then
-  return
-end
-
+local null_ls = require "null-ls"
 local b = null_ls.builtins
 
 local sources = {
@@ -13,16 +8,14 @@ local sources = {
   b.diagnostics.commitlint,
   b.diagnostics.eslint_d,
   b.diagnostics.markdownlint,
+  b.formatting.clang_format,
   b.formatting.eslint_d,
-  b.formatting.prettierd.with({
-    env = {
-      PRETTIERD_LOCAL_PRETTIER_ONLY = 1
-    }
-  }),
-  b.formatting.stylua
+  b.formatting.deno_fmt,
+  b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } },
+  b.formatting.stylua,
 }
 
 null_ls.setup {
   debug = true,
-  sources = sources
+  sources = sources,
 }
