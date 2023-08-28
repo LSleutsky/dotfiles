@@ -13,15 +13,6 @@ M.gitsigns = {
   current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>"
 }
 
-M.ui = {
-  statusline = {
-    -- modules arg here is the default table of modules
-    overriden_modules = function(modules)
-      table.insert(modules, " Ln %l, Col %c")
-    end,
-  },
-}
-
 M.mason = {
   ensure_installed = {
     "bash-language-server",
@@ -36,7 +27,7 @@ M.mason = {
     "json-lsp",
     "jsonlint",
     "lua-language-server",
-    "lua-lsp",
+    "luau-lsp",
     "prettier",
     "stylua",
     "tailwindcss-language-server",

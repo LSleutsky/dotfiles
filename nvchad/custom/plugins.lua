@@ -1,11 +1,9 @@
 local overrides = require("custom.configs.overrides")
 
----@type NvPluginSpec[]
 local plugins = {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      -- format & linting
       {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
@@ -19,23 +17,6 @@ local plugins = {
     end,
   },
 
-  -- overrides
-  {
-    "williamboman/mason.nvim",
-    opts = overrides.mason
-  },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
-  },
-
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
-  },
-
-  -- Install a plugin
   {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
@@ -50,6 +31,10 @@ local plugins = {
   },
 
   {
+    "mg979/vim-visual-multi"
+  },
+
+  {
     "SmiteshP/nvim-navic",
     config = function()
       dofile(vim.g.base46_cache .. "navic")
@@ -58,21 +43,25 @@ local plugins = {
         lsp = { auto_attach = true }
       })
     end
-  }
+  },
 
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
+  --  ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+  --  │ overrides                                                                                        │
+  --  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+  {
+    "williamboman/mason.nvim",
+    opts = overrides.mason
+  },
 
-  -- All NvChad plugins are lazy-loaded by default
-  -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
-  -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
-  -- {
-  --   "mg979/vim-visual-multi",
-  --   lazy = false,
-  -- }
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = overrides.treesitter,
+  },
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = overrides.nvimtree,
+  },
 }
 
 return plugins
