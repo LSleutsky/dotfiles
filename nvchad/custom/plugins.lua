@@ -41,7 +41,7 @@ local plugins = {
 	  },
 	  event = "VeryLazy",
   	opts = {
-      openai_api_key = "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"
+      -- openai_api_key = ""
     },
 	  keys = {
 		  {
