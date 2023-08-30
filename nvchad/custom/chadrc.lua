@@ -1,9 +1,10 @@
 local M = {}
-local highlights = require "custom.highlights"
+local highlights = require("custom.highlights")
+local overrides = require("custom.overrides")
 
 M.ui = {
-  theme = "decay",
-  theme_toggle = { "decay", "catppuccin" },
+  theme = "oxocarbon",
+  theme_toggle = { "oxocarbon", "catppuccin" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -11,6 +12,7 @@ M.ui = {
   extended_integrations = { "navic" },
   statusline = {
     overriden_modules = function(modules)
+      local statusline = require("nvchad.statusline.vscode_colored")
       local function navic_statusline()
         local navic = require("nvim-navic")
 
@@ -23,6 +25,9 @@ M.ui = {
 
       table.insert(modules, 6, navic_statusline())
       table.insert(modules, 12, "| Ln %l, Col %c")
+      table.remove(modules, 3)
+      table.insert(modules, 3, "%#St_gitIcons#" .. statusline.git())
+      table.insert(modules, 4, overrides.gitchanges())
     end
   }
 }
