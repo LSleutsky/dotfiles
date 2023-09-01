@@ -3,8 +3,8 @@ local highlights = require("custom.highlights")
 local overrides = require("custom.overrides")
 
 M.ui = {
-  theme = "oxocarbon",
-  theme_toggle = { "oxocarbon", "catppuccin" },
+  theme = "catppuccin",
+  theme_toggle = { "catppuccin", "oxocarbon" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -24,7 +24,7 @@ M.ui = {
       end
 
       table.insert(modules, 6, navic_statusline())
-      table.insert(modules, 12, "| Ln %l, Col %c")
+      table.insert(modules, 12, "| %l:%c ")
       table.remove(modules, 3)
       table.insert(modules, 3, "%#St_gitIcons#" .. statusline.git())
       table.insert(modules, 4, overrides.gitchanges())
