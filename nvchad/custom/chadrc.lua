@@ -81,7 +81,7 @@ M.ui = {
       end)()
 
       table.insert(modules, 6, " " .. navic_statusline() .. " ")
-      table.insert(modules, 13, "| %l:%c ")
+      table.insert(modules, 12, "| %l:%c ")
     end
   },
   tabufline = {
