@@ -3,8 +3,8 @@ local highlights = require("custom.highlights")
 local overrides = require("custom.overrides")
 
 M.ui = {
-  theme = "decay",
-  theme_toggle = { "decay", "tokyonight" },
+  theme = "tokyonight",
+  theme_toggle = { "tokyonight", "decay" },
   hl_override = highlights.override,
   hl_add = highlights.add,
   extended_integrations = { "navic" },
@@ -60,59 +60,6 @@ M.ui = {
         pmenu_bg = "#bac2de",
         folder_bg = "#89b4fa",
         lavender = "#b4befe",
-      }
-    },
-    decay = {
-      base_16 = {
-        base00 = "#101419",
-        base01 = "#1a1e23",
-        base02 = "#13171c",
-        base03 = "#485263",
-        base04 = "#4d5768",
-        base05 = "#b6beca",
-        base06 = "#b6beca",
-        base07 = "#e3e6eb",
-        base08 = "#70a5eb",
-        base09 = "#e89777",
-        base0A = "#ffeba6",
-        base0B = "#78dba9",
-        base0C = "#74bee9",
-        base0D = "#90daff",
-        base0E = "#c68aee",
-        base0F = "#e5646a",
-      },
-      base_30 = {
-        white = "#b6beca",
-        darker_black = "#101419",
-        black = "#101419", --  nvim bg
-        black3 = "#0e1217",
-        one_bg = "#1a1e23", -- real bg of onedark
-        one_bg3 = "#485263",
-        one_bg4 = "#4d5768",
-        grey = "#485263",
-        grey_fg = "#4d5768",
-        grey_fg3 = "#4d5768",
-        light_grey = "#b6beca",
-        red = "#e05f65",
-        baby_pink = "#f6c9d4",
-        pink = "#f6c9d4",
-        line = "#4d5768", -- for lines like vertsplit
-        green = "#78dba9",
-        vibrant_green = "#94f7c5",
-        nord_blue = "#8cc1ff",
-        blue = "#70a5eb",
-        yellow = "#ffeba6",
-        sun = "#f1cf8a",
-        purple = "#e2a6ff",
-        dark_purple = "#c68aee",
-        teal = "#73c0c9",
-        orange = "#e89777",
-        cyan = "#74bee9",
-        statusline_bg = "#13171c",
-        lightbg = "#4d5768",
-        pmenu_bg = "#b6beca",
-        folder_bg = "#91c7e7",
-        lavender = "#a9acdb",
       }
     }
   },
