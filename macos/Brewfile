@@ -40,6 +40,7 @@ brew "ripgrep-all"
 brew "scc"
 brew "starship"
 brew "tree"
+brew "watson"
 brew "yamllint"
 brew "zsh"
 
