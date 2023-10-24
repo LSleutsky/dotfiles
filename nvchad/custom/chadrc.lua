@@ -3,18 +3,11 @@ local highlights = require("custom.highlights")
 local overrides = require("custom.overrides")
 
 M.ui = {
-  theme = "tokyodark",
-  theme_toggle = { "tokyodark", "decay" },
+  theme = "tokyonight",
+  theme_toggle = { "tokyonight", "decay" },
   hl_override = highlights.override,
   hl_add = highlights.add,
   extended_integrations = { "navic" },
-  changed_themes = {
-    tokyodark = {
-      base_16 = {
-        base08 = "#519aba"
-      }
-    }
-  },
   statusline = {
     overriden_modules = function(modules)
       local statusline = require("nvchad.statusline.vscode_colored")
