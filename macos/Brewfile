@@ -42,6 +42,7 @@ brew "starship"
 brew "tree"
 brew "watson"
 brew "yamllint"
+brew "zk"
 brew "zsh"
 
 tap "doprz/dipc"
