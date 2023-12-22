@@ -50,6 +50,8 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
+cask "1password"
+cask "1password-cli"
 cask "boom-3d"
 cask "discord"
 cask "font-fira-code-nerd-font"
