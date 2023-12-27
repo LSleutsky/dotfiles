@@ -32,7 +32,7 @@ return {
 	font_size = 14,
 	line_height = 1.0,
 
-  color_scheme = "Tokyo Night",
+  color_scheme = "Catppuccin Mocha",
 	bold_brightens_ansi_colors = true,
 	dpi = 96.0,
 
