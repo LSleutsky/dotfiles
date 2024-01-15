@@ -2,7 +2,38 @@
 # ~/.zshrc
 #
 
-zsh-backward-kill-word () {
+# Functions -----------------------------------------------------------------------------------------------------
+
+function git_current_branch() {
+  ref=$(git symbolic-ref HEAD | cut -d'/' -f3)
+  echo $ref
+}
+
+function git_develop_branch() {
+  command git rev-parse --git-dir &>/dev/null || return
+  local branch
+  for branch in dev devel development; do
+    if command git show-ref -q --verify refs/heads/$branch; then
+      echo $branch
+      return
+    fi
+  done
+  echo develop
+}
+
+function git_main_branch() {
+  command git rev-parse --git-dir &>/dev/null || return
+  local ref
+  for ref in refs/{heads,remotes/{origin,upstream}}/{main,trunk,mainline,default}; do
+    if command git show-ref -q --verify $ref; then
+      echo ${ref:t}
+      return
+    fi
+  done
+  echo master
+}
+
+function zsh-backward-kill-word () {
   local WORDCHARS=''
   zle -f kill
   zle backward-kill-word
@@ -11,9 +42,6 @@ zsh-backward-kill-word () {
 [[ -s /home/lush/.autojump/etc/profile.d/autojump.sh ]] && source /home/lush/.autojump/etc/profile.d/autojump.sh
 
 source ~/.aliases
-source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-functions.zsh
 
 setopt always_to_end
 setopt append_history
