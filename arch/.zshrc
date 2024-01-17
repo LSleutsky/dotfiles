@@ -52,6 +52,8 @@ setopt auto_list
 setopt auto_menu
 setopt auto_pushd
 setopt complete_in_word
+setopt correct
+setopt extended_glob
 setopt extended_history
 setopt hist_find_no_dups
 setopt hist_ignore_dups
@@ -60,6 +62,7 @@ setopt hist_reduce_blanks
 setopt hist_save_no_dups
 setopt inc_append_history
 setopt menu_complete
+setopt pushd_ignore_dups
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
@@ -70,6 +73,9 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 zle -N zsh-backward-kill-word
 
+zstyle ':completions*' accept-exact '*(N)'
+zstyle ':completions*' use-cache on
+zstyle ':completions*' cache-path ~/.cache/zcache
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' list-colors ''
@@ -123,15 +129,20 @@ hash -d vids="$HOME/Videos"
 # │ SOURCES                                                                                          │
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 eval "$(starship init zsh)"
-eval "$(fnm env --use-on-cd)"
+eval "$(zoxide init zsh)"
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ ALIASES                                                                                          │
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
+# git
 alias gaa='git add --all'
-alias gac='git add . && git commit -m'
+alias gac='git add --all && git commit -m'
 alias gb="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
 alias gbd='git branch -D'
 alias gbD='git push origin --delete'
@@ -141,40 +152,18 @@ alias gco='git checkout'
 alias gcod='git checkout $(git_develop_branch)'
 alias gcof='git checkout --'
 alias gcom='git checkout $(git_main_branch)'
-alias gcp='git cherry-pick'
-alias gcpa='git cherry-pick --abort'
-alias gcpc='git cherry-pick --continue'
 alias gd='git diff'
 alias gD="git diff -- . ':!package-lock.json'"
 alias gdn='git diff --name-only'
 alias gdt='git diff-tree --no-commit-id --name-status -r'
 alias gfp='git fetch --all --prune && git pull --rebase origin $(git_current_branch)'
-alias gfu='git fetch upstream'
 alias ggf='git push --force origin $(git_current_branch)'
-alias ggfl='git push --force-with-lease origin $(git_current_branch)'
 alias ggp='git push origin $(git_current_branch)'
-alias glc='git log -1 HEAD --stat'
 alias glo="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias glp='git log --patch'
-alias glst='git log --stat -p'
-alias gm='git merge'
 alias gpp='git pull --rebase origin $(git_current_branch) && git push origin $(git_current_branch)'
-alias gpup='git pull upstream $(git_main_branch)'
 alias grb='git rebase'
-alias grba='git rebase --abort'
-alias grbc='git rebase --continue'
-alias grbd='git rebase $(git_develop_branch)'
-alias grbm='git rebase $(git_main_branch)'
-alias grup='git rebase upstream/$(git_main_branch)'
-alias grv='git revert'
-alias gs="git show -- . ':!package-lock.json'"
 alias gsb='git status -sb'
 alias gst='git stash'
-alias gsta='git stash apply'
-alias gstc='git stash clear'
-alias gstl='git stash list'
-alias gstp='git stash pop'
-alias gsts='git stash save'
 
 alias ..='cd ../'
 alias ...='cd ../../'
@@ -186,6 +175,9 @@ alias ........='cd ../../../../../../../'
 alias .........='cd ../../../../../../../../'
 alias ..........='cd ../../../../../../../../../'
 
+alias ns='nvim ~/.config/starship.toml'
+alias nz='nvim ~/.zshrc'
+
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
 alias clock='tty-clock -bcsC4 -f %a,\ %b\ %d'
 alias cls='clear'
@@ -194,7 +186,17 @@ alias find='fd'
 alias free='free -mth'
 alias history='history -i'
 alias ls='eza --all --binary --git --group-directories-first --icons --long'
+alias lt='eza --all --binary --git --group-directories-first --icons --long --tree'
 alias mkdir='mkdir -p'
 alias n='nvim'
+alias pow='sudo poweroff'
+alias reb='sudo reboot'
 alias sn='sudo nvim'
 alias wtr='curl wttr.in'
+
+# void
+alias vsv='sudo vsv'
+alias xbi='sudo xbps-install -Su'
+alias xbq='xbps-query'
+alias xbqs='xbps-query -Rs'
+alias xbr='sudo xbps-reconfigure'
