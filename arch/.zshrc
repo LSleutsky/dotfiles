@@ -135,6 +135,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval "$(fnm env --use-on-cd)"
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ ALIASES                                                                                          │
@@ -184,15 +185,26 @@ alias cls='clear'
 alias df='df -h'
 alias find='fd'
 alias free='free -mth'
+alias grep='grep --color=auto'
 alias history='history -i'
 alias ls='eza --all --binary --git --group-directories-first --icons --long'
 alias lt='eza --all --binary --git --group-directories-first --icons --long --tree'
+alias man='batman'
 alias mkdir='mkdir -p'
 alias n='nvim'
 alias pow='sudo poweroff'
 alias reb='sudo reboot'
 alias sn='sudo nvim'
+alias uuid='lsblk -dno UUID'
 alias wtr='curl wttr.in'
+
+#arch
+alias pacman='sudo pacman'
+alias pacdel='sudo pacman -Rnsudd'
+alias packill='sudo rm -rf /var/lib/pacman/db.lck'
+alias pacwipe='sudo pacman -Rnsudd $(pacman -Qtdq)'
+alias pacupdate='sudo pacman -Syyu && yay -Syu --devel'
+alias yaywipe='sudo yay -Scc'
 
 # void
 alias vsv='sudo vsv'

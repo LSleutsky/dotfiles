@@ -100,6 +100,7 @@ detect_files = [
   '.node-version',
   '.nvmrc',
   '.yarnrc',
-  '.npmrc'
+  '.npmrc',
+  '.gitconfig'
 ]
 detect_folders = ['.nvm', 'js', 'node_modules']
