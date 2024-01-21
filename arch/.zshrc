@@ -114,9 +114,14 @@ export HISTFILESIZE=100000
 export HISTSIZE=100000
 export SAVEHIST=100000
 
-export EDITOR="nvim"
+export EDITOR="lvim"
 export LANG="en_US.UTF-8"
 export PAGER="less"
+export SUDO_EDITOR="lvim"
+
+export GDK_BACKEND="wayland"
+export QT_QPA_PLATFORM="wayland;xcb"
+export XDG_SESSION_DESKTOP="Hyprland"
 
 hash -d cfg="$HOME/.config"
 hash -d dl="$HOME/Downloads"
@@ -176,12 +181,17 @@ alias ........='cd ../../../../../../../'
 alias .........='cd ../../../../../../../../'
 alias ..........='cd ../../../../../../../../../'
 
-alias ns='nvim ~/.config/starship.toml'
-alias nz='nvim ~/.zshrc'
+alias nc='lvim ~/.config/lvim/config.lua'
+alias nh='lvim ~/.config/hypr/hyprland.conf'
+alias nk='lvim ~/.config/kitty/kitty.conf'
+alias ns='lvim ~/.config/starship.toml'
+alias nz='lvim ~/.zshrc'
 
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
 alias clock='tty-clock -bcsC4 -f %a,\ %b\ %d'
 alias cls='clear'
+alias cmatrix='neo-matrix'
+alias copy='wl-copy'
 alias df='df -h'
 alias find='fd'
 alias free='free -mth'
@@ -191,12 +201,16 @@ alias ls='eza --all --binary --git --group-directories-first --icons --long'
 alias lt='eza --all --binary --git --group-directories-first --icons --long --tree'
 alias man='batman'
 alias mkdir='mkdir -p'
-alias n='nvim'
+alias n='lvim'
+alias paste='wl-paste'
 alias pow='sudo poweroff'
 alias reb='sudo reboot'
-alias sn='sudo nvim'
+alias sn='sudo lvim'
 alias uuid='lsblk -dno UUID'
 alias wtr='curl wttr.in'
+
+#hyprland
+alias hyprload='hyprctl reload && hyprctl dispatch exec reload'
 
 #arch
 alias pacman='sudo pacman'
