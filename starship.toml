@@ -54,49 +54,29 @@ detect_files = [
 ]
 detect_folders = ['docker']
 
-# [git_branch]
-# format = "[]($style)[[ ](bg:#11111b fg:#74c7ec bold)$branch](bg:#181825 fg:#74c7ec)[ ]($style)"
-# style = "bg:none fg:#11111b"
-
 [git_branch]
-format = " [$symbol$branch]($style) "
-symbol = "🍣 "
+format = "[]($style)[[ ](bg:#11111b fg:#74c7ec bold)$branch](bg:#181825 fg:#74c7ec)[ ]($style)"
 style = "bg:none fg:#11111b"
 
 [git_commit]
 commit_hash_length = 8
-style = "bold white"
 
 [git_status]
-conflicted = "⚔️ "
-ahead = "🏎️ 💨 ×${count}"
-behind = "🐢 ×${count}"
-diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
-untracked = "🛤️  ×${count}"
-stashed = "📦 "
-modified = "📝 ×${count}"
-staged = "🗃️  ×${count}"
-renamed = "📛 ×${count}"
-deleted = "🗑️  ×${count}"
-style = "bright-white"
-format = "$all_status$ahead_behind"
-
-# [git_status]
-# format = '([\[$all_status$ahead_behind\]]($style) )'
-# style = "bg:none fg:#f38ba8"
-# stashed = '\$'
-# ahead = '⇡'
-# behind = '⇣'
-# up_to_date = ''
-# diverged = '⇕'
-# conflicted = '='
-# deleted = '✘'
-# renamed = '»'
-# modified = '!'
-# staged = '+'
-# untracked = '?'
-# ignore_submodules = false
-# disabled = false
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bg:none fg:#f38ba8"
+stashed = '\$'
+ahead = '⇡'
+behind = '⇣'
+up_to_date = ''
+diverged = '⇕'
+conflicted = '='
+deleted = '✘'
+renamed = '»'
+modified = '!'
+staged = '+'
+untracked = '?'
+ignore_submodules = false
+disabled = false
 
 [line_break]
 disabled = false
