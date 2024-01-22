@@ -120,6 +120,7 @@ export PAGER="less"
 export SUDO_EDITOR="lvim"
 
 export GDK_BACKEND="wayland"
+export GTK_THEME="Catppuccin-Mocha-Standard-Blue-Dark"
 export QT_QPA_PLATFORM="wayland;xcb"
 export XDG_SESSION_DESKTOP="Hyprland"
 
@@ -187,6 +188,7 @@ alias nk='lvim ~/.config/kitty/kitty.conf'
 alias ns='lvim ~/.config/starship.toml'
 alias nz='lvim ~/.zshrc'
 
+alias asciiquarium='asciiquarium -t'
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
 alias clock='tty-clock -bcsC4 -f %a,\ %b\ %d'
 alias cls='clear'
