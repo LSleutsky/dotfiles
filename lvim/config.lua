@@ -97,14 +97,9 @@ lvim.builtin.lualine.sections.lualine_c = {
     sources = { "nvim_diagnostic" },
     symbols = { error = " ", warn = " ", info = " ", hint = " " },
   },
-  {
-    "filename",
-    file_status = true,
-    path = 1,
-  },
   "diff",
 }
-lvim.builtin.lualine.sections.lualine_x = { "encoding", "filetype" }
+lvim.builtin.lualine.sections.lualine_x = { "filetype" }
 
 -- nvimtree
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
