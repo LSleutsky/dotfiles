@@ -141,7 +141,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ ALIASES                                                                                          │
