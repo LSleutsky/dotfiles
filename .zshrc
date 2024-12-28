@@ -114,15 +114,19 @@ export HISTFILESIZE=100000
 export HISTSIZE=100000
 export SAVEHIST=100000
 
-export EDITOR="lvim"
+export EDITOR="nvim"
 export LANG="en_US.UTF-8"
 export PAGER="less"
-export SUDO_EDITOR="lvim"
+export SUDO_EDITOR="nvim"
 
 export GDK_BACKEND="wayland"
-export GTK_THEME="Catppuccin-Mocha-Standard-Blue-Dark"
+export GTK_THEME="Adwaita:dark"
+export GTK2_RC_FILES="/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc"
 export QT_QPA_PLATFORM="wayland;xcb"
+export QT_STYLE_OVERRIDE="Adwaita-Dark"
 export XDG_SESSION_DESKTOP="Hyprland"
+
+export PATH="/home/lush/.bun/bin:$PATH"
 
 hash -d cfg="$HOME/.config"
 hash -d dl="$HOME/Downloads"
@@ -182,17 +186,15 @@ alias ........='cd ../../../../../../../'
 alias .........='cd ../../../../../../../../'
 alias ..........='cd ../../../../../../../../../'
 
-alias nc='lvim ~/.local/share/repos/dotfiles/lvim/config.lua'
-alias nh='lvim ~/.local/share/repos/dotfiles/hypr/hyprland.conf'
-alias nk='lvim ~/.local/share/repos/dotfiles/kitty/kitty.conf'
-alias ns='lvim ~/.local/share/repos/dotfiles/starship.toml'
-alias nz='lvim ~/.local/share/repos/dotfiles/.zshrc'
+alias nh='nvim ~/.local/share/repos/dotfiles/hypr/hyprland.conf'
+alias nk='nvim ~/.local/share/repos/dotfiles/kitty/kitty.conf'
+alias ns='nvim ~/.local/share/repos/dotfiles/starship.toml'
+alias nz='nvim ~/.local/share/repos/dotfiles/.zshrc'
 
 alias asciiquarium='asciiquarium -t'
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
 alias clock='tty-clock -bcsC4 -f %a,\ %b\ %d'
 alias cls='clear'
-alias cmatrix='neo-matrix'
 alias copy='wl-copy'
 alias df='df -h'
 alias find='fd'
@@ -204,11 +206,11 @@ alias ls='eza --all --binary --git --group-directories-first --icons --long'
 alias lt='eza --all --binary --git --group-directories-first --icons --long --tree'
 alias man='batman'
 alias mkdir='mkdir -p'
-alias n='lvim'
+alias n='nvim'
 alias paste='wl-paste'
 alias pow='sudo poweroff'
 alias reb='sudo reboot'
-alias sn='sudo lvim'
+alias sn='sudo nvim'
 alias uuid='lsblk -dno UUID'
 alias wtr='curl wttr.in'
 
@@ -229,3 +231,6 @@ alias xbi='sudo xbps-install -Su'
 alias xbq='xbps-query'
 alias xbqs='xbps-query -Rs'
 alias xbr='sudo xbps-reconfigure'
+
+# bun completions
+[ -s "/home/lush/.bun/_bun" ] && source "/home/lush/.bun/_bun"
