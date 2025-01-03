@@ -241,6 +241,10 @@ alias xbr='sudo xbps-reconfigure'
 alias dnf='sudo dnf'
 alias dnfs='sudo dnf search'
 alias dnfi='sudo dnf install'
+alias dnfu='sudo dnf update --refresh'
+alias fpi='sudo flatpak install flathub'
+alias fpu='sudo flatpak update'
+alias fps='flatpak search'
 
 # bun completions
 [ -s "/home/lush/.bun/_bun" ] && source "/home/lush/.bun/_bun"
