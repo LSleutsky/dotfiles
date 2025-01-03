@@ -126,6 +126,13 @@ export QT_QPA_PLATFORM="wayland;xcb"
 export QT_STYLE_OVERRIDE="Adwaita-Dark"
 export XDG_SESSION_DESKTOP="Hyprland"
 
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_DIRS="/usr/local/share:/usr/share"
+export XDG_CONFIG_DIRS="/etc/xdg"
+
 export PATH="/home/lush/.bun/bin:$PATH"
 
 hash -d cfg="$HOME/.config"
@@ -139,13 +146,11 @@ hash -d vids="$HOME/Videos"
 # │ SOURCES                                                                                          │
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(fnm env --use-on-cd --shell zsh)"
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ ALIASES                                                                                          │
@@ -232,5 +237,17 @@ alias xbq='xbps-query'
 alias xbqs='xbps-query -Rs'
 alias xbr='sudo xbps-reconfigure'
 
+# fedora
+alias dnf='sudo dnf'
+alias dnfs='sudo dnf search'
+alias dnfi='sudo dnf install'
+
 # bun completions
 [ -s "/home/lush/.bun/_bun" ] && source "/home/lush/.bun/_bun"
+
+# fnm
+FNM_PATH="/home/lush/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/lush/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
