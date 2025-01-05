@@ -219,6 +219,9 @@ alias sn='sudo nvim'
 alias uuid='lsblk -dno UUID'
 alias wtr='curl wttr.in'
 
+#linux
+alias open='xdg-open'
+
 #hyprland
 alias hyprload='hyprctl reload && hyprctl dispatch exec reload'
 
