@@ -2,11 +2,12 @@
   path = https://github.com/dandavison/delta/blob/master/themes.gitconfig
 [user]
 	name = Lush Sleutsky
-	email = lushsleutsky@gmail.com
+	email = Lushsleutsky@gmail.com
 	username = LSleutsky
 [core]
 	editor = lvim
   pager = delta
+	sshCommand = ssh -i ~/.ssh/id_ed25519
 [diff]
   colorMoved = default
   guitool = lvimdiff
@@ -88,3 +89,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
