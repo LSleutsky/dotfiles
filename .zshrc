@@ -120,10 +120,7 @@ export PAGER="less"
 export SUDO_EDITOR="nvim"
 
 export GDK_BACKEND="wayland"
-export GTK_THEME="Adwaita:dark"
-export GTK2_RC_FILES="/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc"
 export QT_QPA_PLATFORM="wayland;xcb"
-export QT_STYLE_OVERRIDE="Adwaita-Dark"
 export XDG_SESSION_DESKTOP="Hyprland"
 
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -139,15 +136,16 @@ hash -d cfg="$HOME/.config"
 hash -d dl="$HOME/Downloads"
 hash -d docs="$HOME/Documents"
 hash -d pics="$HOME/Pictures"
-hash -d repos="$HOME/.local/share/repos"
+hash -d repos="$HOME/repos"
 hash -d vids="$HOME/Videos"
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ SOURCES                                                                                          │
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/nvm/init-nvm.sh
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
@@ -191,10 +189,10 @@ alias ........='cd ../../../../../../../'
 alias .........='cd ../../../../../../../../'
 alias ..........='cd ../../../../../../../../../'
 
-alias nh='nvim ~/.local/share/repos/dotfiles/hypr/hyprland.conf'
-alias nk='nvim ~/.local/share/repos/dotfiles/kitty/kitty.conf'
-alias ns='nvim ~/.local/share/repos/dotfiles/starship.toml'
-alias nz='nvim ~/.local/share/repos/dotfiles/.zshrc'
+alias nh='nvim ~/repos/dotfiles/hypr/hyprland.conf'
+alias nk='nvim ~/repos/dotfiles/kitty/kitty.conf'
+alias ns='nvim ~/repos/dotfiles/starship.toml'
+alias nz='nvim ~/repos/dotfiles/.zshrc'
 
 alias asciiquarium='asciiquarium -t'
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
@@ -251,10 +249,3 @@ alias fps='flatpak search'
 
 # bun completions
 [ -s "/home/lush/.bun/_bun" ] && source "/home/lush/.bun/_bun"
-
-# fnm
-FNM_PATH="/home/lush/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/lush/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
