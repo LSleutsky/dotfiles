@@ -42,6 +42,19 @@ function zsh-backward-kill-word () {
 }
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │ SOURCES                                                                                          │
+# ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+fpath+=~/.zsh/zsh-completions
+
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
+# ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ OPTIONS                                                                                          │
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
@@ -64,14 +77,16 @@ setopt inc_append_history
 setopt menu_complete
 setopt pushd_ignore_dups
 
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-autoload -U compinit && compinit -u
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
+autoload -Uz compinit && compinit -u
 _comp_options+=(globdots)
 
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 zle -N zsh-backward-kill-word
+zle -N history-substring-search-up
+zle -N history-substring-search-down
 
 zstyle ':completions*' accept-exact '*(N)'
 zstyle ':completions*' use-cache on
@@ -101,9 +116,18 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-bindkey "^[[A" up-line-or-beginning-search
-bindkey "^[[B" down-line-or-beginning-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 bindkey '^w' zsh-backward-kill-word
+bindkey "^p" up-line-or-beginning-search
+bindkey "^n" down-line-or-beginning-search
+
+bindkey '\e[A' history-substring-search-up
+bindkey '\e[B' history-substring-search-down
+bindkey '\eOA' history-substring-search-up
+bindkey '\eOB' history-substring-search-down
+bindkey '^[[1;5A' history-substring-search-up
+bindkey '^[[1;5B' history-substring-search-down
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ ENVIRONMENT                                                                                      │
@@ -131,6 +155,10 @@ export XDG_DATA_DIRS="/usr/local/share:/usr/share"
 export XDG_CONFIG_DIRS="/etc/xdg"
 
 export PATH="/home/lush/.bun/bin:$PATH"
+export PATH="/home/lush/.local/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 hash -d cfg="$HOME/.config"
 hash -d dl="$HOME/Downloads"
@@ -138,17 +166,6 @@ hash -d docs="$HOME/Documents"
 hash -d pics="$HOME/Pictures"
 hash -d repos="$HOME/repos"
 hash -d vids="$HOME/Videos"
-
-# ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
-# │ SOURCES                                                                                          │
-# ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/nvm/init-nvm.sh
-
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ ALIASES                                                                                          │
@@ -190,12 +207,12 @@ alias .........='cd ../../../../../../../../'
 alias ..........='cd ../../../../../../../../../'
 
 alias nh='nvim ~/repos/dotfiles/hypr/hyprland.conf'
-alias nk='nvim ~/repos/dotfiles/kitty/kitty.conf'
-alias ns='nvim ~/repos/dotfiles/starship.toml'
-alias nz='nvim ~/repos/dotfiles/.zshrc'
+alias ns='nvim ~/dotfiles/starship.toml'
+alias nz='nvim ~/dotfiles/.zshrc'
 
 alias asciiquarium='asciiquarium -t'
-alias batt='bat /sys/class/power_supply/BAT1/capacity'
+alias bat='batcat'
+alias batt='bat /sys/class/power_supply/BAT0/capacity'
 alias clock='tty-clock -bcsC4 -f %a,\ %b\ %d'
 alias cls='clear'
 alias copy='wl-copy'
