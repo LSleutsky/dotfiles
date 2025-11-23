@@ -209,6 +209,8 @@ alias ..........='cd ../../../../../../../../../'
 
 alias nh='nvim ~/repos/dotfiles/hypr/hyprland.conf'
 alias ns='nvim ~/repos/dotfiles/starship.toml'
+alias nw='nvim ~/repos/dotfiles/waybar/config.jsonc'
+alias nws='nvim ~/repos/dotfiles/waybar/style.css'
 alias nz='nvim ~/repos/dotfiles/.zshrc'
 
 alias asciiquarium='asciiquarium -t'
