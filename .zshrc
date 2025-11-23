@@ -47,9 +47,9 @@ function zsh-backward-kill-word () {
 
 fpath+=~/.zsh/zsh-completions
 
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
@@ -207,8 +207,8 @@ alias .........='cd ../../../../../../../../'
 alias ..........='cd ../../../../../../../../../'
 
 alias nh='nvim ~/repos/dotfiles/hypr/hyprland.conf'
-alias ns='nvim ~/dotfiles/starship.toml'
-alias nz='nvim ~/dotfiles/.zshrc'
+alias ns='nvim ~/repos/dotfiles/starship.toml'
+alias nz='nvim ~/repos/dotfiles/.zshrc'
 
 alias asciiquarium='asciiquarium -t'
 alias bat='batcat'
