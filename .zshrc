@@ -187,10 +187,11 @@ alias gd='git diff'
 alias gD="git diff -- . ':!package-lock.json'"
 alias gdn='git diff --name-only'
 alias gdt='git diff-tree --no-commit-id --name-status -r'
-alias gfp='git fetch --all --prune && git pull --rebase origin $(git_current_branch)'
+alias gfp='git fetch --all --prune'
 alias ggf='git push --force origin $(git_current_branch)'
 alias ggp='git push origin $(git_current_branch)'
-alias glo="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gp='git push'
 alias gpp='git pull --rebase origin $(git_current_branch) && git push origin $(git_current_branch)'
 alias grb='git rebase'
 alias gsb='git status -sb'
