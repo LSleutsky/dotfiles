@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "overlay",
     "position": "top",
     "height": 42,
     "spacing": 0,
