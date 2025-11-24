@@ -15,31 +15,36 @@
         "clock"
     ],
     "modules-right": [
-        "tray",
         "custom/wifi",
         "backlight",
         "wireplumber",
         "cpu",
         "temperature",
         "memory",
-        "battery"
+        "battery",
+	"tray"
     ],
 
     "hyprland/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "format-icons": {
-            "1": "一",
-            "2": "二", 
-            "3": "三",
-            "4": "四",
-            "5": "五",
-            "active": "󰮯",
-            "default": "󰊠"
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "active": "",
+        "urgent": "",
+        "persistent": "",
+        "focused": "",
+        "default": ""
         },
-        "persistent-workspaces": {
-            "*": 5
-        }
+      "sort-by-number": true
     },
 
     "hyprland/window": {
@@ -49,12 +54,6 @@
         "rewrite": {
             "": " Hyprland"
         }
-    },
-
-    "tray": {
-        "icon-size": 18,
-        "spacing": 12,
-        "show-passive-items": false
     },
 
     "custom/wifi": {
@@ -119,6 +118,12 @@
         "format-charging": "󰂄 {capacity}%",
         "format-full": "󱟢 {capacity}%",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 12,
+        "show-passive-items": false
     },
 
     "clock": {
