@@ -197,6 +197,7 @@ alias grb='git rebase'
 alias gsb='git status -sb'
 alias gst='git stash'
 
+# shell
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -207,12 +208,14 @@ alias ........='cd ../../../../../../../'
 alias .........='cd ../../../../../../../../'
 alias ..........='cd ../../../../../../../../../'
 
+# dotfiles
 alias nh='nvim ~/repos/dotfiles/hypr/hyprland.conf'
 alias ns='nvim ~/repos/dotfiles/starship.toml'
 alias nw='nvim ~/repos/dotfiles/waybar/config.jsonc'
 alias nws='nvim ~/repos/dotfiles/waybar/style.css'
 alias nz='nvim ~/repos/dotfiles/.zshrc'
 
+# system
 alias asciiquarium='asciiquarium -t'
 alias batt='bat /sys/class/power_supply/BAT1/capacity'
 alias clock='tty-clock -bcsC4 -f %a,\ %b\ %d'
@@ -229,15 +232,13 @@ alias lt='eza --all --binary --git --group-directories-first --icons --long --tr
 alias man='batman'
 alias mkdir='mkdir -p'
 alias n='nvim'
+alias open='xdg-open'
 alias paste='wl-paste'
 alias pow='sudo poweroff'
 alias reb='sudo reboot'
 alias sn='sudo nvim'
 alias uuid='lsblk -dno UUID'
 alias wtr='curl wttr.in'
-
-#linux
-alias open='xdg-open'
 
 #hyprland
 alias hyprload='hyprctl reload && hyprctl dispatch exec reload'
@@ -249,22 +250,3 @@ alias packill='sudo rm -rf /var/lib/pacman/db.lck'
 alias pacwipe='sudo pacman -Rnsudd $(pacman -Qtdq)'
 alias pacupdate='sudo pacman -Syyu && yay -Syu --devel'
 alias yaywipe='sudo yay -Scc'
-
-# void
-alias vsv='sudo vsv'
-alias xbi='sudo xbps-install -Su'
-alias xbq='xbps-query'
-alias xbqs='xbps-query -Rs'
-alias xbr='sudo xbps-reconfigure'
-
-# fedora
-alias dnf='sudo dnf'
-alias dnfs='sudo dnf search'
-alias dnfi='sudo dnf install'
-alias dnfu='sudo dnf update --refresh'
-alias fpi='sudo flatpak install flathub'
-alias fpu='sudo flatpak update'
-alias fps='flatpak search'
-
-# bun completions
-[ -s "/home/lush/.bun/_bun" ] && source "/home/lush/.bun/_bun"
