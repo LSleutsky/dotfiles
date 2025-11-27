@@ -207,9 +207,10 @@ alias .......='cd ../../../../../../'
 alias ........='cd ../../../../../../../'
 alias .........='cd ../../../../../../../../'
 alias ..........='cd ../../../../../../../../../'
+alias pf='fastfetch'
 
 # dotfiles
-alias nh='nvim ~/repos/dotfiles/hypr/hyprland.conf'
+alias nh='nvim ~/repos/dotfiles/hypr/hypr-titan.conf'
 alias ns='nvim ~/repos/dotfiles/starship.toml'
 alias nw='nvim ~/repos/dotfiles/waybar/config.jsonc'
 alias nws='nvim ~/repos/dotfiles/waybar/style.css'
