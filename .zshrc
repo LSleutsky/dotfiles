@@ -47,12 +47,19 @@ function zsh-backward-kill-word () {
 
 fpath+=~/.zsh/zsh-completions
 
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/zsh-history-substring-search/zsh-history-substring-search.zsh
+if [[ -f /etc/arch-release ]]; then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+else
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source ~/zsh-history-substring-search/zsh-history-substring-search.zsh
+fi
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+source /usr/share/nvm/init-nvm.sh
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ OPTIONS                                                                                          │
@@ -212,11 +219,9 @@ alias ..........='cd ../../../../../../../../../'
 alias ff='fastfetch'
 
 # dotfiles
-alias nh='nvim ~/repos/dotfiles/hypr/hypr-titan.conf'
-alias ns='nvim ~/repos/dotfiles/starship.toml'
-alias nw='nvim ~/repos/dotfiles/waybar/config.jsonc'
-alias nws='nvim ~/repos/dotfiles/waybar/style.css'
-alias nz='nvim ~/dotfiles/.zshrc'
+alias ng='nvim ~/.local/share/repos/dotfiles/ghostty/config'
+alias ns='nvim ~/.local/share/repos/dotfiles/starship.toml'
+alias nz='nvim ~/.local/share/repos/dotfiles/.zshrc'
 
 # system
 alias asciiquarium='asciiquarium -t'
