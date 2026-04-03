@@ -14,7 +14,7 @@
     {
       "key": "│ {#34}{icon} distro  {#keys}│",
       "type": "os",
-      "format": "{name} {version}",
+      "format": "{name} {version}"
     },
     {
       "key": "│ {#35} kernel  {#keys}│",

@@ -59,7 +59,7 @@ fi
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-source /usr/share/nvm/init-nvm.sh
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ OPTIONS                                                                                          │
@@ -152,7 +152,6 @@ export SUDO_EDITOR="nvim"
 
 export GDK_BACKEND="wayland"
 export QT_QPA_PLATFORM="wayland;xcb"
-export XDG_SESSION_DESKTOP="Hyprland"
 
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -163,9 +162,6 @@ export XDG_CONFIG_DIRS="/etc/xdg"
 
 export PATH="/home/lush/.bun/bin:$PATH"
 export PATH="/home/lush/.local/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 hash -d cfg="$HOME/.config"
 hash -d dl="$HOME/Downloads"
@@ -256,5 +252,5 @@ alias pacman='sudo pacman'
 alias pacdel='sudo pacman -Rnsudd'
 alias packill='sudo rm -rf /var/lib/pacman/db.lck'
 alias pacwipe='sudo pacman -Rnsudd $(pacman -Qtdq)'
-alias pacupdate='sudo pacman -Syyu && yay -Syu --devel'
+alias pacupdate='sudo pacman -Syyu && paru'
 alias yaywipe='sudo yay -Scc'

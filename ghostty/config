@@ -11,3 +11,6 @@ cursor-style = "block"
 cursor-style-blink = false
 window-colorspace = "display-p3"
 maximize = true
+gtk-single-instance = true
+
+keybind = ctrl+q=quit
