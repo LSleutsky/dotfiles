@@ -5,23 +5,23 @@
 	email = Lushsleutsky@gmail.com
 	username = LSleutsky
 [core]
-	editor = lvim
+	editor = nvim
   pager = delta
 	sshCommand = ssh -i ~/.ssh/id_ed25519
 [diff]
   colorMoved = default
-  guitool = lvimdiff
-	tool = lvimdiff 
-[difftool "lvimdiff"]
-  cmd = "lvim -d \"$LOCAL\" \"$REMOTE\""
+  guitool = nvimdiff
+	tool = nvimdiff 
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
   prompt = true
 [interactive]
   diffFilter = delta --color-only --features=interactive
 [merge]
   conflictstyle = diff3
-  tool = lvimdiff
-[mergetool "lvimdiff"]
-  cmd = "lvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
+  tool = nvimdiff
+[mergetool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
   prompt = true
 [checkout]
 	defaultRemote = origin
