@@ -14,3 +14,6 @@ maximize = true
 gtk-single-instance = true
 
 keybind = ctrl+q=quit
+keybind = ctrl+shift+d=new_split:down
+keybind = ctrl+d=new_split:right
+keybind = ctrl+w=close_surface
