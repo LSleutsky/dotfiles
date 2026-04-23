@@ -213,6 +213,8 @@ alias ........='cd ../../../../../../../'
 alias .........='cd ../../../../../../../../'
 alias ..........='cd ../../../../../../../../../'
 alias ff='fastfetch'
+alias iplist='iface=$(ip route | awk '\''/default/ {print $5; exit}'\''); echo "interface=$iface"; sudo arp-scan --interface="$iface" --localnet'
+alias pipes='pipes-rs'
 
 # dotfiles
 alias ng='nvim ~/.local/share/repos/dotfiles/ghostty/config'
@@ -244,13 +246,9 @@ alias sn='sudo nvim'
 alias uuid='lsblk -dno UUID'
 alias wtr='curl wttr.in'
 
-#hyprland
-alias hyprload='hyprctl reload && hyprctl dispatch exec reload'
-
 #arch
 alias pacman='sudo pacman'
 alias pacdel='sudo pacman -Rnsudd'
 alias packill='sudo rm -rf /var/lib/pacman/db.lck'
 alias pacwipe='sudo pacman -Rnsudd $(pacman -Qtdq)'
 alias pacupdate='sudo pacman -Syyu && paru'
-alias yaywipe='sudo yay -Scc'
