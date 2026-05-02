@@ -195,7 +195,7 @@ alias ggf='git push --force origin $(git_current_branch)'
 alias ggp='git push origin $(git_current_branch)'
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gp='git push'
-alias gpp='git pull --rebase origin $(git_current_branch) && git push origin $(git_current_branch)'
+alias gpf='git push --force-with-lease'
 alias grb='git rebase'
 alias grm='git reset --hard origin/$(git_main_branch)'
 alias gro='git reset --hard origin/$(git_develop_branch)'
