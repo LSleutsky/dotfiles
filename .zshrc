@@ -215,6 +215,7 @@ alias ..........='cd ../../../../../../../../../'
 alias ff='fastfetch'
 alias iplist='iface=$(ip route | awk '\''/default/ {print $5; exit}'\''); echo "interface=$iface"; sudo arp-scan --interface="$iface" --localnet'
 alias pipes='pipes-rs'
+alias zed='zeditor'
 
 # dotfiles
 alias ng='nvim ~/.local/share/repos/dotfiles/ghostty/config'
