@@ -1,6 +1,6 @@
 # Font Configuration
 font-family = "BerkeleyMono Nerd Font"
-font-size = 9
+font-size = 8
 
 # Window Configuration
 window-decoration = false
