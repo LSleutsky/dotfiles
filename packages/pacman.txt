@@ -49,6 +49,7 @@ vim
 wireplumber
 xdg-desktop-portal-gnome
 xwayland-satellite
+zed
 zoxide
 zram-generator
 zsh
