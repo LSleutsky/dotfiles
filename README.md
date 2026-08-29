@@ -56,3 +56,8 @@ matches Goodix `27c6:609c` specifically. That reader autosuspends after 2s and
 then fails to answer verification, so unlocking silently falls back to a password
 prompt. Different hardware needs new IDs from `lsusb` — the rule won't match and
 will fail silently.
+
+`system/usr/lib/systemd/system-sleep/zz-fingerprint-wait.sh` covers a second,
+separate problem: the reader is re-enumerated on every resume, and DMS opens its
+fprintd PAM session before that finishes. The hook blocks resume until the device
+is back. It matches the same vendor/product IDs as the udev rule.
