@@ -1,0 +1,10 @@
+input {
+    touchpad {
+        natural-scroll
+        tap
+    }
+    mouse {
+        natural-scroll
+    }
+}
+

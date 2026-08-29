@@ -1,0 +1,15 @@
+#!/bin/sh
+# Refresh the dotfiles package lists after every pacman transaction.
+# Installed by /etc/pacman.d/hooks/95-dotfiles-pkglist.hook; runs as root.
+# Writes only - committing is left to the user.
+set -eu
+
+REPO=/home/lush/.local/share/dotfiles
+DIR="$REPO/packages"
+
+[ -d "$REPO" ] || exit 0
+
+install -d -o lush -g lush "$DIR"
+pacman -Qqen > "$DIR/pacman.txt"
+pacman -Qqem > "$DIR/aur.txt"
+chown lush:lush "$DIR/pacman.txt" "$DIR/aur.txt"

@@ -1,0 +1,4 @@
+# Goodix fingerprint reader autosuspends after 2s and then fails to answer
+# verification requests, so unlocking falls back to a password prompt.
+# Keep it powered.
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="27c6", ATTR{idProduct}=="609c", ATTR{power/control}="on"
