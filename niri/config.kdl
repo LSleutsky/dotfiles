@@ -1,4 +1,5 @@
 spawn-at-startup "waybar"
+spawn-at-startup "dms" "ipc" "call" "wallpaper" "set" "/home/lush/.local/share/dotfiles/wallpapers/glowing-black-hole.png"
 
 include "dms/alttab.kdl"
 include "dms/binds.kdl"

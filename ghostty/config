@@ -1,6 +1,6 @@
 # Font Configuration
 font-family = "BerkeleyMono Nerd Font"
-font-size = 8
+font-size = 7
 
 # Window Configuration
 window-decoration = false
@@ -32,6 +32,12 @@ keybind = ctrl+t=new_tab
 keybind = ctrl+plus=increase_font_size:1
 keybind = ctrl+minus=decrease_font_size:1
 keybind = ctrl+zero=reset_font_size
+
+keybind = ctrl+shift+arrow_right=new_split:right
+keybind = ctrl+shift+arrow_down=new_split:down
+keybind = ctrl+shift+arrow_left=new_split:left
+keybind = ctrl+shift+arrow_up=new_split:up
+keybind = ctrl+shift+x=close_surface
 
 # Material 3 UI elements
 unfocused-split-opacity = 0.7
