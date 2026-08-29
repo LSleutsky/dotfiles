@@ -154,8 +154,8 @@ export SUDO_EDITOR="nvim"
 export GDK_BACKEND="wayland"
 export QT_QPA_PLATFORM="wayland;xcb"
 
-export ATUIN_CONFIG_DIR="$HOME/.local/share/repos/dotfiles/atuin"
-export ATUIN_THEME_DIR="$HOME/.local/share/repos/dotfiles/atuin/themes"
+export ATUIN_CONFIG_DIR="$HOME/.local/share/dotfiles/atuin"
+export ATUIN_THEME_DIR="$HOME/.local/share/dotfiles/atuin/themes"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
@@ -221,9 +221,9 @@ alias pipes='pipes-rs'
 alias zed='zeditor'
 
 # dotfiles
-alias ng='nvim ~/.local/share/repos/dotfiles/ghostty/config'
-alias ns='nvim ~/.local/share/repos/dotfiles/starship.toml'
-alias nz='nvim ~/.local/share/repos/dotfiles/.zshrc'
+alias ng='nvim ~/.local/share/dotfiles/ghostty/config'
+alias ns='nvim ~/.local/share/dotfiles/starship.toml'
+alias nz='nvim ~/.local/share/dotfiles/.zshrc'
 
 # system
 alias asciiquarium='asciiquarium -t'
