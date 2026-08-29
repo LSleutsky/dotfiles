@@ -20,6 +20,7 @@ git-delta
 github-cli
 greetd
 intel-ucode
+inxi
 libfprint
 linux
 linux-firmware
