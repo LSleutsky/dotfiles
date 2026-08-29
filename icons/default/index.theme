@@ -1,0 +1,4 @@
+[Icon Theme]
+Name=default
+Comment=Points the XCursor library's "default" theme at Bibata Modern Ice.
+Inherits=Bibata-Modern-Ice

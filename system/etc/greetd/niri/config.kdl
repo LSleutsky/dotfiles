@@ -6,6 +6,11 @@ environment {
     DMS_RUN_GREETER "1"
 }
 
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 24
+}
+
 gestures {
     hot-corners {
         off

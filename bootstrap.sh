@@ -27,6 +27,7 @@ LINKS=(
   "niri:$HOME/.config/niri"
   "DankMaterialShell:$HOME/.config/DankMaterialShell"
   "starship.toml:$HOME/.config/starship.toml"
+  "icons:$HOME/.icons"
 )
 
 SYSTEM_UNITS=(greetd NetworkManager sshd thermald power-profiles-daemon)
