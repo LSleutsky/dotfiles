@@ -35,7 +35,7 @@ auto-generated ones that churn on theme changes.
 process serves every window, so edits do nothing until you hit `ctrl+shift+,`
 (`reload_config`). The reload notification is disabled, so there's no toast.
 
-## Does NOT transfer — set up by hand
+## Manual Setup
 
 **Hibernate.** `system/usr/lib/systemd/system-sleep/hibernate-delay.sh` (suspend,
 then hibernate 20 min later via an RTC alarm) installs fine but does nothing
@@ -56,6 +56,3 @@ matches Goodix `27c6:609c` specifically. That reader autosuspends after 2s and
 then fails to answer verification, so unlocking silently falls back to a password
 prompt. Different hardware needs new IDs from `lsusb` — the rule won't match and
 will fail silently.
-
-**Nothing secret is tracked here.** Keep it that way: no `~/.config/gh/hosts.yml`
-(live OAuth token), no `~/.ssh` private keys, no `~/.local/share/atuin/key`.
