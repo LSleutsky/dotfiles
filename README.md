@@ -57,7 +57,13 @@ then fails to answer verification, so unlocking silently falls back to a passwor
 prompt. Different hardware needs new IDs from `lsusb` — the rule won't match and
 will fail silently.
 
-`system/usr/lib/systemd/system-sleep/zz-fingerprint-wait.sh` covers a second,
-separate problem: the reader is re-enumerated on every resume, and DMS opens its
-fprintd PAM session before that finishes. The hook blocks resume until the device
-is back. It matches the same vendor/product IDs as the udev rule.
+`system/usr/lib/systemd/system-sleep/zz-fingerprint-reset.sh` covers a second,
+separate problem. The lock screen opens an fprintd verify session before sleeping
+and holds it open through the whole suspend, so on resume the reader reports
+"still busy with another operation" and PAM fails with PAM_AUTHINFO_UNAVAIL --
+the prompt appears but no finger will ever be accepted. The hook stops fprintd in
+`pre`; it gets D-Bus activated fresh on the next auth attempt.
+
+This must run in `pre`. logind emits `PrepareForSleep(false)` as soon as the
+kernel returns, so DMS has already made its first attempt roughly 200ms before
+any `post` hook gets to run -- gating on resume is too late by construction.
