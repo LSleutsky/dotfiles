@@ -196,7 +196,8 @@ alias gdt='git diff-tree --no-commit-id --name-status -r'
 alias gfp='git fetch --all --prune'
 alias ggf='git push --force origin $(git_current_branch)'
 alias ggp='git push origin $(git_current_branch)'
-alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+# alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gl="serie"
 alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias grb='git rebase'

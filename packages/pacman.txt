@@ -39,6 +39,7 @@ pipewire-pulse
 power-profiles-daemon
 python-gobject
 reflector
+serie
 starship
 sudo
 swayidle
