@@ -1,14 +1,26 @@
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=dms_rule_0 @name=
 window-rule {
     match app-id="firefox"
     open-maximized true
 }
 
+// @id=dms_rule_1 @name=
 window-rule {
     match app-id="com.mitchellh.ghostty"
     open-maximized true
 }
 
+// @id=dms_rule_2 @name=
 window-rule {
     match app-id="zed"
     open-maximized true
+}
+
+// @id=dms-floating-windows @name=DMS Floating Windows
+window-rule {
+    match app-id="^com.danklinux.dms$"
+    open-floating true
 }
