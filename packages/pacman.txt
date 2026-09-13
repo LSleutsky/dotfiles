@@ -30,6 +30,7 @@ networkmanager
 niri
 noto-fonts
 noto-fonts-emoji
+obsidian
 openssh
 otf-monaspace
 otf-monaspace-nerd

@@ -19,6 +19,12 @@ window-rule {
     open-maximized true
 }
 
+
+window-rule {
+    match app-id="obsidian"
+    open-maximized true
+}
+
 // @id=dms-floating-windows @name=DMS Floating Windows
 window-rule {
     match app-id="^com.danklinux.dms$"
