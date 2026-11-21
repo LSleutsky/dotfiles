@@ -1,7 +1,7 @@
 1password
 1password-cli
 bibata-cursor-theme-bin
-greetd-dms-greeter-git
+dux-greeter-git
 paru
 paru-debug
 pipes-rs-bin

@@ -67,3 +67,15 @@ the prompt appears but no finger will ever be accepted. The hook stops fprintd i
 This must run in `pre`. logind emits `PrepareForSleep(false)` as soon as the
 kernel returns, so DMS has already made its first attempt roughly 200ms before
 any `post` hook gets to run -- gating on resume is too late by construction.
+
+## Niri DMS Greeter
+
+If you have to set it up again (_new install, or after deleting `~/.cache`_), run these three in order:
+
+```sh
+setfacl -m u:greeter:x /home/lush ~/.local/state/dms ~/.cache/dms
+dms-greeter sync --profile -y
+sudo dms-greeter sync -y
+```
+
+The setfacl line only lasts as long as those folders do. If something deletes and recreates `~/.cache/dms`, run it again.

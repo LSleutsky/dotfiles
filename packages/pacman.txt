@@ -5,9 +5,8 @@ bat
 bat-extras
 btrfs-progs
 cage
-dms-shell
-dms-shell-niri
 duf
+dux-shell
 efibootmgr
 eza
 fastfetch
@@ -21,6 +20,7 @@ github-cli
 greetd
 intel-ucode
 inxi
+jq
 libfprint
 linux
 linux-firmware
