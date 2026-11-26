@@ -17,6 +17,7 @@ ghostty
 git
 git-delta
 github-cli
+gnome-keyring
 greetd
 intel-ucode
 inxi
@@ -40,6 +41,7 @@ pipewire-pulse
 power-profiles-daemon
 python-gobject
 reflector
+seahorse
 serie
 starship
 sudo
