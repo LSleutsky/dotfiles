@@ -1,6 +1,6 @@
 binds {
     // === System & Overview ===
-    Mod+O repeat=false { toggle-overview; }
+    Mod+Shift+O repeat=false { toggle-overview; }
     Mod+Tab repeat=false { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
 
@@ -8,6 +8,7 @@ binds {
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Mod+B hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
     Mod+Z hotkey-overlay-title="Open Zed" { spawn "zeditor"; }
+    Mod+O hotkey-overlay-title="Open Obsidian" { spawn "obsidian"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
