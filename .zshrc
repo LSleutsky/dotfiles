@@ -62,6 +62,8 @@ eval "$(zoxide init zsh)"
 eval "$(fnm env --use-on-cd --shell zsh)"
 eval "$(atuin init zsh --disable-up-arrow)"
 
+. "/home/lush/.config/vite-plus/env"
+
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ OPTIONS                                                                                          │
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
@@ -205,6 +207,7 @@ alias grm='git reset --hard origin/$(git_main_branch)'
 alias gro='git reset --hard origin/$(git_develop_branch)'
 alias gsb='git status -sb'
 alias gst='git stash'
+alias loc='git ls-files | xargs wc -l';
 
 # shell
 alias ..='cd ../'

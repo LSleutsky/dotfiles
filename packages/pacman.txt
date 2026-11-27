@@ -5,11 +5,14 @@ bat
 bat-extras
 btrfs-progs
 cage
+docker
+docker-compose
 duf
 dux-shell
 efibootmgr
 eza
 fastfetch
+feh
 firefox
 fnm
 fprintd
@@ -38,6 +41,7 @@ otf-monaspace-nerd
 pipewire
 pipewire-audio
 pipewire-pulse
+postgresql
 power-profiles-daemon
 python-gobject
 reflector
@@ -51,6 +55,7 @@ thermald
 torbrowser-launcher
 tree-sitter-cli
 ttf-dejavu
+unzip
 uwsm
 vim
 wireplumber
